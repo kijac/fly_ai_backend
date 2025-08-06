@@ -1,0 +1,10 @@
+name: backendprac
+channels:
+  - defaults
+dependencies:
+  - python=3.12
+  - ipykernel
+  - pymysql
+  - sqlalchemy
+  - python-dotenv
+prefix: C:\Users\047\anaconda3\envs\backendprac
