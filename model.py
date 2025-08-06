@@ -100,3 +100,6 @@ class Donor_Requests_Item(Base):
     donation_request = relationship("Donor_Requests", backref="request_items")
     toy_stock = relationship("Toy_Stock", backref="toy_request_items")
 
+
+# user_id = Column(Integer, ForeignKey("user.id"), nullable=True)
+#     user = relationship("User", backref="question_users")

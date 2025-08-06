@@ -3,6 +3,7 @@ from domain.user.user_schema import UserCreate
 from model import User
 from passlib.context import CryptContext
 import datetime
+from pydantic import EmailStr
 
 pwd_context = CryptContext(schemes = ["bcrypt"], deprecated = "auto")
 
@@ -19,3 +20,7 @@ def create_user(db: Session, user_create: UserCreate):
 
 def get_existing_user(db: Session, user_create: UserCreate):
     return db.query(User).filter((User.email == user_create.email)).first()
+
+def get_user(db: Session, email: EmailStr):
+    return db.query(User).filter(User.email == email).first()
+

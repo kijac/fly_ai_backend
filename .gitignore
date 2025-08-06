@@ -27,4 +27,5 @@ Thumbs.db
 # 기타
 *.log
 *.sqlite3
+test.ipynb
 
