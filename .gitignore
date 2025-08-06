@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+# 환경설정 및 환경파일
+.env
+env/
+venv/
+.venv/
+.idea/
+.vscode/
+
+# 데이터베이스/마이그레이션
+migrations/__pycache__/
+migrations/versions/*.pyc
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# OS별 파일
+.DS_Store
+Thumbs.db
+
+# 기타
+*.log
+*.sqlite3
+
