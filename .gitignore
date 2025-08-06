@@ -6,14 +6,15 @@ __pycache__/
 *.pyc
 
 # 환경설정 및 환경파일
+environment.yml
 .env
-env/
 venv/
 .venv/
 .idea/
 .vscode/
 
 # 데이터베이스/마이그레이션
+migrations/
 migrations/__pycache__/
 migrations/versions/*.pyc
 
@@ -24,7 +25,8 @@ migrations/versions/*.pyc
 .DS_Store
 Thumbs.db
 
-# 기타
+# 로그/DB/기타
 *.log
 *.sqlite3
+*.db
 

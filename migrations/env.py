@@ -1,13 +1,24 @@
+import os
+from dotenv import load_dotenv
+
+load_dotenv()  # .env 파일 로드
+
+# alembic context 객체 불러오기
+from alembic import context
+config = context.config
+
+# .env에서 URL 읽어서 alembic config에 주입
+SQLALCHEMY_DATABASE_URL = os.getenv("SQLALCHEMY_DATABASE_URL")
+if SQLALCHEMY_DATABASE_URL:
+    config.set_main_option("sqlalchemy.url", SQLALCHEMY_DATABASE_URL)
+
+
 from logging.config import fileConfig
 
 from sqlalchemy import engine_from_config
 from sqlalchemy import pool
 
 from alembic import context
-
-# 우리 프로젝트의 모델들 import
-from database import Base
-from model import *  # 모든 모델들 import
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
@@ -20,9 +31,9 @@ if config.config_file_name is not None:
 
 # add your model's MetaData object here
 # for 'autogenerate' support
-# from myapp import mymodel
-# target_metadata = mymodel.Base.metadata
-target_metadata = Base.metadata
+from database import Base
+import model
+target_metadata = model.Base.metadata
 
 # other values from the config, defined by the needs of env.py,
 # can be acquired:
@@ -61,10 +72,13 @@ def run_migrations_online() -> None:
     and associate a connection with the context.
 
     """
-    # 우리 database.py의 엔진을 사용
-    from database import engine
-    
-    with engine.connect() as connection:
+    connectable = engine_from_config(
+        config.get_section(config.config_ini_section, {}),
+        prefix="sqlalchemy.",
+        poolclass=pool.NullPool,
+    )
+
+    with connectable.connect() as connection:
         context.configure(
             connection=connection, target_metadata=target_metadata
         )
