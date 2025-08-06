@@ -33,3 +33,14 @@ class Token(BaseModel):
     user_id: int
 
 
+class UserResponse(BaseModel):
+    user_id: int
+    name: str
+    email: EmailStr
+    address: str | None
+    role: UserRole
+    phone_number: str | None
+    created_at: datetime.datetime
+
+    class Config:
+        orm_mode = True
