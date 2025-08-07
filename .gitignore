@@ -30,3 +30,6 @@ Thumbs.db
 *.sqlite3
 *.db
 
+# alembic
+alembic.ini
+

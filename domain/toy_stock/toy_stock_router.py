@@ -1,7 +1,6 @@
 from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy.orm import Session
 from starlette import status
-from typing import List, Optional
 
 from database import get_db
 from domain.toy_stock import toy_stock_schema, toy_stock_crud
