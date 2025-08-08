@@ -28,5 +28,4 @@ from domain.analyze.analyze_router import router as analyze_router
 #라우터 탑재 템플릿
 app.include_router(user_router.router)
 app.include_router(toy_stock_router.router)
-
 app.include_router(analyze_router, prefix="/api")
