@@ -84,4 +84,4 @@ def get_current_user(token: str = Depends(oauth2_scheme), db: Session = Depends(
 
 @router.get("/myaccount", response_model=user_schema.UserResponse)
 def get_my_info(current_user: user_schema.UserResponse = Depends(get_current_user)):
-    return current_user
+
