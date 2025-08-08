@@ -16,7 +16,6 @@ def convert_result_keys(result):
         "token_usage": result.get("토큰_사용량"),
     }
 
-
 @router.post("/analyze", response_model=AnalyzeResult)
 async def analyze_image(file: UploadFile = File(...)):
     image_bytes = await file.read()  # 이미지 바이트 읽기

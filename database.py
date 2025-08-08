@@ -43,4 +43,7 @@ naming_convention = {
 # naming_convention은 테이블과 컬럼의 이름 규칙을 정의하는 딕셔너리이다.
 # 이 규칙은 SQLAlchemy가 테이블과 컬럼을 생성할 때 이름을 지정하는 데 사용된다.
 # 예를 들어, "ix"는 인덱스의 접두사로 사용되며, "uq"는 유니크 제약 조건의 접두사로 사용된다.
-Base.metadata = MetaData(naming_convention=naming_convention)
+
+# Base를 만들 때 MetaData에 naming_convention을 바로 적용
+metadata = MetaData(naming_convention=naming_convention)
+Base = declarative_base(metadata=metadata)

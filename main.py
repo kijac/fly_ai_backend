@@ -4,6 +4,8 @@ from starlette.responses import FileResponse
 from starlette.staticfiles import StaticFiles
 
 from domain.user import user_router
+from domain.toy_stock import toy_stock_router
+import json
 
 app = FastAPI()
 
@@ -20,6 +22,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+from domain.analyze.analyze_router import router as analyze_router
+
+
 #라우터 탑재 템플릿
 app.include_router(user_router.router)
-
+app.include_router(toy_stock_router.router)
+app.include_router(analyze_router, prefix="/api")
