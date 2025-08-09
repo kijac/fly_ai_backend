@@ -53,7 +53,7 @@ from domain.user.user_router import get_current_user
 
 router = APIRouter()
 
-@router.post("/donation", response_model=toy_stock_schema.ToyDetail)
+@router.post("/donation")
 async def register_toy(
     toy_type: str = Form(...),
     is_donatable: str = Form(...),  # ENUM 문자열로 받음
@@ -88,4 +88,7 @@ async def register_toy(
         # toy_id는 자동생성
     }
     toy = toy_stock_crud.create_toy(db, toy_data)
-    return toy
+    return {
+        "success": True,
+        "message": "기부물품 등록이 완료되었습니다.",
+    }
