@@ -39,3 +39,12 @@ def get_toystock_list(db: Session, toy_type: str ='', skip: int = 0, limit: int 
 def get_toy(db: Session, toy_id: int):
     toy = db.query(Toy_Stock).get(toy_id)
     return toy
+
+from model import Toy_Stock
+
+def create_toy(db, toy_data):
+    toy = Toy_Stock(**toy_data)
+    db.add(toy)
+    db.commit()
+    db.refresh(toy)
+    return toy

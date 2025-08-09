@@ -24,7 +24,7 @@ class ToyDetail(BaseModel):
     donor_status: Optional[str] = None   # Enum → str
     reserved_by_request_id: Optional[int] = None
     created_at: datetime
-    updated_at: datetime
+    updated_at: Optional[datetime] = None
     description: Optional[str] = None
 
     class Config:
