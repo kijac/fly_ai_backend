@@ -46,6 +46,9 @@ class User(Base):
     phone_number = Column(String(20), nullable=True)
     created_at = Column(DateTime, nullable=False)
 
+    points = Column(BigInteger, nullable=False, default=0)  # 개인 포인트
+    subscribe = Column(Boolean, nullable=True, default=False)  # 구독 여부
+
 class Admin(Base):
     __tablename__ = "admin"
 
@@ -72,6 +75,8 @@ class Toy_Stock(Base):
     created_at = Column(DateTime, nullable=False)  # 생성시간
     updated_at = Column(DateTime, nullable=False)  # 수정 시간(변경 시 자동 갱신)
     description = Column(Text, nullable=True)  # LLM모델을 통한 장난감 설명
+
+    price = Column(BigInteger, nullable=True, default=0)  # 장난감 가격
     
     # 관계 설정
     donor = relationship("User", foreign_keys=[donor_id], backref="donated_toys")
@@ -85,6 +90,8 @@ class Donor_Requests(Base):
     recipient_status = Column(Enum(RecipientStatus), nullable=False)  # 상태 관리 - 관리자 승인관리
     requested_at = Column(DateTime, nullable=False)  # 요청 생성 시각
     delivery_status = Column(Enum(DeliveryStatus), nullable=False)  # 배송현황
+
+    created_at = Column(DateTime, nullable=False)  # 생성시간
     
     # 관계 설정
     recipient = relationship("User", foreign_keys=[recipient_id], backref="donation_requests")
