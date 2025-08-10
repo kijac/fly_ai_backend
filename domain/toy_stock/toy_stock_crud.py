@@ -40,11 +40,22 @@ def get_toy(db: Session, toy_id: int):
     toy = db.query(Toy_Stock).get(toy_id)
     return toy
 
-from model import Toy_Stock
-
 def create_toy(db, toy_data):
     toy = Toy_Stock(**toy_data)
     db.add(toy)
     db.commit()
     db.refresh(toy)
     return toy
+
+def get_donation_history(db: Session, user_id: int):
+    toystocks = db.query(Toy_Stock).filter(Toy_Stock.donor_id == user_id).all()
+    result = []
+    for toy in toystocks:
+        result.append({
+            "toy_type": toy.toy_type,
+            "donor_status": toy.donor_status.value if toy.donor_status else None,
+            "created_at": toy.created_at,
+            "image_url": toy.image_url,
+            "has_glb_model": bool(toy.glb_model_url)
+        })
+    return result

@@ -35,3 +35,10 @@ class ToyStockList(BaseModel):
     total: int = 0
     toystock_list: list[Toy] = []
         
+
+class DonationList(BaseModel):
+    toy_type: Optional[str]
+    donor_status: Optional[str]
+    created_at: datetime
+    image_url: Optional[str]
+    has_glb_model: bool
