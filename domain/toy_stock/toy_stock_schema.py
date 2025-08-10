@@ -10,7 +10,7 @@ class Toy(BaseModel):
     description: Optional[str] = None
 
     class Config:
-        orm_mode = True
+        from_attributes = True
 
 class ToyDetail(BaseModel):
     toy_id: int
@@ -28,7 +28,7 @@ class ToyDetail(BaseModel):
     description: Optional[str] = None
 
     class Config:
-        orm_mode = True
+        from_attributes = True
 
 
 class ToyStockList(BaseModel):

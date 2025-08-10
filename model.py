@@ -5,8 +5,8 @@ import enum
 
 # 사용자 역할 정의
 class UserRole(enum.Enum):
-    GROUP = "group"
     USER = "user"
+    GROUP = "group"
 
 # 기부 가능 여부 ENUM
 class DonationStatus(enum.Enum):
@@ -46,6 +46,10 @@ class User(Base):
     phone_number = Column(String(20), nullable=True)
     created_at = Column(DateTime, nullable=False)
 
+    # 새 필드
+    points = Column(BigInteger, nullable=False, default=0)  # 개인 포인트
+    subscribe = Column(Boolean, nullable=True, default=False)  # 구독 여부
+
 class Admin(Base):
     __tablename__ = "admin"
 
@@ -77,6 +81,9 @@ class Toy_Stock(Base):
     donor = relationship("User", foreign_keys=[donor_id], backref="donated_toys")
     reserved_by = relationship("Donor_Requests", foreign_keys=[reserved_by_request_id], backref="reserved_toys")
 
+    # 새 필드
+    price = Column(BigInteger, nullable=True, default=0)  # 장난감 가격
+
 class Donor_Requests(Base):
     __tablename__ = "donor_requests"
 
@@ -89,6 +96,9 @@ class Donor_Requests(Base):
     # 관계 설정
     recipient = relationship("User", foreign_keys=[recipient_id], backref="donation_requests")
 
+    # 새 필드
+    created_at = Column(DateTime, nullable=False)  # 생성시간
+    
 class Donor_Requests_Item(Base):
     __tablename__ = "donor_requests_item"
 

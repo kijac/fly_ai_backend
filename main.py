@@ -5,6 +5,7 @@ from starlette.staticfiles import StaticFiles
 
 from domain.user import user_router
 from domain.toy_stock import toy_stock_router
+from domain.analyze import analyze_router
 
 app = FastAPI()
 
@@ -24,3 +25,4 @@ app.add_middleware(
 #라우터 탑재 템플릿
 app.include_router(user_router.router)
 app.include_router(toy_stock_router.router)
+app.include_router(analyze_router.router)
