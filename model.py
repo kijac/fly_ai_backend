@@ -65,7 +65,7 @@ class Toy_Stock(Base):
 
     toy_id = Column(BigInteger, primary_key=True, autoincrement=True)  # 장난감 고유 ID
     donor_id = Column(BigInteger, ForeignKey("user.user_id"), nullable=False)  # 기부자 ID
-    toy_name = Column(String(100), nullable=False)  # 장난감 이름
+    toy_name = Column(String(100), nullable=True)  # 장난감 이름
     toy_type = Column(String(50), nullable=True)  # 종류(태그역할)
     image_url = Column(String(500), nullable=True)  # 장난감 이미지 경로(2D)
     is_donatable = Column(Enum(DonationStatus), nullable=False)  # 기부 가능여부 판단 결과
@@ -74,7 +74,7 @@ class Toy_Stock(Base):
     donor_status = Column(Enum(DonorStatus), nullable=False)  # 상태 관리
     reserved_by_request_id = Column(BigInteger, ForeignKey("donor_requests.id"), nullable=True)  # 예약 요청 ID
     created_at = Column(DateTime, nullable=False)  # 생성시간
-    updated_at = Column(DateTime, nullable=False)  # 수정 시간(변경 시 자동 갱신)
+    updated_at = Column(DateTime, nullable=True)  # 수정 시간(변경 시 자동 갱신)
     description = Column(Text, nullable=True)  # LLM모델을 통한 장난감 설명
     
     # 관계 설정

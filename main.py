@@ -6,6 +6,7 @@ from starlette.staticfiles import StaticFiles
 from domain.user import user_router
 from domain.toy_stock import toy_stock_router
 from domain.analyze import analyze_router
+from domain.donor_requests import donor_requests_router
 
 app = FastAPI()
 
@@ -26,3 +27,4 @@ app.add_middleware(
 app.include_router(user_router.router)
 app.include_router(toy_stock_router.router)
 app.include_router(analyze_router.router)
+app.include_router(donor_requests_router.router)
