@@ -1,12 +1,17 @@
 from sqlalchemy import or_
 from sqlalchemy.orm import Session
-
+from typing import Tuple, List
 from model import Toy_Stock
 
-def get_toystock_list(db: Session, toy_type: str ='', skip: int = 0, limit: int = 10, keyword: str = ''):
+def get_toystock_list(db: Session, toy_type: str ='', skip: int = 0, limit: int = 10, keyword: str = '', toy_status: str = 'for_sale')-> Tuple[int, List[Toy_Stock]]:
+    
     _toystock_list = db.query(Toy_Stock)
 
-    # 장난감 종류 검색
+    # 상태 필터
+    if toy_status:
+        _toystock_list = _toystock_list.filter(Toy_Stock.toy_status == toy_status)
+
+    # 장난감 종류 필터
     if toy_type:
         search = '%%{}%%'.format(toy_type)
         _toystock_list = _toystock_list.filter(
