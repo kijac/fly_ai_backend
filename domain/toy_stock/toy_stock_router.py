@@ -23,9 +23,10 @@ def toystock_list(
     page: int = Query(0, ge=0, description="페이지 번호 (0부터 시작)"),
     size: int = Query(10, ge=1, le=50, description="한 페이지에 보여줄 개수"),
     keyword: str = Query("", description="검색 키워드 (없으면 전체 조회)"),
+    toy_status: str = Query("for_sale", description="장난감 상태 검색 (없으면 'for sale'로 조회)"),
     db: Session = Depends(get_db)
     ):
-    total, _toystock_list = toy_stock_crud.get_toystock_list(db, toy_type=toy_type, skip=page*size, limit=size, keyword=keyword)
+    total, _toystock_list = toy_stock_crud.get_toystock_list(db, toy_type=toy_type, skip=page*size, limit=size, keyword=keyword, toy_status=toy_status)
     return {
         "total": total, 
         "toystock_list": _toystock_list
@@ -45,6 +46,7 @@ def toy_detail(toy_id: int, db: Session = Depends(get_db)):
 
 @router.post("/submit_sale", response_model=toy_stock_schema.ToySaleResponse)
 async def register_toys_bulk(
+    toy_name: List[str] = Form(...),
     toy_type: List[str] = Form(...),
     description: List[str] = Form(...),
     sale_price: List[int] = Form(...),
@@ -52,22 +54,22 @@ async def register_toys_bulk(
     db: Session = Depends(get_db),
     current_user: User = Depends(get_current_user)
 ):
-    if not toy_type or not description or not sale_price or not images:
+    if not toy_name or not toy_type or not description or not sale_price or not images:
         raise HTTPException(status_code=400, detail="필수 항목이 누락되었습니다.")
 
-    if not (len(toy_type) == len(description) == len(sale_price)):
+    if not (len(toy_name) == len(toy_type) == len(description) == len(sale_price)):
         raise HTTPException(status_code=400, detail="입력 데이터의 개수가 일치하지 않습니다.")
     
     # 이미지 개수로 장난감 개수 자동 계산 (자유로운 개수)
-    if len(images) < len(toy_type):
-        raise HTTPException(status_code=400, detail=f"이미지 개수가 부족합니다. 장난감 {len(toy_type)}개, 이미지 {len(images)}장")
+    if len(images) < len(toy_name):
+        raise HTTPException(status_code=400, detail=f"이미지 개수가 부족합니다. 장난감 {len(toy_name)}개, 이미지 {len(images)}장")
     
     # 각 장난감별 이미지 개수 계산 (균등 분배)
-    base_count = len(images) // len(toy_type)  # 기본 개수
-    remainder = len(images) % len(toy_type)    # 나머지
+    base_count = len(images) // len(toy_name)  # 기본 개수
+    remainder = len(images) % len(toy_name)    # 나머지
     
     toy_image_counts = []
-    for i in range(len(toy_type)):
+    for i in range(len(toy_name)):
         if i < remainder:
             toy_image_counts.append(base_count + 1)  # 나머지를 앞쪽 장난감들에게 1개씩 추가
         else:
@@ -77,10 +79,10 @@ async def register_toys_bulk(
     toys_data_list = []
     
     # 1단계: 입력 검증
-    for idx in range(len(toy_type)):
+    for idx in range(len(toy_name)):
         # 판매가 검증 (0원도 허용)
         if sale_price[idx] < 0:
-            errors.append(f"{toy_type[idx]}: 판매가는 0 이상이어야 합니다.")
+            errors.append(f"{toy_name[idx]}: 판매가는 0 이상이어야 합니다.")
             continue
 
         # 이미지 파일 확장자 검증 (이미지 인덱스 계산)
@@ -89,12 +91,13 @@ async def register_toys_bulk(
         
         for img_idx in range(start_idx, end_idx):
             if not images[img_idx].filename.lower().endswith(('.png', '.jpg', '.jpeg', '.webp')):
-                errors.append(f"{toy_type[idx]} (이미지 {img_idx - start_idx + 1}): 이미지 파일만 업로드 가능합니다.")
+                errors.append(f"{toy_name[idx]} (이미지 {img_idx - start_idx + 1}): 이미지 파일만 업로드 가능합니다.")
                 continue
 
         # 장난감 데이터 준비 (이미지는 나중에 저장)
         toy_data = {
             "user_id": current_user.user_id,
+            "toy_name": toy_name[idx],
             "toy_type": toy_type[idx],
             "description": description[idx],
             "image_url": None,  # 임시로 None, 나중에 업데이트

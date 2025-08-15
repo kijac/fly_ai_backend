@@ -87,6 +87,13 @@ class Donor_Requests(Base):
     # 관계 설정
     recipient = relationship("User", foreign_keys=[recipient_id], backref="donation_requests")
 
+    # ★ 명시적으로 정의
+    request_items = relationship(
+        "Donor_Requests_Item",
+        back_populates="donation_request",
+        cascade="all, delete-orphan",
+    )
+
 class Donor_Requests_Item(Base):
     __tablename__ = "donor_requests_item"
 
@@ -96,9 +103,6 @@ class Donor_Requests_Item(Base):
     unit_price = Column(BigInteger, nullable=True, default=0)  # 장난감 단가
 
     # 관계 설정
-    donation_request = relationship("Donor_Requests", backref="request_items")
+    donation_request = relationship("Donor_Requests", back_populates="request_items")
     toy_stock = relationship("Toy_Stock", backref="toy_request_items")
 
-
-# user_id = Column(Integer, ForeignKey("user.id"), nullable=True)
-#     user = relationship("User", backref="question_users")

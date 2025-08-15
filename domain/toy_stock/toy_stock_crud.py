@@ -1,10 +1,16 @@
 from sqlalchemy import or_
 from sqlalchemy.orm import Session
-
+from typing import Tuple, List
+import json
 from model import Toy_Stock
+from fastapi import HTTPException, status
 
-def get_toystock_list(db: Session, toy_type: str ='', skip: int = 0, limit: int = 10, keyword: str = ''):
+def get_toystock_list(db: Session, toy_type: str ='', skip: int = 0, limit: int = 10, keyword: str = '', toy_status: str = 'for_sale')-> Tuple[int, List[Toy_Stock]]:
     _toystock_list = db.query(Toy_Stock)
+
+    # 상태 필터
+    if toy_status:
+        _toystock_list = _toystock_list.filter(Toy_Stock.toy_status == toy_status)
 
     # 장난감 종류 검색
     if toy_type:
@@ -34,10 +40,57 @@ def get_toystock_list(db: Session, toy_type: str ='', skip: int = 0, limit: int 
         .limit(limit)\
         .all()
     )
+    
+    # 데이터 변환: toy_name과 image_url 처리
+    for toy in _toystock_list:
+        # toy_name이 None이면 빈 문자열로 설정
+        if toy.toy_name is None:
+            toy.toy_name = ""
+        
+        # image_url을 Dict[str, str] 형태로 변환
+        if isinstance(toy.image_url, list):
+            # 리스트를 딕셔너리로 변환 (첫 번째 이미지를 'main'으로)
+            if toy.image_url:
+                image_dict = {"main": toy.image_url[0]}
+                # 추가 이미지가 있으면 'sub1', 'sub2' 등으로 추가
+                for i, img in enumerate(toy.image_url[1:], 1):
+                    image_dict[f"sub{i}"] = img
+                toy.image_url = image_dict
+            else:
+                toy.image_url = None
+        elif isinstance(toy.image_url, str):
+            # 문자열이면 'main' 키로 설정
+            toy.image_url = {"main": toy.image_url}
+        elif toy.image_url is None:
+            toy.image_url = None
+    
     return total, _toystock_list
 
 def get_toy(db: Session, toy_id: int):
-    toy = db.query(Toy_Stock).get(toy_id)
+    toy = db.get(Toy_Stock, toy_id)
+
+    if toy is None:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="장난감을 찾을 수 없습니다.")
+
+    # image_url 처리: 문자열이면 JSON으로 파싱
+    if isinstance(toy.image_url, str):
+        try:
+            toy.image_url = json.loads(toy.image_url)
+        except Exception:
+            toy.image_url = None
+    # 리스트인 경우 Dict[str, str] 형태로 변환 (toystocklist와 동일한 방식)
+    elif isinstance(toy.image_url, list):
+        if toy.image_url:
+            image_dict = {"main": toy.image_url[0]}
+            for i, img in enumerate(toy.image_url[1:], 1):
+                image_dict[f"sub{i}"] = img
+            toy.image_url = image_dict
+        else:
+            toy.image_url = None
+    # None인 경우는 그대로 유지
+    elif toy.image_url is None:
+        toy.image_url = None
+   
     return toy
 
 def create_toy(db, toy_data):

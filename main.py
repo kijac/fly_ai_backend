@@ -5,7 +5,9 @@ from starlette.staticfiles import StaticFiles
 
 from domain.user import user_router
 from domain.toy_stock import toy_stock_router
-import json
+from domain.analyze import analyze_router
+from domain.donor_requests import donor_requests_router
+
 
 app = FastAPI()
 
@@ -29,3 +31,4 @@ from domain.analyze.analyze_router import router as analyze_router
 app.include_router(user_router.router)
 app.include_router(toy_stock_router.router)
 app.include_router(analyze_router, prefix="/api")
+app.include_router(donor_requests_router.router)
