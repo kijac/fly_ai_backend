@@ -12,6 +12,8 @@ venv/
 .venv/
 .idea/
 .vscode/
+.toypics/
+
 
 # 데이터베이스/마이그레이션
 migrations/
@@ -27,6 +29,7 @@ Thumbs.db
 *.log
 *.sqlite3
 test.ipynb
+reset_toy_stock.py
 
 # ...existing code...
 alembic.ini
