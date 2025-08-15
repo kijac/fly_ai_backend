@@ -8,7 +8,7 @@ import shutil
 from database import get_db
 from domain.toy_stock import toy_stock_schema, toy_stock_crud
 from fastapi import Form, File, UploadFile
-from model import DonationStatus, DonorStatus, User
+from model import ToyStatus, User, DonationStatus
 from datetime import datetime
 from domain.user.user_router import get_current_user
 
@@ -17,7 +17,7 @@ router = APIRouter(
 )
 
 # 장난감 리스트 불러오기
-@router.get("/toystokclist", response_model=toy_stock_schema.ToyStockList)
+@router.get("/toystocklist", response_model=toy_stock_schema.ToyStockList)
 def toystock_list(
     toy_type: str = Query("", description="장난감 종류 검색 (없으면 전체 조회)"), # Path Parameter
     page: int = Query(0, ge=0, description="페이지 번호 (0부터 시작)"),
@@ -43,81 +43,236 @@ def toy_detail(toy_id: int, db: Session = Depends(get_db)):
 #@router.get("/mytoy", status_code=status.HTTP_200_OK)
 
 
-@router.post("/donation")
+@router.post("/submit_sale", response_model=toy_stock_schema.ToySaleResponse)
 async def register_toys_bulk(
     toy_type: List[str] = Form(...),
-    is_donatable: List[str] = Form(...),
     description: List[str] = Form(...),
-    images: List[UploadFile] = File(...),
+    sale_price: List[int] = Form(...),
+    images: List[UploadFile] = File(...),  # 모든 이미지를 하나의 리스트로 받음
     db: Session = Depends(get_db),
     current_user: User = Depends(get_current_user)
 ):
-    if not toy_type or not is_donatable or not images:
+    if not toy_type or not description or not sale_price or not images:
         raise HTTPException(status_code=400, detail="필수 항목이 누락되었습니다.")
 
-    if not (len(toy_type) == len(is_donatable) == len(description) == len(images)):
+    if not (len(toy_type) == len(description) == len(sale_price)):
         raise HTTPException(status_code=400, detail="입력 데이터의 개수가 일치하지 않습니다.")
+    
+    # 이미지 개수로 장난감 개수 자동 계산 (자유로운 개수)
+    if len(images) < len(toy_type):
+        raise HTTPException(status_code=400, detail=f"이미지 개수가 부족합니다. 장난감 {len(toy_type)}개, 이미지 {len(images)}장")
+    
+    # 각 장난감별 이미지 개수 계산 (균등 분배)
+    base_count = len(images) // len(toy_type)  # 기본 개수
+    remainder = len(images) % len(toy_type)    # 나머지
+    
+    toy_image_counts = []
+    for i in range(len(toy_type)):
+        if i < remainder:
+            toy_image_counts.append(base_count + 1)  # 나머지를 앞쪽 장난감들에게 1개씩 추가
+        else:
+            toy_image_counts.append(base_count)
 
     errors = []
-    success_count = 0
+    toys_data_list = []
+    
+    # 1단계: 입력 검증
     for idx in range(len(toy_type)):
-        # ENUM 값 변환 예외처리
-        try:
-            donation_status = DonationStatus(is_donatable[idx])
-        except ValueError:
-            errors.append(f"{toy_type[idx]}: is_donatable 값이 올바르지 않습니다.")
+        # 판매가 검증 (0원도 허용)
+        if sale_price[idx] < 0:
+            errors.append(f"{toy_type[idx]}: 판매가는 0 이상이어야 합니다.")
             continue
 
-        # 이미지 파일 확장자 체크
-        if not images[idx].filename.lower().endswith(('.png', '.jpg', '.jpeg')):
-            errors.append(f"{toy_type[idx]}: 이미지 파일만 업로드 가능합니다.")
-            continue
+        # 이미지 파일 확장자 검증 (이미지 인덱스 계산)
+        start_idx = sum(toy_image_counts[:idx])  # 이전 장난감들의 이미지 개수 합
+        end_idx = start_idx + toy_image_counts[idx]  # 현재 장난감의 이미지 끝 인덱스
+        
+        for img_idx in range(start_idx, end_idx):
+            if not images[img_idx].filename.lower().endswith(('.png', '.jpg', '.jpeg', '.webp')):
+                errors.append(f"{toy_type[idx]} (이미지 {img_idx - start_idx + 1}): 이미지 파일만 업로드 가능합니다.")
+                continue
 
-        # 이미지 저장
-        save_dir = "toypics"
-        os.makedirs(save_dir, exist_ok=True)
-        image_path = os.path.join(save_dir, images[idx].filename)
-        with open(image_path, "wb") as buffer:
-            shutil.copyfileobj(images[idx].file, buffer)
-
+        # 장난감 데이터 준비 (이미지는 나중에 저장)
         toy_data = {
-            "donor_id": current_user.user_id,
+            "user_id": current_user.user_id,
             "toy_type": toy_type[idx],
-            "is_donatable": donation_status,
             "description": description[idx],
-            "image_url": image_path,
-            "donor_status": DonorStatus.PENDING,
+            "image_url": None,  # 임시로 None, 나중에 업데이트
+            "toy_status": ToyStatus.FOR_SALE,
+            "sale_price": sale_price[idx],
             "created_at": datetime.now(),
             "updated_at": datetime.now(),
         }
-        toy_stock_crud.create_toy(db, toy_data)
-        success_count += 1
+        toys_data_list.append(toy_data)
 
-    # 성공적으로 등록된 물품 수만큼 포인트 추가
-    current_user.points += 100 * success_count
-    db.commit()
+    # 2단계: 트랜잭션으로 일괄 저장
+    success_count = 0
+    if toys_data_list:
+        try:
+            # 장난감 데이터 저장
+            created_toys = toy_stock_crud.create_toys_bulk(db, toys_data_list)
+            success_count = len(toys_data_list)
+            
+            # 3단계: 이미지를 toy_id 기반으로 저장하고 DB 업데이트
+            image_start_idx = 0
+            for idx, toy in enumerate(created_toys):
+                # 현재 장난감의 이미지들 추출
+                image_count = toy_image_counts[idx]
+                toy_images = images[image_start_idx:image_start_idx + image_count]
+                
+                # 여러 이미지를 toy_id_순서.확장자 형태로 저장
+                image_paths = toy_stock_crud.save_images_with_toy_id(db, toy_images, toy.toy_id)
+                # DB에 이미지 경로들 업데이트 (JSON 배열)
+                toy.image_url = image_paths
+                
+                image_start_idx += image_count
+            
+            # 성공적으로 등록된 물품 수만큼 포인트 추가 (현재는 0점, 추후 정책에 따라 조정)
+            current_user.points += 0 * success_count
+            db.commit()
+        except Exception as e:
+            db.rollback()
+            raise HTTPException(status_code=500, detail=f"장난감 등록 중 오류가 발생했습니다: {str(e)}")
 
+    # 3단계: 응답 처리
     if errors:
         raise HTTPException(
             status_code=400,
             detail={
-                "message": f"{success_count}개 등록, 오류 {len(errors)}개, 포인트 {100 * success_count}점 적립",
+                "message": f"{success_count}개 등록, 오류 {len(errors)}개",
                 "errors": errors
             }
         )
 
     return {
         "success": True,
-        "message": f"{success_count}개의 기부물품이 등록되었습니다. 포인트 {100 * success_count}점 적립되었습니다.",
-        "points_added": 100 * success_count,
+        "message": f"{success_count}개의 장난감이 판매 등록되었습니다.",
+        "registered_count": success_count,
+        "points_added": 0 * success_count,
         "current_points": current_user.points
     }
 
 
-@router.get("/donation/donation_list", response_model=list[toy_stock_schema.DonationList])
-async def get_donation_history(
+@router.post("/submit_donation", response_model=toy_stock_schema.ToyDonationResponse)
+async def register_donation_bulk(
+    toy_type: List[str] = Form(...),
+    description: List[str] = Form(...),
+    is_donatable: List[str] = Form(...),
+    images: List[UploadFile] = File(...),  # 모든 이미지를 하나의 리스트로 받음
     db: Session = Depends(get_db),
     current_user: User = Depends(get_current_user)
 ):
-    return toy_stock_crud.get_donation_history(db, current_user.user_id)
+    if not toy_type or not description or not is_donatable or not images:
+        raise HTTPException(status_code=400, detail="필수 항목이 누락되었습니다.")
+
+    if not (len(toy_type) == len(description) == len(is_donatable)):
+        raise HTTPException(status_code=400, detail="입력 데이터의 개수가 일치하지 않습니다.")
+    
+    # 이미지 개수로 장난감 개수 자동 계산 (자유로운 개수)
+    if len(images) < len(toy_type):
+        raise HTTPException(status_code=400, detail=f"이미지 개수가 부족합니다. 장난감 {len(toy_type)}개, 이미지 {len(images)}장")
+    
+    # 각 장난감별 이미지 개수 계산 (균등 분배)
+    base_count = len(images) // len(toy_type)  # 기본 개수
+    remainder = len(images) % len(toy_type)    # 나머지
+    
+    toy_image_counts = []
+    for i in range(len(toy_type)):
+        if i < remainder:
+            toy_image_counts.append(base_count + 1)  # 나머지를 앞쪽 장난감들에게 1개씩 추가
+        else:
+            toy_image_counts.append(base_count)
+
+    errors = []
+    toys_data_list = []
+    
+    # 1단계: 입력 검증
+    for idx in range(len(toy_type)):
+        # is_donatable ENUM 값 검증
+        try:
+            donation_status = DonationStatus(is_donatable[idx])
+        except ValueError:
+            errors.append(f"{toy_type[idx]}: is_donatable 값이 올바르지 않습니다. (impossible, recyclable, upcycle 중 선택)")
+            continue
+
+        # 이미지 파일 확장자 검증 (이미지 인덱스 계산)
+        start_idx = sum(toy_image_counts[:idx])  # 이전 장난감들의 이미지 개수 합
+        end_idx = start_idx + toy_image_counts[idx]  # 현재 장난감의 이미지 끝 인덱스
+        
+        for img_idx in range(start_idx, end_idx):
+            if not images[img_idx].filename.lower().endswith(('.png', '.jpg', '.jpeg', '.webp')):
+                errors.append(f"{toy_type[idx]} (이미지 {img_idx - start_idx + 1}): 이미지 파일만 업로드 가능합니다.")
+                continue
+
+        # 장난감 데이터 준비 (이미지는 나중에 저장)
+        toy_data = {
+            "user_id": current_user.user_id,
+            "toy_type": toy_type[idx],
+            "description": description[idx],
+            "image_url": None,  # 임시로 None, 나중에 업데이트
+            "toy_status": ToyStatus.FOR_SALE,  # 기부도 FOR_SALE 상태로 설정
+            "is_donatable": donation_status,
+            "created_at": datetime.now(),
+            "updated_at": datetime.now(),
+        }
+        toys_data_list.append(toy_data)
+
+    # 2단계: 트랜잭션으로 일괄 저장
+    success_count = 0
+    if toys_data_list:
+        try:
+            # 장난감 데이터 저장
+            created_toys = toy_stock_crud.create_toys_bulk(db, toys_data_list)
+            success_count = len(toys_data_list)
+            
+            # 3단계: 이미지를 toy_id 기반으로 저장하고 DB 업데이트
+            image_start_idx = 0
+            for idx, toy in enumerate(created_toys):
+                # 현재 장난감의 이미지들 추출
+                image_count = toy_image_counts[idx]
+                toy_images = images[image_start_idx:image_start_idx + image_count]
+                
+                # 여러 이미지를 toy_id_순서.확장자 형태로 저장
+                image_paths = toy_stock_crud.save_images_with_toy_id(db, toy_images, toy.toy_id)
+                # DB에 이미지 경로들 업데이트 (JSON 배열)
+                toy.image_url = image_paths
+                
+                image_start_idx += image_count
+            
+            # 성공적으로 등록된 물품 수만큼 포인트 추가 (현재는 0점, 추후 정책에 따라 조정)
+            current_user.points += 30 * success_count
+            db.commit()
+        except Exception as e:
+            db.rollback()
+            raise HTTPException(status_code=500, detail=f"장난감 등록 중 오류가 발생했습니다: {str(e)}")
+
+    # 3단계: 응답 처리
+    if errors:
+        raise HTTPException(
+            status_code=400,
+            detail={
+                "message": f"{success_count}개 등록, 오류 {len(errors)}개",
+                "errors": errors
+            }
+        )
+
+    return {
+        "success": True,
+        "message": f"{success_count}개의 장난감이 기부 등록되었습니다. 포인트 {0 * success_count}점 적립되었습니다.",
+        "registered_count": success_count,
+        "points_added": 0 * success_count,
+        "current_points": current_user.points
+    }
+
+
+@router.get("/sale_list", response_model=list[toy_stock_schema.SaleList])
+async def get_sale_history(
+    db: Session = Depends(get_db),
+    current_user: User = Depends(get_current_user)
+):
+    try:
+        return toy_stock_crud.get_sale_history(db, current_user.user_id)
+    except Exception as e:
+        print(f"Error in get_sale_history: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"서버 오류가 발생했습니다: {str(e)}")
 
