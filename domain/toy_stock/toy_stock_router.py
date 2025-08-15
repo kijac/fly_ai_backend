@@ -30,10 +30,3 @@ def toystock_list(
 def toy_detail(toy_id: int, db: Session = Depends(get_db)):
     toy = toy_stock_crud.get_toy(db, toy_id)
     return toy
-
-
-
-
-
-## 주문한 장난감 리스트 불러오기
-#@router.get("/mytoy", status_code=status.HTTP_200_OK)

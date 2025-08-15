@@ -1,7 +1,7 @@
 from fastapi import APIRouter, HTTPException, Query, File, UploadFile, Form
 from starlette import status
 from datetime import datetime
-from typing import Optional
+from typing import Optional, Dict
 
 from domain.analyze import analyze_schema, analyze_crud
 
@@ -11,36 +11,33 @@ router = APIRouter(
 
 @router.post("/classify", response_model=analyze_schema.AnalyzeResponse)
 async def classify_toy(
-    image: UploadFile = File(..., description="장난감 이미지 파일"),
+    front: UploadFile = File(..., description="정면"),
+    rear: UploadFile = File(..., description="후면"),
+    left: UploadFile = File(..., description="좌측"),
+    right: UploadFile = File(..., description="우측"),
     task_id: Optional[str] = Form(None, description="작업 ID (자동 생성)")
     ):
     """
-    장난감 기부 가능 여부 확인을 위한 사진 전송
-    
-    - **image**: 이미지 파일 (JPG, PNG, JPEG)
+    장난감 기부 가능 여부 확인을 위한 4면(전/후/좌/우) 이미지 전송
     - **task_id**: 작업 ID (자동 생성)
     """
     try:
-        # 이미지 파일 검증 (안전한 방식)
-        if not image.content_type:
-            raise HTTPException(
-                status_code=status.HTTP_400_BAD_REQUEST,
-                detail="이미지 파일의 Content-Type을 확인할 수 없습니다."
-            )
-        
-        # content_type이 string인지 확인하고 안전하게 검증
-        content_type = str(image.content_type) if image.content_type else ""
-        if not content_type.startswith('image/'):
-            raise HTTPException(
-                status_code=status.HTTP_400_BAD_REQUEST,
-                detail=f"이미지 파일만 업로드 가능합니다. 현재 타입: {content_type}"
-            )
+        # 파일 검증
+        analyze_crud._validate_image(front, "front")
+        analyze_crud._validate_image(rear, "rear")
+        analyze_crud._validate_image(left, "left")
+        analyze_crud._validate_image(right, "right")
         
         # 이미지 데이터 읽기 (이미지 데이터를 bytes로 변환)
-        image_data = await image.read()
+        images: Dict[str, bytes] = {
+            "front": await front.read(),
+            "rear": await rear.read(),
+            "left": await left.read(),
+            "right": await right.read(),
+        }
         
         # 분석 작업 생성
-        task_id = analyze_crud.create_analysis_task(image_data)
+        task_id = analyze_crud.create_analysis_task(images)
         
         # 백그라운드에서 분석 작업 시작
         analyze_crud.start_analysis_task(task_id)
@@ -48,7 +45,7 @@ async def classify_toy(
         return analyze_schema.AnalyzeResponse(
             task_id=task_id,
             status="processing",
-            message="분석이 시작되었습니다. 결과를 확인하려면 /result 엔드포인트를 사용하세요.",
+            message="분석이 시작되었습니다. 결과를 확인하려면 classify/result 엔드포인트를 사용하세요.",
             created_at=datetime.now()
         )
         

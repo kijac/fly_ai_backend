@@ -36,7 +36,7 @@ def request_delivery(
 
 
 
-# 배송내역 조회시 리스트를 보내주는 api
+# 구매내역 조회시 리스트를 보내주는 api
 @router.get("/orders", response_model=donor_requests_schema.PurchaseHistoryList, status_code=status.HTTP_200_OK)
 def get_purchase_history(
     user_id: int,

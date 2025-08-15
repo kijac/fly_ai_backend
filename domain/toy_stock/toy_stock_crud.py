@@ -1,7 +1,9 @@
 from sqlalchemy import or_
 from sqlalchemy.orm import Session
 from typing import Tuple, List
+import json
 from model import Toy_Stock
+from fastapi import HTTPException, status
 
 def get_toystock_list(db: Session, toy_type: str ='', skip: int = 0, limit: int = 10, keyword: str = '', toy_status: str = 'for_sale')-> Tuple[int, List[Toy_Stock]]:
     
@@ -42,5 +44,14 @@ def get_toystock_list(db: Session, toy_type: str ='', skip: int = 0, limit: int 
     return total, _toystock_list
 
 def get_toy(db: Session, toy_id: int):
-    toy = db.query(Toy_Stock).get(toy_id)
+    toy = db.get(Toy_Stock, toy_id)
+
+    if toy is None:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="장난감을 찾을 수 없습니다.")
+
+    if isinstance(toy.image_url, str):
+        try:
+            toy.image_url = json.loads(toy.image_url)
+        except Exception:
+            toy.image_url = None   
     return toy
