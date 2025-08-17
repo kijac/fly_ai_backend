@@ -1,0 +1,1302 @@
+[
+  {
+    "image_path": "evaluation/datasets/images/img_0000_front.JPG",
+    "ground_truth": {
+      "toy_type": "자동차 장난감",
+      "battery": "건전지",
+      "size": "중간",
+      "material": "플라스틱",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": true,
+      "donation_reason": "플라스틱 건전지 장난감, 상태 양호"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/img_0001_front.JPG",
+    "ground_truth": {
+      "toy_type": "변신 로봇",
+      "battery": "비건전지",
+      "size": "큼",
+      "material": "플라스틱",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": true,
+      "donation_reason": "플라스틱 비건전지 장난감, 상태 양호"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/img_0002_front.JPG",
+    "ground_truth": {
+      "toy_type": "블록",
+      "battery": "비건전지",
+      "size": "큼",
+      "material": "플라스틱",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": true,
+      "donation_reason": "플라스틱 비건전지 장난감, 상태 양호"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/img_0003_front.png",
+    "ground_truth": {
+      "toy_type": "인형",
+      "battery": "비건전지",
+      "size": "중간",
+      "material": "섬유",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": false,
+      "donation_reason": "천/섬유 소재는 위생상 기부 불가"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/img_0004_front.png",
+    "ground_truth": {
+      "toy_type": "공",
+      "battery": "비건전지",
+      "size": "중간",
+      "material": "고무",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": true,
+      "donation_reason": "고무 비건전지 장난감, 상태 양호"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0005_front.png",
+    "ground_truth": {
+      "toy_type": "피규어",
+      "battery": "비건전지",
+      "size": "작음",
+      "material": "플라스틱",
+      "damage": "경미한 파손",
+      "soil": "약간 더러움",
+      "donation_possible": false,
+      "donation_reason": "경미한 파손으로 수리 필요"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0006_front.png",
+    "ground_truth": {
+      "toy_type": "자동차 장난감",
+      "battery": "건전지",
+      "size": "중간",
+      "material": "플라스틱",
+      "damage": "심각한 파손",
+      "soil": "깨끗",
+      "donation_possible": false,
+      "donation_reason": "심각한 파손으로 완제품 기부 불가"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0007_front.png",
+    "ground_truth": {
+      "toy_type": "나무 장난감",
+      "battery": "비건전지",
+      "size": "중간",
+      "material": "나무",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": false,
+      "donation_reason": "나무 소재는 안전상 기부 불가"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0008_front.png",
+    "ground_truth": {
+      "toy_type": "아동 도서",
+      "battery": "비건전지",
+      "size": "중간",
+      "material": "종이",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": false,
+      "donation_reason": "아동 도서은 기부 불가 종류"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0009_front.png",
+    "ground_truth": {
+      "toy_type": "보행기",
+      "battery": "비건전지",
+      "size": "큼",
+      "material": "플라스틱",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": false,
+      "donation_reason": "보행기은 기부 불가 종류"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0010_front.png",
+    "ground_truth": {
+      "toy_type": "자동차 장난감",
+      "battery": "건전지",
+      "size": "중간",
+      "material": "플라스틱",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": true,
+      "donation_reason": "플라스틱 건전지 장난감, 상태 양호"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0011_front.png",
+    "ground_truth": {
+      "toy_type": "변신 로봇",
+      "battery": "비건전지",
+      "size": "큼",
+      "material": "플라스틱",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": true,
+      "donation_reason": "플라스틱 비건전지 장난감, 상태 양호"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0012_front.png",
+    "ground_truth": {
+      "toy_type": "블록",
+      "battery": "비건전지",
+      "size": "큼",
+      "material": "플라스틱",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": true,
+      "donation_reason": "플라스틱 비건전지 장난감, 상태 양호"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0013_front.png",
+    "ground_truth": {
+      "toy_type": "인형",
+      "battery": "비건전지",
+      "size": "중간",
+      "material": "섬유",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": false,
+      "donation_reason": "천/섬유 소재는 위생상 기부 불가"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0014_front.png",
+    "ground_truth": {
+      "toy_type": "공",
+      "battery": "비건전지",
+      "size": "중간",
+      "material": "고무",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": true,
+      "donation_reason": "고무 비건전지 장난감, 상태 양호"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0015_front.png",
+    "ground_truth": {
+      "toy_type": "피규어",
+      "battery": "비건전지",
+      "size": "작음",
+      "material": "플라스틱",
+      "damage": "경미한 파손",
+      "soil": "약간 더러움",
+      "donation_possible": false,
+      "donation_reason": "경미한 파손으로 수리 필요"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0016_front.png",
+    "ground_truth": {
+      "toy_type": "자동차 장난감",
+      "battery": "건전지",
+      "size": "중간",
+      "material": "플라스틱",
+      "damage": "심각한 파손",
+      "soil": "깨끗",
+      "donation_possible": false,
+      "donation_reason": "심각한 파손으로 완제품 기부 불가"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0017_front.png",
+    "ground_truth": {
+      "toy_type": "나무 장난감",
+      "battery": "비건전지",
+      "size": "중간",
+      "material": "나무",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": false,
+      "donation_reason": "나무 소재는 안전상 기부 불가"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0018_front.png",
+    "ground_truth": {
+      "toy_type": "아동 도서",
+      "battery": "비건전지",
+      "size": "중간",
+      "material": "종이",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": false,
+      "donation_reason": "아동 도서은 기부 불가 종류"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0019_front.png",
+    "ground_truth": {
+      "toy_type": "보행기",
+      "battery": "비건전지",
+      "size": "큼",
+      "material": "플라스틱",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": false,
+      "donation_reason": "보행기은 기부 불가 종류"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0020_front.png",
+    "ground_truth": {
+      "toy_type": "자동차 장난감",
+      "battery": "건전지",
+      "size": "중간",
+      "material": "플라스틱",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": true,
+      "donation_reason": "플라스틱 건전지 장난감, 상태 양호"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0021_front.png",
+    "ground_truth": {
+      "toy_type": "변신 로봇",
+      "battery": "비건전지",
+      "size": "큼",
+      "material": "플라스틱",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": true,
+      "donation_reason": "플라스틱 비건전지 장난감, 상태 양호"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0022_front.png",
+    "ground_truth": {
+      "toy_type": "블록",
+      "battery": "비건전지",
+      "size": "큼",
+      "material": "플라스틱",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": true,
+      "donation_reason": "플라스틱 비건전지 장난감, 상태 양호"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0023_front.png",
+    "ground_truth": {
+      "toy_type": "인형",
+      "battery": "비건전지",
+      "size": "중간",
+      "material": "섬유",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": false,
+      "donation_reason": "천/섬유 소재는 위생상 기부 불가"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0024_front.png",
+    "ground_truth": {
+      "toy_type": "공",
+      "battery": "비건전지",
+      "size": "중간",
+      "material": "고무",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": true,
+      "donation_reason": "고무 비건전지 장난감, 상태 양호"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0025_front.png",
+    "ground_truth": {
+      "toy_type": "피규어",
+      "battery": "비건전지",
+      "size": "작음",
+      "material": "플라스틱",
+      "damage": "경미한 파손",
+      "soil": "약간 더러움",
+      "donation_possible": false,
+      "donation_reason": "경미한 파손으로 수리 필요"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0026_front.png",
+    "ground_truth": {
+      "toy_type": "자동차 장난감",
+      "battery": "건전지",
+      "size": "중간",
+      "material": "플라스틱",
+      "damage": "심각한 파손",
+      "soil": "깨끗",
+      "donation_possible": false,
+      "donation_reason": "심각한 파손으로 완제품 기부 불가"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0027_front.png",
+    "ground_truth": {
+      "toy_type": "나무 장난감",
+      "battery": "비건전지",
+      "size": "중간",
+      "material": "나무",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": false,
+      "donation_reason": "나무 소재는 안전상 기부 불가"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0028_front.png",
+    "ground_truth": {
+      "toy_type": "아동 도서",
+      "battery": "비건전지",
+      "size": "중간",
+      "material": "종이",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": false,
+      "donation_reason": "아동 도서은 기부 불가 종류"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0029_front.png",
+    "ground_truth": {
+      "toy_type": "보행기",
+      "battery": "비건전지",
+      "size": "큼",
+      "material": "플라스틱",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": false,
+      "donation_reason": "보행기은 기부 불가 종류"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0030_front.png",
+    "ground_truth": {
+      "toy_type": "자동차 장난감",
+      "battery": "건전지",
+      "size": "중간",
+      "material": "플라스틱",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": true,
+      "donation_reason": "플라스틱 건전지 장난감, 상태 양호"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0031_front.png",
+    "ground_truth": {
+      "toy_type": "변신 로봇",
+      "battery": "비건전지",
+      "size": "큼",
+      "material": "플라스틱",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": true,
+      "donation_reason": "플라스틱 비건전지 장난감, 상태 양호"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0032_front.png",
+    "ground_truth": {
+      "toy_type": "블록",
+      "battery": "비건전지",
+      "size": "큼",
+      "material": "플라스틱",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": true,
+      "donation_reason": "플라스틱 비건전지 장난감, 상태 양호"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0033_front.png",
+    "ground_truth": {
+      "toy_type": "인형",
+      "battery": "비건전지",
+      "size": "중간",
+      "material": "섬유",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": false,
+      "donation_reason": "천/섬유 소재는 위생상 기부 불가"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0034_front.png",
+    "ground_truth": {
+      "toy_type": "공",
+      "battery": "비건전지",
+      "size": "중간",
+      "material": "고무",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": true,
+      "donation_reason": "고무 비건전지 장난감, 상태 양호"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0035_front.png",
+    "ground_truth": {
+      "toy_type": "피규어",
+      "battery": "비건전지",
+      "size": "작음",
+      "material": "플라스틱",
+      "damage": "경미한 파손",
+      "soil": "약간 더러움",
+      "donation_possible": false,
+      "donation_reason": "경미한 파손으로 수리 필요"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0036_front.png",
+    "ground_truth": {
+      "toy_type": "자동차 장난감",
+      "battery": "건전지",
+      "size": "중간",
+      "material": "플라스틱",
+      "damage": "심각한 파손",
+      "soil": "깨끗",
+      "donation_possible": false,
+      "donation_reason": "심각한 파손으로 완제품 기부 불가"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0037_front.png",
+    "ground_truth": {
+      "toy_type": "나무 장난감",
+      "battery": "비건전지",
+      "size": "중간",
+      "material": "나무",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": false,
+      "donation_reason": "나무 소재는 안전상 기부 불가"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0038_front.png",
+    "ground_truth": {
+      "toy_type": "아동 도서",
+      "battery": "비건전지",
+      "size": "중간",
+      "material": "종이",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": false,
+      "donation_reason": "아동 도서은 기부 불가 종류"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0039_front.png",
+    "ground_truth": {
+      "toy_type": "보행기",
+      "battery": "비건전지",
+      "size": "큼",
+      "material": "플라스틱",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": false,
+      "donation_reason": "보행기은 기부 불가 종류"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0040_front.png",
+    "ground_truth": {
+      "toy_type": "자동차 장난감",
+      "battery": "건전지",
+      "size": "중간",
+      "material": "플라스틱",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": true,
+      "donation_reason": "플라스틱 건전지 장난감, 상태 양호"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0041_front.png",
+    "ground_truth": {
+      "toy_type": "변신 로봇",
+      "battery": "비건전지",
+      "size": "큼",
+      "material": "플라스틱",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": true,
+      "donation_reason": "플라스틱 비건전지 장난감, 상태 양호"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0042_front.png",
+    "ground_truth": {
+      "toy_type": "블록",
+      "battery": "비건전지",
+      "size": "큼",
+      "material": "플라스틱",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": true,
+      "donation_reason": "플라스틱 비건전지 장난감, 상태 양호"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0043_front.png",
+    "ground_truth": {
+      "toy_type": "인형",
+      "battery": "비건전지",
+      "size": "중간",
+      "material": "섬유",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": false,
+      "donation_reason": "천/섬유 소재는 위생상 기부 불가"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0044_front.png",
+    "ground_truth": {
+      "toy_type": "공",
+      "battery": "비건전지",
+      "size": "중간",
+      "material": "고무",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": true,
+      "donation_reason": "고무 비건전지 장난감, 상태 양호"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0045_front.png",
+    "ground_truth": {
+      "toy_type": "피규어",
+      "battery": "비건전지",
+      "size": "작음",
+      "material": "플라스틱",
+      "damage": "경미한 파손",
+      "soil": "약간 더러움",
+      "donation_possible": false,
+      "donation_reason": "경미한 파손으로 수리 필요"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0046_front.png",
+    "ground_truth": {
+      "toy_type": "자동차 장난감",
+      "battery": "건전지",
+      "size": "중간",
+      "material": "플라스틱",
+      "damage": "심각한 파손",
+      "soil": "깨끗",
+      "donation_possible": false,
+      "donation_reason": "심각한 파손으로 완제품 기부 불가"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0047_front.png",
+    "ground_truth": {
+      "toy_type": "나무 장난감",
+      "battery": "비건전지",
+      "size": "중간",
+      "material": "나무",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": false,
+      "donation_reason": "나무 소재는 안전상 기부 불가"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0048_front.png",
+    "ground_truth": {
+      "toy_type": "아동 도서",
+      "battery": "비건전지",
+      "size": "중간",
+      "material": "종이",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": false,
+      "donation_reason": "아동 도서은 기부 불가 종류"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0049_front.png",
+    "ground_truth": {
+      "toy_type": "보행기",
+      "battery": "비건전지",
+      "size": "큼",
+      "material": "플라스틱",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": false,
+      "donation_reason": "보행기은 기부 불가 종류"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0050_front.png",
+    "ground_truth": {
+      "toy_type": "자동차 장난감",
+      "battery": "건전지",
+      "size": "중간",
+      "material": "플라스틱",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": true,
+      "donation_reason": "플라스틱 건전지 장난감, 상태 양호"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0051_front.png",
+    "ground_truth": {
+      "toy_type": "변신 로봇",
+      "battery": "비건전지",
+      "size": "큼",
+      "material": "플라스틱",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": true,
+      "donation_reason": "플라스틱 비건전지 장난감, 상태 양호"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0052_front.png",
+    "ground_truth": {
+      "toy_type": "블록",
+      "battery": "비건전지",
+      "size": "큼",
+      "material": "플라스틱",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": true,
+      "donation_reason": "플라스틱 비건전지 장난감, 상태 양호"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0053_front.png",
+    "ground_truth": {
+      "toy_type": "인형",
+      "battery": "비건전지",
+      "size": "중간",
+      "material": "섬유",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": false,
+      "donation_reason": "천/섬유 소재는 위생상 기부 불가"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0054_front.png",
+    "ground_truth": {
+      "toy_type": "공",
+      "battery": "비건전지",
+      "size": "중간",
+      "material": "고무",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": true,
+      "donation_reason": "고무 비건전지 장난감, 상태 양호"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0055_front.png",
+    "ground_truth": {
+      "toy_type": "피규어",
+      "battery": "비건전지",
+      "size": "작음",
+      "material": "플라스틱",
+      "damage": "경미한 파손",
+      "soil": "약간 더러움",
+      "donation_possible": false,
+      "donation_reason": "경미한 파손으로 수리 필요"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0056_front.png",
+    "ground_truth": {
+      "toy_type": "자동차 장난감",
+      "battery": "건전지",
+      "size": "중간",
+      "material": "플라스틱",
+      "damage": "심각한 파손",
+      "soil": "깨끗",
+      "donation_possible": false,
+      "donation_reason": "심각한 파손으로 완제품 기부 불가"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0057_front.png",
+    "ground_truth": {
+      "toy_type": "나무 장난감",
+      "battery": "비건전지",
+      "size": "중간",
+      "material": "나무",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": false,
+      "donation_reason": "나무 소재는 안전상 기부 불가"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0058_front.png",
+    "ground_truth": {
+      "toy_type": "아동 도서",
+      "battery": "비건전지",
+      "size": "중간",
+      "material": "종이",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": false,
+      "donation_reason": "아동 도서은 기부 불가 종류"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0059_front.png",
+    "ground_truth": {
+      "toy_type": "보행기",
+      "battery": "비건전지",
+      "size": "큼",
+      "material": "플라스틱",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": false,
+      "donation_reason": "보행기은 기부 불가 종류"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0060_front.png",
+    "ground_truth": {
+      "toy_type": "자동차 장난감",
+      "battery": "건전지",
+      "size": "중간",
+      "material": "플라스틱",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": true,
+      "donation_reason": "플라스틱 건전지 장난감, 상태 양호"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0061_front.png",
+    "ground_truth": {
+      "toy_type": "변신 로봇",
+      "battery": "비건전지",
+      "size": "큼",
+      "material": "플라스틱",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": true,
+      "donation_reason": "플라스틱 비건전지 장난감, 상태 양호"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0062_front.png",
+    "ground_truth": {
+      "toy_type": "블록",
+      "battery": "비건전지",
+      "size": "큼",
+      "material": "플라스틱",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": true,
+      "donation_reason": "플라스틱 비건전지 장난감, 상태 양호"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0063_front.png",
+    "ground_truth": {
+      "toy_type": "인형",
+      "battery": "비건전지",
+      "size": "중간",
+      "material": "섬유",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": false,
+      "donation_reason": "천/섬유 소재는 위생상 기부 불가"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0064_front.png",
+    "ground_truth": {
+      "toy_type": "공",
+      "battery": "비건전지",
+      "size": "중간",
+      "material": "고무",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": true,
+      "donation_reason": "고무 비건전지 장난감, 상태 양호"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0065_front.png",
+    "ground_truth": {
+      "toy_type": "피규어",
+      "battery": "비건전지",
+      "size": "작음",
+      "material": "플라스틱",
+      "damage": "경미한 파손",
+      "soil": "약간 더러움",
+      "donation_possible": false,
+      "donation_reason": "경미한 파손으로 수리 필요"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0066_front.png",
+    "ground_truth": {
+      "toy_type": "자동차 장난감",
+      "battery": "건전지",
+      "size": "중간",
+      "material": "플라스틱",
+      "damage": "심각한 파손",
+      "soil": "깨끗",
+      "donation_possible": false,
+      "donation_reason": "심각한 파손으로 완제품 기부 불가"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0067_front.png",
+    "ground_truth": {
+      "toy_type": "나무 장난감",
+      "battery": "비건전지",
+      "size": "중간",
+      "material": "나무",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": false,
+      "donation_reason": "나무 소재는 안전상 기부 불가"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0068_front.png",
+    "ground_truth": {
+      "toy_type": "아동 도서",
+      "battery": "비건전지",
+      "size": "중간",
+      "material": "종이",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": false,
+      "donation_reason": "아동 도서은 기부 불가 종류"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0069_front.png",
+    "ground_truth": {
+      "toy_type": "보행기",
+      "battery": "비건전지",
+      "size": "큼",
+      "material": "플라스틱",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": false,
+      "donation_reason": "보행기은 기부 불가 종류"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0070_front.png",
+    "ground_truth": {
+      "toy_type": "자동차 장난감",
+      "battery": "건전지",
+      "size": "중간",
+      "material": "플라스틱",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": true,
+      "donation_reason": "플라스틱 건전지 장난감, 상태 양호"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0071_front.png",
+    "ground_truth": {
+      "toy_type": "변신 로봇",
+      "battery": "비건전지",
+      "size": "큼",
+      "material": "플라스틱",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": true,
+      "donation_reason": "플라스틱 비건전지 장난감, 상태 양호"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0072_front.png",
+    "ground_truth": {
+      "toy_type": "블록",
+      "battery": "비건전지",
+      "size": "큼",
+      "material": "플라스틱",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": true,
+      "donation_reason": "플라스틱 비건전지 장난감, 상태 양호"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0073_front.png",
+    "ground_truth": {
+      "toy_type": "인형",
+      "battery": "비건전지",
+      "size": "중간",
+      "material": "섬유",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": false,
+      "donation_reason": "천/섬유 소재는 위생상 기부 불가"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0074_front.png",
+    "ground_truth": {
+      "toy_type": "공",
+      "battery": "비건전지",
+      "size": "중간",
+      "material": "고무",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": true,
+      "donation_reason": "고무 비건전지 장난감, 상태 양호"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0075_front.png",
+    "ground_truth": {
+      "toy_type": "피규어",
+      "battery": "비건전지",
+      "size": "작음",
+      "material": "플라스틱",
+      "damage": "경미한 파손",
+      "soil": "약간 더러움",
+      "donation_possible": false,
+      "donation_reason": "경미한 파손으로 수리 필요"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0076_front.png",
+    "ground_truth": {
+      "toy_type": "자동차 장난감",
+      "battery": "건전지",
+      "size": "중간",
+      "material": "플라스틱",
+      "damage": "심각한 파손",
+      "soil": "깨끗",
+      "donation_possible": false,
+      "donation_reason": "심각한 파손으로 완제품 기부 불가"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0077_front.png",
+    "ground_truth": {
+      "toy_type": "나무 장난감",
+      "battery": "비건전지",
+      "size": "중간",
+      "material": "나무",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": false,
+      "donation_reason": "나무 소재는 안전상 기부 불가"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0078_front.png",
+    "ground_truth": {
+      "toy_type": "아동 도서",
+      "battery": "비건전지",
+      "size": "중간",
+      "material": "종이",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": false,
+      "donation_reason": "아동 도서은 기부 불가 종류"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0079_front.png",
+    "ground_truth": {
+      "toy_type": "보행기",
+      "battery": "비건전지",
+      "size": "큼",
+      "material": "플라스틱",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": false,
+      "donation_reason": "보행기은 기부 불가 종류"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0080_front.png",
+    "ground_truth": {
+      "toy_type": "자동차 장난감",
+      "battery": "건전지",
+      "size": "중간",
+      "material": "플라스틱",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": true,
+      "donation_reason": "플라스틱 건전지 장난감, 상태 양호"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0081_front.png",
+    "ground_truth": {
+      "toy_type": "변신 로봇",
+      "battery": "비건전지",
+      "size": "큼",
+      "material": "플라스틱",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": true,
+      "donation_reason": "플라스틱 비건전지 장난감, 상태 양호"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0082_front.png",
+    "ground_truth": {
+      "toy_type": "블록",
+      "battery": "비건전지",
+      "size": "큼",
+      "material": "플라스틱",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": true,
+      "donation_reason": "플라스틱 비건전지 장난감, 상태 양호"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0083_front.png",
+    "ground_truth": {
+      "toy_type": "인형",
+      "battery": "비건전지",
+      "size": "중간",
+      "material": "섬유",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": false,
+      "donation_reason": "천/섬유 소재는 위생상 기부 불가"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0084_front.png",
+    "ground_truth": {
+      "toy_type": "공",
+      "battery": "비건전지",
+      "size": "중간",
+      "material": "고무",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": true,
+      "donation_reason": "고무 비건전지 장난감, 상태 양호"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0085_front.png",
+    "ground_truth": {
+      "toy_type": "피규어",
+      "battery": "비건전지",
+      "size": "작음",
+      "material": "플라스틱",
+      "damage": "경미한 파손",
+      "soil": "약간 더러움",
+      "donation_possible": false,
+      "donation_reason": "경미한 파손으로 수리 필요"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0086_front.png",
+    "ground_truth": {
+      "toy_type": "자동차 장난감",
+      "battery": "건전지",
+      "size": "중간",
+      "material": "플라스틱",
+      "damage": "심각한 파손",
+      "soil": "깨끗",
+      "donation_possible": false,
+      "donation_reason": "심각한 파손으로 완제품 기부 불가"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0087_front.png",
+    "ground_truth": {
+      "toy_type": "나무 장난감",
+      "battery": "비건전지",
+      "size": "중간",
+      "material": "나무",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": false,
+      "donation_reason": "나무 소재는 안전상 기부 불가"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0088_front.png",
+    "ground_truth": {
+      "toy_type": "아동 도서",
+      "battery": "비건전지",
+      "size": "중간",
+      "material": "종이",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": false,
+      "donation_reason": "아동 도서은 기부 불가 종류"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0089_front.png",
+    "ground_truth": {
+      "toy_type": "보행기",
+      "battery": "비건전지",
+      "size": "큼",
+      "material": "플라스틱",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": false,
+      "donation_reason": "보행기은 기부 불가 종류"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0090_front.png",
+    "ground_truth": {
+      "toy_type": "자동차 장난감",
+      "battery": "건전지",
+      "size": "중간",
+      "material": "플라스틱",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": true,
+      "donation_reason": "플라스틱 건전지 장난감, 상태 양호"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0091_front.png",
+    "ground_truth": {
+      "toy_type": "변신 로봇",
+      "battery": "비건전지",
+      "size": "큼",
+      "material": "플라스틱",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": true,
+      "donation_reason": "플라스틱 비건전지 장난감, 상태 양호"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0092_front.png",
+    "ground_truth": {
+      "toy_type": "블록",
+      "battery": "비건전지",
+      "size": "큼",
+      "material": "플라스틱",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": true,
+      "donation_reason": "플라스틱 비건전지 장난감, 상태 양호"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0093_front.png",
+    "ground_truth": {
+      "toy_type": "인형",
+      "battery": "비건전지",
+      "size": "중간",
+      "material": "섬유",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": false,
+      "donation_reason": "천/섬유 소재는 위생상 기부 불가"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0094_front.png",
+    "ground_truth": {
+      "toy_type": "공",
+      "battery": "비건전지",
+      "size": "중간",
+      "material": "고무",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": true,
+      "donation_reason": "고무 비건전지 장난감, 상태 양호"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0095_front.png",
+    "ground_truth": {
+      "toy_type": "피규어",
+      "battery": "비건전지",
+      "size": "작음",
+      "material": "플라스틱",
+      "damage": "경미한 파손",
+      "soil": "약간 더러움",
+      "donation_possible": false,
+      "donation_reason": "경미한 파손으로 수리 필요"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0096_front.png",
+    "ground_truth": {
+      "toy_type": "자동차 장난감",
+      "battery": "건전지",
+      "size": "중간",
+      "material": "플라스틱",
+      "damage": "심각한 파손",
+      "soil": "깨끗",
+      "donation_possible": false,
+      "donation_reason": "심각한 파손으로 완제품 기부 불가"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0097_front.png",
+    "ground_truth": {
+      "toy_type": "나무 장난감",
+      "battery": "비건전지",
+      "size": "중간",
+      "material": "나무",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": false,
+      "donation_reason": "나무 소재는 안전상 기부 불가"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0098_front.png",
+    "ground_truth": {
+      "toy_type": "아동 도서",
+      "battery": "비건전지",
+      "size": "중간",
+      "material": "종이",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": false,
+      "donation_reason": "아동 도서은 기부 불가 종류"
+    }
+  },
+  {
+    "image_path": "evaluation/datasets/images/Img_0099_front.png",
+    "ground_truth": {
+      "toy_type": "보행기",
+      "battery": "비건전지",
+      "size": "큼",
+      "material": "플라스틱",
+      "damage": "없음",
+      "soil": "깨끗",
+      "donation_possible": false,
+      "donation_reason": "보행기은 기부 불가 종류"
+    }
+  }
+]

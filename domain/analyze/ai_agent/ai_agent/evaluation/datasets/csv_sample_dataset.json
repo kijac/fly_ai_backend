@@ -1,0 +1,56 @@
+[
+  {
+    "image_path": "datasets/images/img_0000_front.JPG",
+    "ground_truth": {
+      "toy_type": "피규어",
+      "material": "플라스틱, 천",
+      "donation_possible": false,
+      "reason": "천 소재가 포함되어 있음"
+    }
+  },
+  {
+    "image_path": "datasets/images/img_0001_front.JPG",
+    "ground_truth": {
+      "toy_type": "건전지 장난감 (사운드북 포함)",
+      "material": "플라스틱",
+      "donation_possible": true,
+      "reason": ""
+    }
+  },
+  {
+    "image_path": "datasets/images/img_0002_front.JPG",
+    "ground_truth": {
+      "toy_type": "피규어",
+      "material": "플라스틱",
+      "donation_possible": true,
+      "reason": ""
+    }
+  },
+  {
+    "image_path": "datasets/images/img_0003_front.png",
+    "ground_truth": {
+      "toy_type": "변신 로봇",
+      "material": "플라스틱",
+      "donation_possible": true,
+      "reason": ""
+    }
+  },
+  {
+    "image_path": "datasets/images/img_0004_front.png",
+    "ground_truth": {
+      "toy_type": "자동차 장난감",
+      "material": "플라스틱",
+      "donation_possible": true,
+      "reason": ""
+    }
+  },
+  {
+    "image_path": "datasets/images/img_0012_front.png",
+    "ground_truth": {
+      "toy_type": "나무 장난감",
+      "material": "나무",
+      "donation_possible": false,
+      "reason": "나무 소재"
+    }
+  }
+]

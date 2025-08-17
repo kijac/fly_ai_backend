@@ -31,5 +31,18 @@ Thumbs.db
 test.ipynb
 reset_toy_stock.py
 
+# AI 모델 파일들 (용량이 크므로 제외)
+domain/analyze/ai_agent/toys_index/
+domain/analyze/ai_agent/used/
+domain/analyze/ai_agent/products_info.csv
+domain/analyze/ai_agent/old_toy/
+domain/analyze/ai_agent/venv/
+
+# AI 모델 캐시 및 빌드 파일
+domain/analyze/ai_agent/__pycache__/
+domain/analyze/ai_agent/*.egg-info/
+domain/analyze/ai_agent/build/
+domain/analyze/ai_agent/dist/
+
 # ...existing code...
 alembic.ini

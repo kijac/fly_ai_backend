@@ -1,0 +1,13 @@
+{
+  "image_path": "evaluation/datasets/images/Img_0000_front.png",
+  "ground_truth": {
+    "toy_type": "자동차 장난감",
+    "battery": "건전지",
+    "size": "중간",
+    "material": "플라스틱",
+    "damage": "없음",
+    "soil": "깨끗",
+    "donation_possible": true,
+    "donation_reason": "플라스틱 건전지 장난감, 상태 양호"
+  }
+}

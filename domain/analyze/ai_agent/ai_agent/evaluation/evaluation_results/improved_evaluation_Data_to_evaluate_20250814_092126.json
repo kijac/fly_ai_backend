@@ -1,0 +1,5510 @@
+{
+  "evaluation_summary": {
+    "timestamp": "20250814_092126",
+    "total_images": 100,
+    "overall_accuracy": 61.0,
+    "csv_source": "Data_to_evaluate.csv"
+  },
+  "detailed_results": [
+    {
+      "img_no": "0000",
+      "image_file": "img_0000_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "피규어",
+        "건전지 여부": "비건전지",
+        "재료": "플라스틱",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "피규어/모형류는 세밀한 파손 여부 확인 필요 | 비건전지 장난감은 기계적 동작 확인 | 플라스틱 소재는 균열이나 변형 확인 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 4개 각도 모두 플라스틱 재질로 보이며, 다른 재질의 혼합은 확인되지 않습니다.",
+        "크기": "중간",
+        "기부 가능 여부": "가능",
+        "기부 불가 사유": "플라스틱 비건전지 장난감, 상태 양호",
+        "수리/분해": "수리 불필요(완제품)",
+        "토큰 사용량": {
+          "type_agent": 1460,
+          "material_agent": 2020,
+          "damage_agent": 2058,
+          "soil_agent": 1368,
+          "total": 6906
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "있음",
+          "correct": true
+        },
+        "material": {
+          "predicted": "플라스틱",
+          "actual": "플라스틱, 천",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "피규어",
+          "actual": "피규어",
+          "correct": true
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "피규어",
+        "material": "플라스틱, 천",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": "천 소재가 포함되어 있음."
+      }
+    },
+    {
+      "img_no": "0001",
+      "image_file": "img_0001_front",
+      "ground_truth": "가능",
+      "ai_prediction": "가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "피규어",
+        "건전지 여부": "불명",
+        "재료": "플라스틱",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "피규어/모형류는 세밀한 파손 여부 확인 필요 | 플라스틱 소재는 균열이나 변형 확인 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 4개 각도 모두에서 장난감의 주요 재질은 플라스틱으로 보입니다. 투명한 헬멧 부분도 플라스틱으로 추정됩니다. 금속, 나무, 섬유, 실리콘, 유리, 고무 재질은 관찰되지 않았습니다.",
+        "크기": "중간",
+        "기부 가능 여부": "가능",
+        "기부 불가 사유": "플라스틱 비건전지 장난감, 상태 양호",
+        "수리/분해": "수리 불필요(완제품)",
+        "토큰 사용량": {
+          "type_agent": 1458,
+          "material_agent": 2057,
+          "damage_agent": 2052,
+          "soil_agent": 1368,
+          "total": 6935
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "있음",
+          "correct": true
+        },
+        "material": {
+          "predicted": "플라스틱",
+          "actual": "플라스틱",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "피규어",
+          "actual": "건전지 장난감 (사운드북 포함)",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "건전지 장난감 (사운드북 포함)",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0002",
+      "image_file": "img_0002_front",
+      "ground_truth": "가능",
+      "ai_prediction": "가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "피규어",
+        "건전지 여부": "비건전지",
+        "재료": "플라스틱,금속",
+        "파손": "없음",
+        "오염도": "보통",
+        "관찰사항": "피규어/모형류는 세밀한 파손 여부 확인 필요 | 비건전지 장난감은 기계적 동작 확인 | 혼합 소재는 각 재료별 상태 확인 필요 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 장난감의 본체는 플라스틱으로 보이며, 안장 부분의 버클은 금속 재질로 추정됩니다.",
+        "크기": "중간",
+        "기부 가능 여부": "가능",
+        "기부 불가 사유": "플라스틱 비건전지 장난감, 상태 양호",
+        "수리/분해": "수리 불필요(완제품)",
+        "토큰 사용량": {
+          "type_agent": 1460,
+          "material_agent": 2028,
+          "damage_agent": 2051,
+          "soil_agent": 1412,
+          "total": 6951
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "있음",
+          "correct": true
+        },
+        "material": {
+          "predicted": "플라스틱,금속",
+          "actual": "플라스틱",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "보통",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "피규어",
+          "actual": "피규어",
+          "correct": true
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "피규어",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0003",
+      "image_file": "img_0003_front",
+      "ground_truth": "가능",
+      "ai_prediction": "가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "자동차 장난감",
+        "건전지 여부": "불명",
+        "재료": "플라스틱,금속",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "자동차 장난감은 바퀴와 동작부위 상태 중요 | 혼합 소재는 각 재료별 상태 확인 필요 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 장난감의 본체는 플라스틱으로 보이며, 바퀴의 휠 부분은 금속 재질로 추정됩니다. 4개 각도 모두에서 플라스틱 본체와 금속 휠이 확인됩니다.",
+        "크기": "중간",
+        "기부 가능 여부": "가능",
+        "기부 불가 사유": "플라스틱 비건전지 장난감, 상태 양호",
+        "수리/분해": "수리 불필요(완제품)",
+        "토큰 사용량": {
+          "type_agent": 1459,
+          "material_agent": 2049,
+          "damage_agent": 2050,
+          "soil_agent": 1368,
+          "total": 6926
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "있음",
+          "correct": true
+        },
+        "material": {
+          "predicted": "플라스틱,금속",
+          "actual": "플라스틱",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "자동차 장난감",
+          "actual": "변신 로봇",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "변신 로봇",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0004",
+      "image_file": "img_0004_front",
+      "ground_truth": "가능",
+      "ai_prediction": "불가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "자동차 장난감",
+        "건전지 여부": "비건전지",
+        "재료": "플라스틱,고무",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "자동차 장난감은 바퀴와 동작부위 상태 중요 | 비건전지 장난감은 기계적 동작 확인 | 혼합 소재는 각 재료별 상태 확인 필요 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 장난감의 본체는 플라스틱으로 보이며, 바퀴는 고무 재질로 추정됩니다. 4개 각도 모두에서 플라스틱 본체와 고무 바퀴가 확인됩니다.",
+        "크기": "작음",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "실리콘/고무 소재는 재활용 불가능",
+        "수리/분해": "분해/부품 추출(업사이클)",
+        "토큰 사용량": {
+          "type_agent": 1461,
+          "material_agent": 2045,
+          "damage_agent": 2051,
+          "soil_agent": 1368,
+          "total": 6925
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "있음",
+          "correct": true
+        },
+        "material": {
+          "predicted": "플라스틱,고무",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "자동차 장난감",
+          "actual": "자동차 장난감",
+          "correct": true
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "자동차 장난감",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0005",
+      "image_file": "img_0005_front",
+      "ground_truth": "가능",
+      "ai_prediction": "가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "플라스틱",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "플라스틱 소재는 균열이나 변형 확인 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 4개 각도 모두에서 장난감 카메라의 본체, 렌즈, 버튼 등이 플라스틱으로 제작된 것으로 보입니다. 특별히 다른 재질의 부품이나 장식이 확인되지 않아 단일 소재로 판단됩니다.",
+        "크기": "작음",
+        "기부 가능 여부": "가능",
+        "기부 불가 사유": "플라스틱 비건전지 장난감, 상태 양호",
+        "수리/분해": "수리 불필요(완제품)",
+        "토큰 사용량": {
+          "type_agent": 1457,
+          "material_agent": 2046,
+          "damage_agent": 2051,
+          "soil_agent": 1368,
+          "total": 6922
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "있음",
+          "correct": true
+        },
+        "material": {
+          "predicted": "플라스틱",
+          "actual": "플라스틱",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "비건전지 장난감 (",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "비건전지 장난감 (",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0006",
+      "image_file": "img_0006_front",
+      "ground_truth": "가능",
+      "ai_prediction": "가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "건전지 장난감",
+        "건전지 여부": "건전지",
+        "재료": "플라스틱",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "건전지 장난감은 전자부품 상태 확인 필요 | 플라스틱 소재는 균열이나 변형 확인 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 4개 각도 모두에서 장난감의 본체, 머리, 날개, 발 등이 플라스틱으로 제작된 것으로 보입니다. 특별히 다른 재질의 부품은 확인되지 않습니다.",
+        "크기": "중간",
+        "기부 가능 여부": "가능",
+        "기부 불가 사유": "플라스틱 건전지 장난감, 상태 양호",
+        "수리/분해": "수리 불필요(완제품)",
+        "토큰 사용량": {
+          "type_agent": 1462,
+          "material_agent": 2039,
+          "damage_agent": 2067,
+          "soil_agent": 1368,
+          "total": 6936
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "있음",
+          "correct": true
+        },
+        "material": {
+          "predicted": "플라스틱",
+          "actual": "플라스틱",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "건전지 장난감",
+          "actual": "건전지 장난감 (사운드북 포함)",
+          "correct": true
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "건전지 장난감 (사운드북 포함)",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0007",
+      "image_file": "img_0007_front",
+      "ground_truth": "가능",
+      "ai_prediction": "불가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "자동차 장난감",
+        "건전지 여부": "비건전지",
+        "재료": "플라스틱,고무",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "자동차 장난감은 바퀴와 동작부위 상태 중요 | 비건전지 장난감은 기계적 동작 확인 | 혼합 소재는 각 재료별 상태 확인 필요 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 장난감의 대부분은 플라스틱으로 구성되어 있으나, 바퀴는 고무 재질로 보입니다.",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "실리콘/고무 소재는 재활용 불가능",
+        "수리/분해": "분해/부품 추출(업사이클)",
+        "토큰 사용량": {
+          "type_agent": 1461,
+          "material_agent": 2024,
+          "damage_agent": 2050,
+          "soil_agent": 1368,
+          "total": 6903
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "있음",
+          "correct": true
+        },
+        "material": {
+          "predicted": "플라스틱,고무",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "자동차 장난감",
+          "actual": "자동차 장난감",
+          "correct": true
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "자동차 장난감",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0008",
+      "image_file": "img_0008_front",
+      "ground_truth": "가능",
+      "ai_prediction": "가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "플라스틱",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "플라스틱 소재는 균열이나 변형 확인 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 4개 각도 모두에서 장난감 토스터기의 본체와 부품들이 플라스틱으로 제작된 것으로 보입니다. 특별히 다른 재질의 요소는 확인되지 않습니다.",
+        "크기": "작음",
+        "기부 가능 여부": "가능",
+        "기부 불가 사유": "플라스틱 비건전지 장난감, 상태 양호",
+        "수리/분해": "수리 불필요(완제품)",
+        "토큰 사용량": {
+          "type_agent": 1457,
+          "material_agent": 2035,
+          "damage_agent": 2053,
+          "soil_agent": 1368,
+          "total": 6913
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "있음",
+          "correct": true
+        },
+        "material": {
+          "predicted": "플라스틱",
+          "actual": "플라스틱",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "비건전지 장난감 (",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "비건전지 장난감 (",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0009",
+      "image_file": "img_0009_front",
+      "ground_truth": "가능",
+      "ai_prediction": "가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "건전지 장난감",
+        "건전지 여부": "건전지",
+        "재료": "플라스틱",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "건전지 장난감은 전자부품 상태 확인 필요 | 플라스틱 소재는 균열이나 변형 확인 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 4개 각도 모두에서 장난감 전체가 균일한 색상과 질감의 플라스틱으로 구성되어 있음을 확인할 수 있습니다. 금속, 섬유, 실리콘, 유리, 고무 등의 다른 재료는 보이지 않습니다.",
+        "크기": "작음",
+        "기부 가능 여부": "가능",
+        "기부 불가 사유": "플라스틱 건전지 장난감, 상태 양호",
+        "수리/분해": "수리 불필요(완제품)",
+        "토큰 사용량": {
+          "type_agent": 1462,
+          "material_agent": 2050,
+          "damage_agent": 2063,
+          "soil_agent": 1368,
+          "total": 6943
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "있음",
+          "correct": true
+        },
+        "material": {
+          "predicted": "플라스틱",
+          "actual": "플라스틱",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "건전지 장난감",
+          "actual": "건전지 장난감 (사운드북 포함)",
+          "correct": true
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "건전지 장난감 (사운드북 포함)",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0010",
+      "image_file": "img_0010_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "불가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "탈것",
+        "건전지 여부": "비건전지",
+        "재료": "플라스틱,고무",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "비건전지 장난감은 기계적 동작 확인 | 혼합 소재는 각 재료별 상태 확인 필요 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 장난감 본체는 녹색 플라스틱으로 보이며, 바퀴 부분은 빨간색 고무 재질로 보입니다. 끈은 섬유 재질로 보입니다.",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "실리콘/고무 소재는 재활용 불가능",
+        "수리/분해": "분해/부품 추출(업사이클)",
+        "토큰 사용량": {
+          "type_agent": 1459,
+          "material_agent": 2039,
+          "damage_agent": 2053,
+          "soil_agent": 1368,
+          "total": 6919
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "판단 불가",
+          "correct": false
+        },
+        "material": {
+          "predicted": "플라스틱,고무",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "탈것",
+          "actual": "비건전지 장난감 (",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "비건전지 장난감 (",
+        "material": "플라스틱",
+        "parts_complete": "판단 불가",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": "장난감 용도 불분명"
+      }
+    },
+    {
+      "img_no": "0011",
+      "image_file": "img_0011_front",
+      "ground_truth": "가능",
+      "ai_prediction": "가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "피규어",
+        "건전지 여부": "비건전지",
+        "재료": "플라스틱",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "피규어/모형류는 세밀한 파손 여부 확인 필요 | 비건전지 장난감은 기계적 동작 확인 | 플라스틱 소재는 균열이나 변형 확인 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 4개 각도 모두에서 장난감의 전체적인 형태와 질감이 플라스틱으로 보입니다. 특별한 금속, 천, 실리콘, 유리 등의 다른 재질은 관찰되지 않습니다.",
+        "크기": "중간",
+        "기부 가능 여부": "가능",
+        "기부 불가 사유": "플라스틱 비건전지 장난감, 상태 양호",
+        "수리/분해": "수리 불필요(완제품)",
+        "토큰 사용량": {
+          "type_agent": 1460,
+          "material_agent": 2040,
+          "damage_agent": 2054,
+          "soil_agent": 1368,
+          "total": 6922
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "있음",
+          "correct": true
+        },
+        "material": {
+          "predicted": "플라스틱",
+          "actual": "플라스틱",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "피규어",
+          "actual": "피규어",
+          "correct": true
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "피규어",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0012",
+      "image_file": "img_0012_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "불가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "나무 장난감",
+        "건전지 여부": "비건전지",
+        "재료": "나무",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "비건전지 장난감은 기계적 동작 확인 | 나무 소재는 균열이나 부식 상태 확인 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 4개 각도 모두 나무 재질로 보이며, 나뭇결이 선명하게 관찰됩니다. 다른 재질의 혼합은 보이지 않습니다.",
+        "크기": "작음",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "나무 소재는 안전상 기부 불가",
+        "수리/분해": "분해/부품 추출(업사이클)",
+        "토큰 사용량": {
+          "type_agent": 1461,
+          "material_agent": 2027,
+          "damage_agent": 2082,
+          "soil_agent": 1368,
+          "total": 6938
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "있음",
+          "correct": true
+        },
+        "material": {
+          "predicted": "나무",
+          "actual": "나무",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "나무 장난감",
+          "actual": "나무 장난감",
+          "correct": true
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "나무 장난감",
+        "material": "나무",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": "나무 소재"
+      }
+    },
+    {
+      "img_no": "0013",
+      "image_file": "img_0013_front",
+      "ground_truth": "가능",
+      "ai_prediction": "가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "블록",
+        "건전지 여부": "비건전지",
+        "재료": "플라스틱",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "블록류는 결합부위 마모 상태 확인 | 비건전지 장난감은 기계적 동작 확인 | 플라스틱 소재는 균열이나 변형 확인 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 4개 각도 모두에서 보이는 큐브의 표면은 균일한 색상과 질감을 가진 플라스틱으로 보입니다. 특별한 금속, 천, 실리콘, 유리 또는 고무 부품은 관찰되지 않았습니다.",
+        "크기": "작음",
+        "기부 가능 여부": "가능",
+        "기부 불가 사유": "플라스틱 비건전지 장난감, 상태 양호",
+        "수리/분해": "수리 불필요(완제품)",
+        "토큰 사용량": {
+          "type_agent": 1459,
+          "material_agent": 2049,
+          "damage_agent": 2051,
+          "soil_agent": 1368,
+          "total": 6927
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "있음",
+          "correct": true
+        },
+        "material": {
+          "predicted": "플라스틱",
+          "actual": "플라스틱",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "블록",
+          "actual": "비건전지 장난감 (",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "비건전지 장난감 (",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0014",
+      "image_file": "img_0014_front",
+      "ground_truth": "가능",
+      "ai_prediction": "가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "건전지 장난감",
+        "건전지 여부": "건전지",
+        "재료": "플라스틱",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "건전지 장난감은 전자부품 상태 확인 필요 | 플라스틱 소재는 균열이나 변형 확인 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 4개 각도 모두에서 장난감 본체가 플라스틱으로 구성된 것으로 보이며, 다른 재질의 혼합은 관찰되지 않습니다.",
+        "크기": "작음",
+        "기부 가능 여부": "가능",
+        "기부 불가 사유": "플라스틱 건전지 장난감, 상태 양호",
+        "수리/분해": "수리 불필요(완제품)",
+        "토큰 사용량": {
+          "type_agent": 1462,
+          "material_agent": 2028,
+          "damage_agent": 2051,
+          "soil_agent": 1368,
+          "total": 6909
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "있음",
+          "correct": true
+        },
+        "material": {
+          "predicted": "플라스틱",
+          "actual": "플라스틱",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "보통",
+          "correct": true
+        },
+        "type": {
+          "predicted": "건전지 장난감",
+          "actual": "건전지 장난감 (사운드북 포함)",
+          "correct": true
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "건전지 장난감 (사운드북 포함)",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "보통",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0015",
+      "image_file": "img_0015_front",
+      "ground_truth": "가능",
+      "ai_prediction": "가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "건전지",
+        "재료": "플라스틱",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "건전지 장난감은 전자부품 상태 확인 필요 | 플라스틱 소재는 균열이나 변형 확인 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 4개 각도 모두에서 장난감의 주요 구성 요소가 플라스틱으로 보이며, 다른 재질의 혼합은 관찰되지 않습니다.",
+        "크기": "중간",
+        "기부 가능 여부": "가능",
+        "기부 불가 사유": "플라스틱 건전지 장난감, 상태 양호",
+        "수리/분해": "수리 불필요(완제품)",
+        "토큰 사용량": {
+          "type_agent": 1458,
+          "material_agent": 2028,
+          "damage_agent": 2051,
+          "soil_agent": 1368,
+          "total": 6905
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "있음",
+          "correct": true
+        },
+        "material": {
+          "predicted": "플라스틱",
+          "actual": "플라스틱",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "건전지 장난감 (사운드북 포함)",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "건전지 장난감 (사운드북 포함)",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0016",
+      "image_file": "img_0016_front",
+      "ground_truth": "가능",
+      "ai_prediction": "가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "건전지 장난감",
+        "건전지 여부": "건전지",
+        "재료": "플라스틱",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "건전지 장난감은 전자부품 상태 확인 필요 | 플라스틱 소재는 균열이나 변형 확인 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 모든 각도에서 관찰했을 때 장난감 전체가 플라스틱으로 구성된 것으로 보입니다. 특별한 금속, 나무, 섬유, 실리콘, 유리 또는 고무 부품은 확인되지 않았습니다.",
+        "크기": "중간",
+        "기부 가능 여부": "가능",
+        "기부 불가 사유": "플라스틱 건전지 장난감, 상태 양호",
+        "수리/분해": "수리 불필요(완제품)",
+        "토큰 사용량": {
+          "type_agent": 1462,
+          "material_agent": 2045,
+          "damage_agent": 2053,
+          "soil_agent": 1368,
+          "total": 6928
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "있음",
+          "correct": true
+        },
+        "material": {
+          "predicted": "플라스틱",
+          "actual": "플라스틱",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "건전지 장난감",
+          "actual": "건전지 장난감 (사운드북 포함)",
+          "correct": true
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "건전지 장난감 (사운드북 포함)",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0017",
+      "image_file": "img_0017_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "불가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "나무 장난감",
+        "건전지 여부": "비건전지",
+        "재료": "나무",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "비건전지 장난감은 기계적 동작 확인 | 나무 소재는 균열이나 부식 상태 확인 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 4개 각도 모두 나무 재질로 보이며, 나뭇결이 선명하게 관찰됩니다. 다른 재질의 혼합은 보이지 않습니다.",
+        "크기": "작음",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "나무 소재는 안전상 기부 불가",
+        "수리/분해": "분해/부품 추출(업사이클)",
+        "토큰 사용량": {
+          "type_agent": 1461,
+          "material_agent": 2027,
+          "damage_agent": 2051,
+          "soil_agent": 1368,
+          "total": 6907
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "있음",
+          "correct": true
+        },
+        "material": {
+          "predicted": "나무",
+          "actual": "나무",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "나무 장난감",
+          "actual": "나무 장난감",
+          "correct": true
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "나무 장난감",
+        "material": "나무",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": "나무 소재"
+      }
+    },
+    {
+      "img_no": "0018",
+      "image_file": "img_0018_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "불가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "자동차 장난감",
+        "건전지 여부": "비건전지",
+        "재료": "나무",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "자동차 장난감은 바퀴와 동작부위 상태 중요 | 비건전지 장난감은 기계적 동작 확인 | 나무 소재는 균열이나 부식 상태 확인 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 4개 각도 모두에서 나무 재질의 본체와 바퀴가 확인되며, 다른 재질의 혼합은 보이지 않습니다.",
+        "크기": "작음",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "나무 소재는 안전상 기부 불가",
+        "수리/분해": "분해/부품 추출(업사이클)",
+        "토큰 사용량": {
+          "type_agent": 1461,
+          "material_agent": 2023,
+          "damage_agent": 2053,
+          "soil_agent": 1368,
+          "total": 6905
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "있음",
+          "correct": true
+        },
+        "material": {
+          "predicted": "나무",
+          "actual": "나무",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "자동차 장난감",
+          "actual": "나무 장난감",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "나무 장난감",
+        "material": "나무",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": "나무 소재"
+      }
+    },
+    {
+      "img_no": "0019",
+      "image_file": "img_0019_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "불가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "자동차 장난감",
+        "건전지 여부": "불명",
+        "재료": "플라스틱,고무",
+        "파손": "미세한 파손",
+        "오염도": "보통",
+        "관찰사항": "자동차 장난감은 바퀴와 동작부위 상태 중요 | 혼합 소재는 각 재료별 상태 확인 필요 | 경미한 파손 - 수리 후 기부 가능 | 오염 없음 - 기부 적합 | 재료 분석: 장난감 탱크의 본체는 플라스틱으로 보이며, 바퀴 부분은 검은색 고무 재질로 보입니다. 따라서 혼합 소재로 분류됩니다.",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "실리콘/고무 소재는 재활용 불가능",
+        "수리/분해": "분해/부품 추출(업사이클)",
+        "토큰 사용량": {
+          "type_agent": 1459,
+          "material_agent": 2036,
+          "damage_agent": 2056,
+          "soil_agent": 1392,
+          "total": 6943
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "미세한 파손",
+          "actual": "있음",
+          "correct": false
+        },
+        "material": {
+          "predicted": "플라스틱,고무",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "보통",
+          "actual": "보통",
+          "correct": true
+        },
+        "type": {
+          "predicted": "자동차 장난감",
+          "actual": "자동차 장난감",
+          "correct": true
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "자동차 장난감",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "보통",
+        "recycling_reason": "파손"
+      }
+    },
+    {
+      "img_no": "0020",
+      "image_file": "img_0020_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "불가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "탈것",
+        "건전지 여부": "비건전지",
+        "재료": "플라스틱,섬유",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "비건전지 장난감은 기계적 동작 확인 | 혼합 소재는 각 재료별 상태 확인 필요 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 장난감 본체는 부드러운 천 소재로 보이며, 바퀴는 플라스틱 소재로 확인됩니다. 또한, 귀 부분에 다양한 패턴의 천이 사용되었고, 장식용 리본도 섬유 소재입니다.",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "천/섬유 소재는 위생상 기부 불가",
+        "수리/분해": "분해/부품 추출(업사이클)",
+        "토큰 사용량": {
+          "type_agent": 1459,
+          "material_agent": 2050,
+          "damage_agent": 2063,
+          "soil_agent": 1368,
+          "total": 6940
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "있음",
+          "correct": true
+        },
+        "material": {
+          "predicted": "플라스틱,섬유",
+          "actual": "나무, 천",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "보통",
+          "correct": true
+        },
+        "type": {
+          "predicted": "탈것",
+          "actual": "인형",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "인형",
+        "material": "나무, 천",
+        "parts_complete": "있음",
+        "soil_level": "보통",
+        "recycling_reason": "천, 나무 소재"
+      }
+    },
+    {
+      "img_no": "0021",
+      "image_file": "img_0021_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "불가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "피규어",
+        "건전지 여부": "비건전지",
+        "재료": "플라스틱",
+        "파손": "부품 누락",
+        "오염도": "보통",
+        "관찰사항": "피규어/모형류는 세밀한 파손 여부 확인 필요 | 비건전지 장난감은 기계적 동작 확인 | 플라스틱 소재는 균열이나 변형 확인 | 부품 누락 - 부품 보완 후 기부 가능 | 약간의 사용 흔적 - 세척 후 기부 가능 | 재료 분석: 4개 각도 모두에서 장난감의 본체가 플라스틱으로 제작된 것으로 보이며, 특별한 다른 재질의 혼합은 관찰되지 않습니다. 표면 질감과 색상이 균일합니다.",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1460,
+          "material_agent": 2042,
+          "damage_agent": 2076,
+          "soil_agent": 1381,
+          "total": 6959
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "부품 누락",
+          "actual": "일부 없음",
+          "correct": false
+        },
+        "material": {
+          "predicted": "플라스틱",
+          "actual": "플라스틱, 실리콘",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "보통",
+          "actual": "더러움 (재활용 불가)",
+          "correct": false
+        },
+        "type": {
+          "predicted": "피규어",
+          "actual": "피규어",
+          "correct": true
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "피규어",
+        "material": "플라스틱, 실리콘",
+        "parts_complete": "일부 없음",
+        "soil_level": "더러움 (재활용 불가)",
+        "recycling_reason": "소재 혼합(완전 분해 가능성 낮음), 파손"
+      }
+    },
+    {
+      "img_no": "0022",
+      "image_file": "img_0022_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "불가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "인형",
+        "건전지 여부": "비건전지",
+        "재료": "섬유/천",
+        "파손": "미세한 파손",
+        "오염도": "보통",
+        "관찰사항": "비건전지 장난감은 기계적 동작 확인 | 경미한 파손 - 수리 후 기부 가능 | 약간의 사용 흔적 - 세척 후 기부 가능 | 재료 분석: 4개 각도 모두 부드러운 천 재질로 구성된 봉제 인형으로 확인됩니다. 특별한 금속, 플라스틱, 고무 등의 부품은 보이지 않습니다.",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "천/섬유 소재는 위생상 기부 불가",
+        "수리/분해": "분해/부품 추출(업사이클)",
+        "토큰 사용량": {
+          "type_agent": 1459,
+          "material_agent": 2038,
+          "damage_agent": 2052,
+          "soil_agent": 1404,
+          "total": 6953
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "미세한 파손",
+          "actual": "있음",
+          "correct": false
+        },
+        "material": {
+          "predicted": "섬유/천",
+          "actual": "천",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "보통",
+          "actual": "보통",
+          "correct": true
+        },
+        "type": {
+          "predicted": "인형",
+          "actual": "인형",
+          "correct": true
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "인형",
+        "material": "천",
+        "parts_complete": "있음",
+        "soil_level": "보통",
+        "recycling_reason": "천 소재"
+      }
+    },
+    {
+      "img_no": "0023",
+      "image_file": "img_0023_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "불가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "자동차 장난감",
+        "건전지 여부": "불명",
+        "재료": "플라스틱,고무",
+        "파손": "없음",
+        "오염도": "보통",
+        "관찰사항": "자동차 장난감은 바퀴와 동작부위 상태 중요 | 혼합 소재는 각 재료별 상태 확인 필요 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 차량 본체는 플라스틱으로 보이며, 바퀴는 고무 재질로 추정됩니다. 4개 각도 모두에서 플라스틱 본체와 고무 바퀴가 확인됩니다.",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "실리콘/고무 소재는 재활용 불가능",
+        "수리/분해": "분해/부품 추출(업사이클)",
+        "토큰 사용량": {
+          "type_agent": 1459,
+          "material_agent": 2043,
+          "damage_agent": 2051,
+          "soil_agent": 1391,
+          "total": 6944
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "있음",
+          "correct": true
+        },
+        "material": {
+          "predicted": "플라스틱,고무",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "보통",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "자동차 장난감",
+          "actual": "자동차 장난감",
+          "correct": true
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "자동차 장난감",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": "오른쪽 앞바퀴 파손"
+      }
+    },
+    {
+      "img_no": "0024",
+      "image_file": "img_0024_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "비건전지",
+        "재료": "플라스틱",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "비건전지 장난감은 기계적 동작 확인 | 플라스틱 소재는 균열이나 변형 확인 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 4개 각도 모두에서 장난감 전체가 균일한 파란색 플라스틱으로 구성되어 있으며, 다른 재질의 부품은 보이지 않습니다. 키 부분도 플라스틱으로 보입니다.",
+        "크기": "중간",
+        "기부 가능 여부": "가능",
+        "기부 불가 사유": "플라스틱 비건전지 장난감, 상태 양호",
+        "수리/분해": "수리 불필요(완제품)",
+        "토큰 사용량": {
+          "type_agent": 1459,
+          "material_agent": 2041,
+          "damage_agent": 2069,
+          "soil_agent": 1368,
+          "total": 6937
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "일부 없음",
+          "correct": false
+        },
+        "material": {
+          "predicted": "플라스틱",
+          "actual": "플라스틱",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "더러움 (재활용 불가)",
+          "correct": false
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "건전지 장난감 (사운드북 포함)",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "건전지 장난감 (사운드북 포함)",
+        "material": "플라스틱",
+        "parts_complete": "일부 없음",
+        "soil_level": "더러움 (재활용 불가)",
+        "recycling_reason": "대부분 부품이 없음"
+      }
+    },
+    {
+      "img_no": "0025",
+      "image_file": "img_0025_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "불가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "비건전지",
+        "재료": "실리콘",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "비건전지 장난감은 기계적 동작 확인 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 4개 각도 모두 부드럽고 탄력 있는 재질로 보이며, 실리콘 특유의 매트한 표면과 색상이 확인됩니다. 다른 재질의 혼합은 관찰되지 않습니다.",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "실리콘/고무 소재는 재활용 불가능",
+        "수리/분해": "분해/부품 추출(업사이클)",
+        "토큰 사용량": {
+          "type_agent": 1459,
+          "material_agent": 2042,
+          "damage_agent": 2073,
+          "soil_agent": 1368,
+          "total": 6942
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "있음",
+          "correct": true
+        },
+        "material": {
+          "predicted": "실리콘",
+          "actual": "실리콘",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "비건전지 장난감 (",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "비건전지 장난감 (",
+        "material": "실리콘",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": "실리콘 소재"
+      }
+    },
+    {
+      "img_no": "0026",
+      "image_file": "img_0026_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "건전지 장난감",
+        "건전지 여부": "건전지",
+        "재료": "플라스틱",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "건전지 장난감은 전자부품 상태 확인 필요 | 플라스틱 소재는 균열이나 변형 확인 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 장난감 전체가 플라스틱으로 구성되어 있으며, 다른 재질의 부품은 보이지 않습니다. 키보드, 드럼 본체, 심벌즈 등 모든 부분이 플라스틱으로 사출된 것으로 보입니다.",
+        "크기": "중간",
+        "기부 가능 여부": "가능",
+        "기부 불가 사유": "플라스틱 건전지 장난감, 상태 양호",
+        "수리/분해": "수리 불필요(완제품)",
+        "토큰 사용량": {
+          "type_agent": 1462,
+          "material_agent": 2045,
+          "damage_agent": 2062,
+          "soil_agent": 1368,
+          "total": 6937
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "일부 없음",
+          "correct": false
+        },
+        "material": {
+          "predicted": "플라스틱",
+          "actual": "플라스틱",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "보통",
+          "correct": true
+        },
+        "type": {
+          "predicted": "건전지 장난감",
+          "actual": "건전지 장난감 (사운드북 포함)",
+          "correct": true
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "건전지 장난감 (사운드북 포함)",
+        "material": "플라스틱",
+        "parts_complete": "일부 없음",
+        "soil_level": "보통",
+        "recycling_reason": "드럼스틱과 드럼 없음"
+      }
+    },
+    {
+      "img_no": "0027",
+      "image_file": "img_0027_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "플라스틱",
+        "파손": "없음",
+        "오염도": "보통",
+        "관찰사항": "플라스틱 소재는 균열이나 변형 확인 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 4개 각도 모두에서 장난감의 주요 재질이 플라스틱으로 보입니다. 붉은색 지붕과 흰색 본체, 그리고 내부의 색상 구분된 문 모두 균일한 플라스틱 질감을 가지고 있습니다. 금속, 섬유, 실리콘, 유리, 고무 재질은 관찰되지 않습니다.",
+        "크기": "중간",
+        "기부 가능 여부": "가능",
+        "기부 불가 사유": "플라스틱 비건전지 장난감, 상태 양호",
+        "수리/분해": "수리 불필요(완제품)",
+        "토큰 사용량": {
+          "type_agent": 1457,
+          "material_agent": 2070,
+          "damage_agent": 2063,
+          "soil_agent": 1392,
+          "total": 6982
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "일부 없음",
+          "correct": false
+        },
+        "material": {
+          "predicted": "플라스틱",
+          "actual": "플라스틱",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "보통",
+          "actual": "보통",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "건전지 장난감 (사운드북 포함)",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "건전지 장난감 (사운드북 포함)",
+        "material": "플라스틱",
+        "parts_complete": "일부 없음",
+        "soil_level": "보통",
+        "recycling_reason": "4번째 문 부품 없음"
+      }
+    },
+    {
+      "img_no": "0028",
+      "image_file": "img_0028_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "비건전지",
+        "재료": "플라스틱",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "비건전지 장난감은 기계적 동작 확인 | 플라스틱 소재는 균열이나 변형 확인 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 4개 각도 모두에서 오렌지색 플라스틱으로만 구성된 것으로 보이며, 다른 재질의 혼합은 관찰되지 않습니다.",
+        "크기": "중간",
+        "기부 가능 여부": "가능",
+        "기부 불가 사유": "플라스틱 비건전지 장난감, 상태 양호",
+        "수리/분해": "수리 불필요(완제품)",
+        "토큰 사용량": {
+          "type_agent": 1459,
+          "material_agent": 2028,
+          "damage_agent": 2053,
+          "soil_agent": 1368,
+          "total": 6908
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "있음",
+          "correct": true
+        },
+        "material": {
+          "predicted": "플라스틱",
+          "actual": "플라스틱",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "보통",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "플라스틱으로만 된 장난감부품 (큰것)",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "플라스틱으로만 된 장난감부품 (큰것)",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "보통",
+        "recycling_reason": "스크래치 많음"
+      }
+    },
+    {
+      "img_no": "0029",
+      "image_file": "img_0029_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "불가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "건전지 장난감",
+        "건전지 여부": "건전지",
+        "재료": "플라스틱,금속",
+        "파손": "심각한 파손",
+        "오염도": "더러움",
+        "관찰사항": "건전지 장난감은 전자부품 상태 확인 필요 | 혼합 소재는 각 재료별 상태 확인 필요 | 부품 누락 - 부품 보완 후 기부 가능 | 심한 오염 - 위생상 기부 불가 | 재료 분석: 장난감의 주요 본체는 플라스틱으로 보이며, 내부에는 금속 부품(전자 회로 기판, 스피커 부품 등)이 포함되어 있습니다. 또한, 일부 부품에서 금속 재질의 나사나 축이 보일 가능성이 있습니다.",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "심각한 파손으로 완제품 기부 불가",
+        "수리/분해": "분해/부품 추출(업사이클)",
+        "토큰 사용량": {
+          "type_agent": 1462,
+          "material_agent": 2060,
+          "damage_agent": 2059,
+          "soil_agent": 1414,
+          "total": 6995
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "심각한 파손",
+          "actual": "일부 없음",
+          "correct": false
+        },
+        "material": {
+          "predicted": "플라스틱,금속",
+          "actual": "플라스틱",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "더러움",
+          "actual": "더러움 (재활용 불가)",
+          "correct": false
+        },
+        "type": {
+          "predicted": "건전지 장난감",
+          "actual": "건전지 장난감 (사운드북 포함)",
+          "correct": true
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "건전지 장난감 (사운드북 포함)",
+        "material": "플라스틱",
+        "parts_complete": "일부 없음",
+        "soil_level": "더러움 (재활용 불가)",
+        "recycling_reason": "많이 부서짐"
+      }
+    },
+    {
+      "img_no": "0030",
+      "image_file": "img_0030_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "자동차 장난감",
+        "건전지 여부": "건전지",
+        "재료": "플라스틱,금속",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "자동차 장난감은 바퀴와 동작부위 상태 중요 | 건전지 장난감은 전자부품 상태 확인 필요 | 혼합 소재는 각 재료별 상태 확인 필요 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 차량 본체는 플라스틱으로 보이며, 바퀴 축 부분에 금속 재질이 사용되었을 가능성이 높습니다. 또한, 내부 부품이나 작동 메커니즘에 금속이 포함될 수 있습니다.",
+        "크기": "중간",
+        "기부 가능 여부": "가능",
+        "기부 불가 사유": "플라스틱 건전지 장난감, 상태 양호",
+        "수리/분해": "수리 불필요(완제품)",
+        "토큰 사용량": {
+          "type_agent": 1460,
+          "material_agent": 2048,
+          "damage_agent": 2051,
+          "soil_agent": 1368,
+          "total": 6927
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "있음",
+          "correct": true
+        },
+        "material": {
+          "predicted": "플라스틱,금속",
+          "actual": "플라스틱",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "보통",
+          "correct": true
+        },
+        "type": {
+          "predicted": "자동차 장난감",
+          "actual": "자동차 장난감",
+          "correct": true
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "자동차 장난감",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "보통",
+        "recycling_reason": "창문 스크래치 많음"
+      }
+    },
+    {
+      "img_no": "0031",
+      "image_file": "img_0031_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "건전지 장난감",
+        "건전지 여부": "건전지",
+        "재료": "플라스틱",
+        "파손": "없음",
+        "오염도": "보통",
+        "관찰사항": "건전지 장난감은 전자부품 상태 확인 필요 | 플라스틱 소재는 균열이나 변형 확인 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 4개 각도 모두에서 장난감의 주요 재질이 플라스틱으로 보이며, 다른 재질의 혼합은 관찰되지 않습니다. 표면 질감과 색상이 균일한 플라스틱의 특징을 보입니다.",
+        "크기": "중간",
+        "기부 가능 여부": "가능",
+        "기부 불가 사유": "플라스틱 건전지 장난감, 상태 양호",
+        "수리/분해": "수리 불필요(완제품)",
+        "토큰 사용량": {
+          "type_agent": 1462,
+          "material_agent": 2047,
+          "damage_agent": 2067,
+          "soil_agent": 1392,
+          "total": 6968
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "일부 없음",
+          "correct": false
+        },
+        "material": {
+          "predicted": "플라스틱",
+          "actual": "플라스틱",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "보통",
+          "actual": "보통",
+          "correct": true
+        },
+        "type": {
+          "predicted": "건전지 장난감",
+          "actual": "건전지 장난감 (사운드북 포함)",
+          "correct": true
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "건전지 장난감 (사운드북 포함)",
+        "material": "플라스틱",
+        "parts_complete": "일부 없음",
+        "soil_level": "보통",
+        "recycling_reason": "부서진 부분, 사용감 많음"
+      }
+    },
+    {
+      "img_no": "0032",
+      "image_file": "img_0032_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "불가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "자동차 장난감",
+        "건전지 여부": "불명",
+        "재료": "플라스틱,고무",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "자동차 장난감은 바퀴와 동작부위 상태 중요 | 혼합 소재는 각 재료별 상태 확인 필요 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 장난감 소방차의 본체는 플라스틱으로 보이며, 바퀴는 고무 재질로 추정됩니다. 4개 각도 모두에서 플라스틱 본체와 고무 바퀴가 확인됩니다.",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "실리콘/고무 소재는 재활용 불가능",
+        "수리/분해": "분해/부품 추출(업사이클)",
+        "토큰 사용량": {
+          "type_agent": 1459,
+          "material_agent": 2048,
+          "damage_agent": 2051,
+          "soil_agent": 1368,
+          "total": 6926
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "일부 없음",
+          "correct": false
+        },
+        "material": {
+          "predicted": "플라스틱,고무",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "보통",
+          "correct": true
+        },
+        "type": {
+          "predicted": "자동차 장난감",
+          "actual": "자동차 장난감",
+          "correct": true
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "자동차 장난감",
+        "material": "플라스틱",
+        "parts_complete": "일부 없음",
+        "soil_level": "보통",
+        "recycling_reason": "사용감 많음"
+      }
+    },
+    {
+      "img_no": "0033",
+      "image_file": "img_0033_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "비건전지",
+        "재료": "플라스틱",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "비건전지 장난감은 기계적 동작 확인 | 플라스틱 소재는 균열이나 변형 확인 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 4개 각도 모두 균일한 노란색 플라스틱 재질로 보이며, 다른 재질의 혼합은 관찰되지 않습니다.",
+        "크기": "중간",
+        "기부 가능 여부": "가능",
+        "기부 불가 사유": "플라스틱 비건전지 장난감, 상태 양호",
+        "수리/분해": "수리 불필요(완제품)",
+        "토큰 사용량": {
+          "type_agent": 1459,
+          "material_agent": 2027,
+          "damage_agent": 2053,
+          "soil_agent": 1368,
+          "total": 6907
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "있음",
+          "correct": true
+        },
+        "material": {
+          "predicted": "플라스틱",
+          "actual": "실리콘",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "비건전지 장난감 (",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "비건전지 장난감 (",
+        "material": "실리콘",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": "실리콘"
+      }
+    },
+    {
+      "img_no": "0034",
+      "image_file": "img_0034_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "건전지 장난감",
+        "건전지 여부": "건전지",
+        "재료": "플라스틱",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "건전지 장난감은 전자부품 상태 확인 필요 | 플라스틱 소재는 균열이나 변형 확인 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 4개 각도 모두에서 장난감의 본체가 녹색 플라스틱으로 만들어진 것으로 보이며, 건반 부분도 플라스틱으로 보입니다. 다른 재질의 부품은 확인되지 않습니다.",
+        "크기": "중간",
+        "기부 가능 여부": "가능",
+        "기부 불가 사유": "플라스틱 건전지 장난감, 상태 양호",
+        "수리/분해": "수리 불필요(완제품)",
+        "토큰 사용량": {
+          "type_agent": 1462,
+          "material_agent": 2041,
+          "damage_agent": 2054,
+          "soil_agent": 1368,
+          "total": 6925
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "일부 없음",
+          "correct": false
+        },
+        "material": {
+          "predicted": "플라스틱",
+          "actual": "플라스틱",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "더러움 (재활용 불가)",
+          "correct": false
+        },
+        "type": {
+          "predicted": "건전지 장난감",
+          "actual": "건전지 장난감 (사운드북 포함)",
+          "correct": true
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "건전지 장난감 (사운드북 포함)",
+        "material": "플라스틱",
+        "parts_complete": "일부 없음",
+        "soil_level": "더러움 (재활용 불가)",
+        "recycling_reason": "더러움"
+      }
+    },
+    {
+      "img_no": "0035",
+      "image_file": "img_0035_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "자동차 장난감",
+        "건전지 여부": "불명",
+        "재료": "플라스틱,금속",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "자동차 장난감은 바퀴와 동작부위 상태 중요 | 혼합 소재는 각 재료별 상태 확인 필요 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 장난감 본체는 플라스틱으로 보이나, 바퀴 축 등 일부 부품에서 금속 재질이 의심됩니다. 정확한 판단을 위해서는 추가적인 정보가 필요합니다.",
+        "크기": "중간",
+        "기부 가능 여부": "가능",
+        "기부 불가 사유": "플라스틱 비건전지 장난감, 상태 양호",
+        "수리/분해": "수리 불필요(완제품)",
+        "토큰 사용량": {
+          "type_agent": 1459,
+          "material_agent": 2040,
+          "damage_agent": 2050,
+          "soil_agent": 1368,
+          "total": 6917
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "일부 없음",
+          "correct": false
+        },
+        "material": {
+          "predicted": "플라스틱,금속",
+          "actual": "플라스틱",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "더러움 (재활용 불가)",
+          "correct": false
+        },
+        "type": {
+          "predicted": "자동차 장난감",
+          "actual": "자동차 장난감",
+          "correct": true
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "자동차 장난감",
+        "material": "플라스틱",
+        "parts_complete": "일부 없음",
+        "soil_level": "더러움 (재활용 불가)",
+        "recycling_reason": "파손이 많이 됨"
+      }
+    },
+    {
+      "img_no": "0036",
+      "image_file": "img_0036_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "블록",
+        "건전지 여부": "비건전지",
+        "재료": "플라스틱",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "블록류는 결합부위 마모 상태 확인 | 비건전지 장난감은 기계적 동작 확인 | 플라스틱 소재는 균열이나 변형 확인 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 4개 각도 모두에서 동일한 재질의 플라스틱으로 구성된 것으로 보이며, 색상만 다릅니다. 금속, 섬유, 실리콘, 유리, 고무 등의 다른 재질은 관찰되지 않습니다.",
+        "크기": "작음",
+        "기부 가능 여부": "가능",
+        "기부 불가 사유": "플라스틱 비건전지 장난감, 상태 양호",
+        "수리/분해": "수리 불필요(완제품)",
+        "토큰 사용량": {
+          "type_agent": 1459,
+          "material_agent": 2047,
+          "damage_agent": 2064,
+          "soil_agent": 1368,
+          "total": 6938
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "판단 불가",
+          "correct": false
+        },
+        "material": {
+          "predicted": "플라스틱",
+          "actual": "플라스틱",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "보통",
+          "correct": true
+        },
+        "type": {
+          "predicted": "블록",
+          "actual": "기타",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "기타",
+        "material": "플라스틱",
+        "parts_complete": "판단 불가",
+        "soil_level": "보통",
+        "recycling_reason": "용도 불분명"
+      }
+    },
+    {
+      "img_no": "0037",
+      "image_file": "img_0037_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "자동차 장난감",
+        "건전지 여부": "비건전지",
+        "재료": "플라스틱,금속",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "자동차 장난감은 바퀴와 동작부위 상태 중요 | 비건전지 장난감은 기계적 동작 확인 | 혼합 소재는 각 재료별 상태 확인 필요 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 장난감 자동차의 본체는 플라스틱으로 보이며, 바퀴의 림 부분은 금속 재질로 보입니다. 따라서 혼합 소재로 분류됩니다.",
+        "크기": "작음",
+        "기부 가능 여부": "가능",
+        "기부 불가 사유": "플라스틱 비건전지 장난감, 상태 양호",
+        "수리/분해": "수리 불필요(완제품)",
+        "토큰 사용량": {
+          "type_agent": 1461,
+          "material_agent": 2036,
+          "damage_agent": 2051,
+          "soil_agent": 1368,
+          "total": 6916
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "일부 없음",
+          "correct": false
+        },
+        "material": {
+          "predicted": "플라스틱,금속",
+          "actual": "플라스틱",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "보통",
+          "correct": true
+        },
+        "type": {
+          "predicted": "자동차 장난감",
+          "actual": "자동차 장난감",
+          "correct": true
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "자동차 장난감",
+        "material": "플라스틱",
+        "parts_complete": "일부 없음",
+        "soil_level": "보통",
+        "recycling_reason": "자동차 바퀴 부품 없음"
+      }
+    },
+    {
+      "img_no": "0038",
+      "image_file": "img_0038_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "자동차 장난감",
+        "건전지 여부": "불명",
+        "재료": "플라스틱,금속",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "자동차 장난감은 바퀴와 동작부위 상태 중요 | 혼합 소재는 각 재료별 상태 확인 필요 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 차량 본체는 플라스틱으로 보이며, 바퀴 축은 금속으로 추정됩니다. 4개 각도 모두에서 플라스틱 본체와 금속 부품(바퀴 축)이 확인됩니다.",
+        "크기": "중간",
+        "기부 가능 여부": "가능",
+        "기부 불가 사유": "플라스틱 비건전지 장난감, 상태 양호",
+        "수리/분해": "수리 불필요(완제품)",
+        "토큰 사용량": {
+          "type_agent": 1459,
+          "material_agent": 2047,
+          "damage_agent": 2053,
+          "soil_agent": 1368,
+          "total": 6927
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "일부 없음",
+          "correct": false
+        },
+        "material": {
+          "predicted": "플라스틱,금속",
+          "actual": "플라스틱",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "보통",
+          "correct": true
+        },
+        "type": {
+          "predicted": "자동차 장난감",
+          "actual": "자동차 장난감",
+          "correct": true
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "자동차 장난감",
+        "material": "플라스틱",
+        "parts_complete": "일부 없음",
+        "soil_level": "보통",
+        "recycling_reason": "빨간 창문 부서짐"
+      }
+    },
+    {
+      "img_no": "0039",
+      "image_file": "img_0039_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "피규어",
+        "건전지 여부": "건전지",
+        "재료": "플라스틱,금속",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "피규어/모형류는 세밀한 파손 여부 확인 필요 | 건전지 장난감은 전자부품 상태 확인 필요 | 혼합 소재는 각 재료별 상태 확인 필요 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 장난감의 본체는 투명한 플라스틱으로 보이며, 다리 관절 부분에 금속 부품(축)이 사용된 것으로 추정됩니다. 또한, 내부의 기어와 모터 부분도 금속으로 보입니다.",
+        "크기": "작음",
+        "기부 가능 여부": "가능",
+        "기부 불가 사유": "플라스틱 건전지 장난감, 상태 양호",
+        "수리/분해": "수리 불필요(완제품)",
+        "토큰 사용량": {
+          "type_agent": 1459,
+          "material_agent": 2053,
+          "damage_agent": 2063,
+          "soil_agent": 1368,
+          "total": 6943
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "판단 불가",
+          "correct": false
+        },
+        "material": {
+          "predicted": "플라스틱,금속",
+          "actual": "플라스틱",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "보통",
+          "correct": true
+        },
+        "type": {
+          "predicted": "피규어",
+          "actual": "건전지 장난감 (사운드북 포함)",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "건전지 장난감 (사운드북 포함)",
+        "material": "플라스틱",
+        "parts_complete": "판단 불가",
+        "soil_level": "보통",
+        "recycling_reason": "부품이 일부 없음"
+      }
+    },
+    {
+      "img_no": "0040",
+      "image_file": "img_0040_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "비건전지",
+        "재료": "플라스틱",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "비건전지 장난감은 기계적 동작 확인 | 플라스틱 소재는 균열이나 변형 확인 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 4개 각도 모두에서 파란색 본체와 주황색, 노란색, 보라색 부품이 플라스틱 재질로 보이며, 다른 재질의 혼합은 관찰되지 않습니다.",
+        "크기": "작음",
+        "기부 가능 여부": "가능",
+        "기부 불가 사유": "플라스틱 비건전지 장난감, 상태 양호",
+        "수리/분해": "수리 불필요(완제품)",
+        "토큰 사용량": {
+          "type_agent": 1459,
+          "material_agent": 2042,
+          "damage_agent": 2051,
+          "soil_agent": 1368,
+          "total": 6920
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "판단 불가",
+          "correct": false
+        },
+        "material": {
+          "predicted": "플라스틱",
+          "actual": "플라스틱",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "보통",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "플라스틱으로만 된 장난감부품 (큰것)",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "플라스틱으로만 된 장난감부품 (큰것)",
+        "material": "플라스틱",
+        "parts_complete": "판단 불가",
+        "soil_level": "보통",
+        "recycling_reason": "완제품 아님"
+      }
+    },
+    {
+      "img_no": "0041",
+      "image_file": "img_0041_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "피규어",
+        "건전지 여부": "비건전지",
+        "재료": "플라스틱",
+        "파손": "미세한 파손",
+        "오염도": "보통",
+        "관찰사항": "피규어/모형류는 세밀한 파손 여부 확인 필요 | 비건전지 장난감은 기계적 동작 확인 | 플라스틱 소재는 균열이나 변형 확인 | 경미한 파손 - 수리 후 기부 가능 | 오염 없음 - 기부 적합 | 재료 분석: 4개 각도 모두에서 장난감의 본체가 플라스틱으로 제작되었음을 확인할 수 있습니다. 특별한 금속, 섬유, 실리콘, 유리 또는 고무 부품은 보이지 않습니다. 색상과 질감이 균일하여 단일 소재로 판단됩니다.",
+        "크기": "작음",
+        "기부 가능 여부": "가능",
+        "기부 불가 사유": "플라스틱 비건전지 장난감, 상태 양호",
+        "수리/분해": "수리 불필요(완제품)",
+        "토큰 사용량": {
+          "type_agent": 1460,
+          "material_agent": 2056,
+          "damage_agent": 2049,
+          "soil_agent": 1389,
+          "total": 6954
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "미세한 파손",
+          "actual": "있음",
+          "correct": false
+        },
+        "material": {
+          "predicted": "플라스틱",
+          "actual": "플라스틱",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "보통",
+          "actual": "더러움 (재활용 불가)",
+          "correct": false
+        },
+        "type": {
+          "predicted": "피규어",
+          "actual": "플라스틱으로만 된 장난감부품 (큰것)",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "플라스틱으로만 된 장난감부품 (큰것)",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "더러움 (재활용 불가)",
+        "recycling_reason": "어느 장난감 부품인 거 같음. 완제품 아님"
+      }
+    },
+    {
+      "img_no": "0042",
+      "image_file": "img_0042_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "불가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "자동차 장난감",
+        "건전지 여부": "비건전지",
+        "재료": "플라스틱,금속",
+        "파손": "경미한 파손",
+        "오염도": "약간 더러움",
+        "관찰사항": "자동차 장난감은 바퀴와 동작부위 상태 중요 | 비건전지 장난감은 기계적 동작 확인 | 혼합 소재는 각 재료별 상태 확인 필요 | 경미한 파손 - 수리 후 기부 가능 | 약간 더러움 - 세척 후 기부 가능 | 재료 분석: 장난감 자동차의 본체는 플라스틱으로 보이며, 바퀴 축이나 기타 내부 부품에 금속이 사용되었을 가능성이 높습니다. 4개 각도 모두에서 플라스틱 재질이 주를 이루지만, 바퀴의 회전축 등에서 금속 부품이 사용되었을 것으로 추정됩니다.",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "오염 상태로 위생상 기부 불가",
+        "수리/분해": "분해/부품 추출(업사이클)",
+        "토큰 사용량": {
+          "type_agent": 1461,
+          "material_agent": 2072,
+          "damage_agent": 2073,
+          "soil_agent": 1392,
+          "total": 6998
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "경미한 파손",
+          "actual": "일부 없음",
+          "correct": false
+        },
+        "material": {
+          "predicted": "플라스틱,금속",
+          "actual": "플라스틱",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "약간 더러움",
+          "actual": "더러움 (재활용 불가)",
+          "correct": false
+        },
+        "type": {
+          "predicted": "자동차 장난감",
+          "actual": "자동차 장난감",
+          "correct": true
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "자동차 장난감",
+        "material": "플라스틱",
+        "parts_complete": "일부 없음",
+        "soil_level": "더러움 (재활용 불가)",
+        "recycling_reason": "파손이 많음"
+      }
+    },
+    {
+      "img_no": "0043",
+      "image_file": "img_0043_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "피규어",
+        "건전지 여부": "비건전지",
+        "재료": "플라스틱",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "피규어/모형류는 세밀한 파손 여부 확인 필요 | 비건전지 장난감은 기계적 동작 확인 | 플라스틱 소재는 균열이나 변형 확인 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 4개 각도 모두에서 장난감의 주요 재질이 플라스틱으로 보이며, 다른 재질의 혼합은 관찰되지 않습니다. 표면 질감과 색상이 균일하여 단일 소재로 판단됩니다.",
+        "크기": "작음",
+        "기부 가능 여부": "가능",
+        "기부 불가 사유": "플라스틱 비건전지 장난감, 상태 양호",
+        "수리/분해": "수리 불필요(완제품)",
+        "토큰 사용량": {
+          "type_agent": 1460,
+          "material_agent": 2045,
+          "damage_agent": 2051,
+          "soil_agent": 1368,
+          "total": 6924
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "일부 없음",
+          "correct": false
+        },
+        "material": {
+          "predicted": "플라스틱",
+          "actual": "플라스틱",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "더러움 (재활용 불가)",
+          "correct": false
+        },
+        "type": {
+          "predicted": "피규어",
+          "actual": "변신 로봇",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "변신 로봇",
+        "material": "플라스틱",
+        "parts_complete": "일부 없음",
+        "soil_level": "더러움 (재활용 불가)",
+        "recycling_reason": "파손이 많음"
+      }
+    },
+    {
+      "img_no": "0044",
+      "image_file": "img_0044_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "건전지",
+        "재료": "플라스틱",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "건전지 장난감은 전자부품 상태 확인 필요 | 플라스틱 소재는 균열이나 변형 확인 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 4개 각도 모두에서 보이는 장난감은 흰색 플라스틱으로만 구성되어 있으며, 균일한 색상과 매끄러운 표면 질감을 가지고 있습니다. 금속, 섬유, 실리콘, 유리, 고무 등의 다른 재료는 관찰되지 않습니다.",
+        "크기": "작음",
+        "기부 가능 여부": "가능",
+        "기부 불가 사유": "플라스틱 건전지 장난감, 상태 양호",
+        "수리/분해": "수리 불필요(완제품)",
+        "토큰 사용량": {
+          "type_agent": 1458,
+          "material_agent": 2058,
+          "damage_agent": 2051,
+          "soil_agent": 1368,
+          "total": 6935
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "판단 불가",
+          "correct": false
+        },
+        "material": {
+          "predicted": "플라스틱",
+          "actual": "플라스틱",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "보통",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "건전지 장난감 (사운드북 포함)",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "건전지 장난감 (사운드북 포함)",
+        "material": "플라스틱",
+        "parts_complete": "판단 불가",
+        "soil_level": "보통",
+        "recycling_reason": "완제품 아닌거 같음"
+      }
+    },
+    {
+      "img_no": "0045",
+      "image_file": "img_0045_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "피규어",
+        "건전지 여부": "비건전지",
+        "재료": "플라스틱",
+        "파손": "없음",
+        "오염도": "보통",
+        "관찰사항": "피규어/모형류는 세밀한 파손 여부 확인 필요 | 비건전지 장난감은 기계적 동작 확인 | 플라스틱 소재는 균열이나 변형 확인 | 파손 없음, 부품 완전 - 기부 적합 | 약간의 사용 흔적 - 세척 후 기부 가능 | 재료 분석: 4개 각도 모두에서 보이는 장난감은 균일한 색상과 질감을 가진 플라스틱으로 보입니다. 특별히 다른 재질의 부품이나 장식이 확인되지 않아 단일 소재로 판단됩니다.",
+        "크기": "작음",
+        "기부 가능 여부": "가능",
+        "기부 불가 사유": "플라스틱 비건전지 장난감, 상태 양호",
+        "수리/분해": "수리 불필요(완제품)",
+        "토큰 사용량": {
+          "type_agent": 1460,
+          "material_agent": 2043,
+          "damage_agent": 2053,
+          "soil_agent": 1378,
+          "total": 6934
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "일부 없음",
+          "correct": false
+        },
+        "material": {
+          "predicted": "플라스틱",
+          "actual": "플라스틱",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "보통",
+          "actual": "보통",
+          "correct": true
+        },
+        "type": {
+          "predicted": "피규어",
+          "actual": "피규어",
+          "correct": true
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "피규어",
+        "material": "플라스틱",
+        "parts_complete": "일부 없음",
+        "soil_level": "보통",
+        "recycling_reason": "팔이 없음"
+      }
+    },
+    {
+      "img_no": "0046",
+      "image_file": "img_0046_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "자동차 장난감",
+        "건전지 여부": "비건전지",
+        "재료": "플라스틱,금속",
+        "파손": "미세한 파손",
+        "오염도": "보통",
+        "관찰사항": "자동차 장난감은 바퀴와 동작부위 상태 중요 | 비건전지 장난감은 기계적 동작 확인 | 혼합 소재는 각 재료별 상태 확인 필요 | 경미한 파손 - 수리 후 기부 가능 | 오염 없음 - 기부 적합 | 재료 분석: 장난감 자동차의 본체는 플라스틱으로 보이며, 바퀴 축 부분에 금속 재질이 사용된 것으로 추정됩니다. 4개 각도 모두에서 플라스틱 본체와 바퀴가 확인되며, 바퀴의 회전을 위한 금속 축이 있을 가능성이 높습니다.",
+        "크기": "작음",
+        "기부 가능 여부": "가능",
+        "기부 불가 사유": "플라스틱 비건전지 장난감, 상태 양호",
+        "수리/분해": "수리 불필요(완제품)",
+        "토큰 사용량": {
+          "type_agent": 1461,
+          "material_agent": 2065,
+          "damage_agent": 2051,
+          "soil_agent": 1392,
+          "total": 6969
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "미세한 파손",
+          "actual": "일부 없음",
+          "correct": false
+        },
+        "material": {
+          "predicted": "플라스틱,금속",
+          "actual": "플라스틱",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "보통",
+          "actual": "더러움 (재활용 불가)",
+          "correct": false
+        },
+        "type": {
+          "predicted": "자동차 장난감",
+          "actual": "자동차 장난감",
+          "correct": true
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "자동차 장난감",
+        "material": "플라스틱",
+        "parts_complete": "일부 없음",
+        "soil_level": "더러움 (재활용 불가)",
+        "recycling_reason": "파란 등 깨짐, 더러움"
+      }
+    },
+    {
+      "img_no": "0047",
+      "image_file": "img_0047_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "자동차 장난감",
+        "건전지 여부": "비건전지",
+        "재료": "플라스틱,금속",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "자동차 장난감은 바퀴와 동작부위 상태 중요 | 비건전지 장난감은 기계적 동작 확인 | 혼합 소재는 각 재료별 상태 확인 필요 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 장난감 자동차의 본체는 플라스틱으로 보이며, 바퀴 축 부분에 금속 재질이 확인됩니다.",
+        "크기": "중간",
+        "기부 가능 여부": "가능",
+        "기부 불가 사유": "플라스틱 비건전지 장난감, 상태 양호",
+        "수리/분해": "수리 불필요(완제품)",
+        "토큰 사용량": {
+          "type_agent": 1461,
+          "material_agent": 2026,
+          "damage_agent": 2051,
+          "soil_agent": 1368,
+          "total": 6906
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "일부 없음",
+          "correct": false
+        },
+        "material": {
+          "predicted": "플라스틱,금속",
+          "actual": "플라스틱",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "더러움 (재활용 불가)",
+          "correct": false
+        },
+        "type": {
+          "predicted": "자동차 장난감",
+          "actual": "자동차 장난감",
+          "correct": true
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "자동차 장난감",
+        "material": "플라스틱",
+        "parts_complete": "일부 없음",
+        "soil_level": "더러움 (재활용 불가)",
+        "recycling_reason": "차가 쪼개짐"
+      }
+    },
+    {
+      "img_no": "0048",
+      "image_file": "img_0048_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "피규어",
+        "건전지 여부": "비건전지",
+        "재료": "플라스틱",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "피규어/모형류는 세밀한 파손 여부 확인 필요 | 비건전지 장난감은 기계적 동작 확인 | 플라스틱 소재는 균열이나 변형 확인 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 4개 각도 모두에서 장난감의 본체와 부속품들이 균일한 플라스틱 재질로 보이며, 다른 재질의 혼합은 관찰되지 않습니다. 색상과 질감이 일관되어 플라스틱 단일 소재로 판단됩니다.",
+        "크기": "작음",
+        "기부 가능 여부": "가능",
+        "기부 불가 사유": "플라스틱 비건전지 장난감, 상태 양호",
+        "수리/분해": "수리 불필요(완제품)",
+        "토큰 사용량": {
+          "type_agent": 1460,
+          "material_agent": 2054,
+          "damage_agent": 2051,
+          "soil_agent": 1368,
+          "total": 6933
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "판단 불가",
+          "correct": false
+        },
+        "material": {
+          "predicted": "플라스틱",
+          "actual": "플라스틱, 실리콘",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "보통",
+          "correct": true
+        },
+        "type": {
+          "predicted": "피규어",
+          "actual": "피규어",
+          "correct": true
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "피규어",
+        "material": "플라스틱, 실리콘",
+        "parts_complete": "판단 불가",
+        "soil_level": "보통",
+        "recycling_reason": "겉소재가 실리콘"
+      }
+    },
+    {
+      "img_no": "0049",
+      "image_file": "img_0049_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "피규어",
+        "건전지 여부": "비건전지",
+        "재료": "플라스틱",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "피규어/모형류는 세밀한 파손 여부 확인 필요 | 비건전지 장난감은 기계적 동작 확인 | 플라스틱 소재는 균열이나 변형 확인 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 4개 각도 모두에서 장난감의 본체와 부품이 균일한 색상과 질감의 플라스틱으로 보입니다. 금속, 섬유, 실리콘, 유리, 고무 재질은 관찰되지 않았습니다.",
+        "크기": "작음",
+        "기부 가능 여부": "가능",
+        "기부 불가 사유": "플라스틱 비건전지 장난감, 상태 양호",
+        "수리/분해": "수리 불필요(완제품)",
+        "토큰 사용량": {
+          "type_agent": 1460,
+          "material_agent": 2050,
+          "damage_agent": 2050,
+          "soil_agent": 1368,
+          "total": 6928
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "일부 없음",
+          "correct": false
+        },
+        "material": {
+          "predicted": "플라스틱",
+          "actual": "플라스틱",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "보통",
+          "correct": true
+        },
+        "type": {
+          "predicted": "피규어",
+          "actual": "건전지 장난감 (사운드북 포함)",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "건전지 장난감 (사운드북 포함)",
+        "material": "플라스틱",
+        "parts_complete": "일부 없음",
+        "soil_level": "보통",
+        "recycling_reason": "팔 부서짐"
+      }
+    },
+    {
+      "img_no": "0050",
+      "image_file": "img_0050_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "불가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "자동차 장난감",
+        "건전지 여부": "비건전지",
+        "재료": "플라스틱,고무",
+        "파손": "미세한 파손",
+        "오염도": "보통",
+        "관찰사항": "자동차 장난감은 바퀴와 동작부위 상태 중요 | 비건전지 장난감은 기계적 동작 확인 | 혼합 소재는 각 재료별 상태 확인 필요 | 경미한 파손 - 수리 후 기부 가능 | 오염 없음 - 기부 적합 | 재료 분석: 장난감 본체는 플라스틱으로 보이며, 바퀴는 고무 재질로 보입니다.",
+        "크기": "작음",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "실리콘/고무 소재는 재활용 불가능",
+        "수리/분해": "분해/부품 추출(업사이클)",
+        "토큰 사용량": {
+          "type_agent": 1461,
+          "material_agent": 2022,
+          "damage_agent": 2052,
+          "soil_agent": 1413,
+          "total": 6948
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "미세한 파손",
+          "actual": "있음",
+          "correct": false
+        },
+        "material": {
+          "predicted": "플라스틱,고무",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "보통",
+          "actual": "더러움 (재활용 불가)",
+          "correct": false
+        },
+        "type": {
+          "predicted": "자동차 장난감",
+          "actual": "자동차 장난감",
+          "correct": true
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "자동차 장난감",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "더러움 (재활용 불가)",
+        "recycling_reason": "더러움"
+      }
+    },
+    {
+      "img_no": "0051",
+      "image_file": "img_0051_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "자동차 장난감",
+        "건전지 여부": "비건전지",
+        "재료": "플라스틱,금속",
+        "파손": "미세한 파손",
+        "오염도": "보통",
+        "관찰사항": "자동차 장난감은 바퀴와 동작부위 상태 중요 | 비건전지 장난감은 기계적 동작 확인 | 혼합 소재는 각 재료별 상태 확인 필요 | 경미한 파손 - 수리 후 기부 가능 | 오염 없음 - 기부 적합 | 재료 분석: 차량 본체는 플라스틱으로 보이며, 일부 부품(예: 스포일러, 휠 일부)에서 금속 재질의 광택이 관찰됩니다.",
+        "크기": "작음",
+        "기부 가능 여부": "가능",
+        "기부 불가 사유": "플라스틱 비건전지 장난감, 상태 양호",
+        "수리/분해": "수리 불필요(완제품)",
+        "토큰 사용량": {
+          "type_agent": 1461,
+          "material_agent": 2038,
+          "damage_agent": 2061,
+          "soil_agent": 1389,
+          "total": 6949
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "미세한 파손",
+          "actual": "일부 없음",
+          "correct": false
+        },
+        "material": {
+          "predicted": "플라스틱,금속",
+          "actual": "플라스틱",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "보통",
+          "actual": "더러움 (재활용 불가)",
+          "correct": false
+        },
+        "type": {
+          "predicted": "자동차 장난감",
+          "actual": "자동차 장난감",
+          "correct": true
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "자동차 장난감",
+        "material": "플라스틱",
+        "parts_complete": "일부 없음",
+        "soil_level": "더러움 (재활용 불가)",
+        "recycling_reason": "바퀴 파손, 더러움"
+      }
+    },
+    {
+      "img_no": "0052",
+      "image_file": "img_0052_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "불가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "자동차 장난감",
+        "건전지 여부": "비건전지",
+        "재료": "플라스틱,고무",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "자동차 장난감은 바퀴와 동작부위 상태 중요 | 비건전지 장난감은 기계적 동작 확인 | 혼합 소재는 각 재료별 상태 확인 필요 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 장난감의 본체는 플라스틱으로 보이며, 바퀴는 고무 재질로 보입니다. 4개 각도 모두에서 플라스틱 본체와 고무 바퀴가 확인됩니다.",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "실리콘/고무 소재는 재활용 불가능",
+        "수리/분해": "분해/부품 추출(업사이클)",
+        "토큰 사용량": {
+          "type_agent": 1461,
+          "material_agent": 2044,
+          "damage_agent": 2053,
+          "soil_agent": 1368,
+          "total": 6926
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "일부 없음",
+          "correct": false
+        },
+        "material": {
+          "predicted": "플라스틱,고무",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "보통",
+          "correct": true
+        },
+        "type": {
+          "predicted": "자동차 장난감",
+          "actual": "변신 로봇",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "변신 로봇",
+        "material": "플라스틱",
+        "parts_complete": "일부 없음",
+        "soil_level": "보통",
+        "recycling_reason": "다리 없음"
+      }
+    },
+    {
+      "img_no": "0053",
+      "image_file": "img_0053_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "불가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "자동차 장난감",
+        "건전지 여부": "건전지",
+        "재료": "플라스틱,고무",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "자동차 장난감은 바퀴와 동작부위 상태 중요 | 건전지 장난감은 전자부품 상태 확인 필요 | 혼합 소재는 각 재료별 상태 확인 필요 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 차량 본체는 플라스틱으로 보이며, 바퀴는 고무 재질로 추정됩니다. 4개 각도 모두에서 이러한 특징이 관찰됩니다.",
+        "크기": "작음",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "실리콘/고무 소재는 재활용 불가능",
+        "수리/분해": "분해/부품 추출(업사이클)",
+        "토큰 사용량": {
+          "type_agent": 1460,
+          "material_agent": 2036,
+          "damage_agent": 2053,
+          "soil_agent": 1368,
+          "total": 6917
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "일부 없음",
+          "correct": false
+        },
+        "material": {
+          "predicted": "플라스틱,고무",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "보통",
+          "correct": true
+        },
+        "type": {
+          "predicted": "자동차 장난감",
+          "actual": "자동차 장난감",
+          "correct": true
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "자동차 장난감",
+        "material": "플라스틱",
+        "parts_complete": "일부 없음",
+        "soil_level": "보통",
+        "recycling_reason": "자동차 전조등이 없어보임"
+      }
+    },
+    {
+      "img_no": "0054",
+      "image_file": "img_0054_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "자동차 장난감",
+        "건전지 여부": "건전지",
+        "재료": "플라스틱,금속",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "자동차 장난감은 바퀴와 동작부위 상태 중요 | 건전지 장난감은 전자부품 상태 확인 필요 | 혼합 소재는 각 재료별 상태 확인 필요 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 차량 본체는 플라스틱으로 보이며, 바퀴 축과 일부 디테일에서 금속 재질이 확인됩니다.",
+        "크기": "중간",
+        "기부 가능 여부": "가능",
+        "기부 불가 사유": "플라스틱 건전지 장난감, 상태 양호",
+        "수리/분해": "수리 불필요(완제품)",
+        "토큰 사용량": {
+          "type_agent": 1460,
+          "material_agent": 2027,
+          "damage_agent": 2049,
+          "soil_agent": 1368,
+          "total": 6904
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "일부 없음",
+          "correct": false
+        },
+        "material": {
+          "predicted": "플라스틱,금속",
+          "actual": "플라스틱",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "더러움 (재활용 불가)",
+          "correct": false
+        },
+        "type": {
+          "predicted": "자동차 장난감",
+          "actual": "자동차 장난감",
+          "correct": true
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "자동차 장난감",
+        "material": "플라스틱",
+        "parts_complete": "일부 없음",
+        "soil_level": "더러움 (재활용 불가)",
+        "recycling_reason": "파손이 많음"
+      }
+    },
+    {
+      "img_no": "0055",
+      "image_file": "img_0055_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "자동차 장난감",
+        "건전지 여부": "비건전지",
+        "재료": "플라스틱,금속",
+        "파손": "없음",
+        "오염도": "보통",
+        "관찰사항": "자동차 장난감은 바퀴와 동작부위 상태 중요 | 비건전지 장난감은 기계적 동작 확인 | 혼합 소재는 각 재료별 상태 확인 필요 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 장난감 소방차의 본체는 플라스틱으로 보이며, 바퀴 축과 일부 연결 부위는 금속으로 추정됩니다. 또한, 사다리 부분의 일부도 금속 재질로 보입니다.",
+        "크기": "작음",
+        "기부 가능 여부": "가능",
+        "기부 불가 사유": "플라스틱 비건전지 장난감, 상태 양호",
+        "수리/분해": "수리 불필요(완제품)",
+        "토큰 사용량": {
+          "type_agent": 1461,
+          "material_agent": 2048,
+          "damage_agent": 2051,
+          "soil_agent": 1389,
+          "total": 6949
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "일부 없음",
+          "correct": false
+        },
+        "material": {
+          "predicted": "플라스틱,금속",
+          "actual": "플라스틱",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "보통",
+          "actual": "보통",
+          "correct": true
+        },
+        "type": {
+          "predicted": "자동차 장난감",
+          "actual": "자동차 장난감",
+          "correct": true
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "자동차 장난감",
+        "material": "플라스틱",
+        "parts_complete": "일부 없음",
+        "soil_level": "보통",
+        "recycling_reason": "뒤에 사다리 깨짐"
+      }
+    },
+    {
+      "img_no": "0056",
+      "image_file": "img_0056_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "플라스틱",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "플라스틱 소재는 균열이나 변형 확인 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 파인애플 본체와 잎 부분 모두 플라스틱 재질로 보이며, 색상과 질감이 균일합니다. 4개 각도 모두에서 다른 재질의 혼합은 관찰되지 않습니다.",
+        "크기": "불명",
+        "기부 가능 여부": "가능",
+        "기부 불가 사유": "플라스틱 비건전지 장난감, 상태 양호",
+        "수리/분해": "수리 불필요(완제품)",
+        "토큰 사용량": {
+          "type_agent": 0,
+          "material_agent": 2043,
+          "damage_agent": 2051,
+          "soil_agent": 1368,
+          "total": 5462
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "판단 불가",
+          "correct": false
+        },
+        "material": {
+          "predicted": "플라스틱",
+          "actual": "플라스틱",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "보통",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "기타",
+          "correct": true
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "기타",
+        "material": "플라스틱",
+        "parts_complete": "판단 불가",
+        "soil_level": "보통",
+        "recycling_reason": "용도 불분명"
+      }
+    },
+    {
+      "img_no": "0057",
+      "image_file": "img_0057_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "불가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "피규어",
+        "건전지 여부": "비건전지",
+        "재료": "플라스틱",
+        "파손": "부품 누락",
+        "오염도": "깨끗",
+        "관찰사항": "피규어/모형류는 세밀한 파손 여부 확인 필요 | 비건전지 장난감은 기계적 동작 확인 | 플라스틱 소재는 균열이나 변형 확인 | 부품 누락 - 부품 보완 후 기부 가능 | 오염 없음 - 기부 적합 | 재료 분석: 4개 각도 모두에서 녹색과 갈색의 플라스틱 재질로만 구성되어 있으며, 표면 질감과 색상이 균일하여 단일 소재로 판단됩니다.",
+        "크기": "작음",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1460,
+          "material_agent": 2035,
+          "damage_agent": 2062,
+          "soil_agent": 1368,
+          "total": 6925
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "부품 누락",
+          "actual": "일부 없음",
+          "correct": false
+        },
+        "material": {
+          "predicted": "플라스틱",
+          "actual": "플라스틱",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "피규어",
+          "actual": "피규어",
+          "correct": true
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "피규어",
+        "material": "플라스틱",
+        "parts_complete": "일부 없음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": "팔이 없음"
+      }
+    },
+    {
+      "img_no": "0058",
+      "image_file": "img_0058_front",
+      "ground_truth": "가능",
+      "ai_prediction": "불가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "건전지",
+        "재료": "플라스틱,고무",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "건전지 장난감은 전자부품 상태 확인 필요 | 혼합 소재는 각 재료별 상태 확인 필요 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 장난감 본체는 플라스틱으로 보이며, 양쪽 끝의 동그란 부분(스피커 또는 버튼으로 추정)은 고무 재질로 보입니다. 여러 색상의 작은 버튼들도 플라스틱으로 보입니다.",
+        "크기": "작음",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "실리콘/고무 소재는 재활용 불가능",
+        "수리/분해": "분해/부품 추출(업사이클)",
+        "토큰 사용량": {
+          "type_agent": 1458,
+          "material_agent": 2051,
+          "damage_agent": 2053,
+          "soil_agent": 1368,
+          "total": 6930
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "있음",
+          "correct": true
+        },
+        "material": {
+          "predicted": "플라스틱,고무",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "건전지 장난감 (사운드북 포함)",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "건전지 장난감 (사운드북 포함)",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0059",
+      "image_file": "img_0059_front",
+      "ground_truth": "가능",
+      "ai_prediction": "가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "비건전지",
+        "재료": "플라스틱",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "비건전지 장난감은 기계적 동작 확인 | 플라스틱 소재는 균열이나 변형 확인 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 장난감 본체와 버튼 모두 플라스틱으로 보이며, 다른 재질의 혼합은 관찰되지 않습니다.",
+        "크기": "작음",
+        "기부 가능 여부": "가능",
+        "기부 불가 사유": "플라스틱 비건전지 장난감, 상태 양호",
+        "수리/분해": "수리 불필요(완제품)",
+        "토큰 사용량": {
+          "type_agent": 1459,
+          "material_agent": 2022,
+          "damage_agent": 2063,
+          "soil_agent": 1368,
+          "total": 6912
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "있음",
+          "correct": true
+        },
+        "material": {
+          "predicted": "플라스틱",
+          "actual": "플라스틱",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "비건전지 장난감 (",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "비건전지 장난감 (",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0060",
+      "image_file": "img_0060_front",
+      "ground_truth": "가능",
+      "ai_prediction": "가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "건전지 장난감",
+        "건전지 여부": "건전지",
+        "재료": "플라스틱",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "건전지 장난감은 전자부품 상태 확인 필요 | 플라스틱 소재는 균열이나 변형 확인 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 모든 각도에서 장난감의 주요 재질은 플라스틱으로 보입니다. 다양한 색상의 플라스틱 부품들이 결합되어 있으며, 투명한 플라스틱 부분도 확인됩니다. 금속, 섬유, 실리콘, 유리, 고무 재질은 관찰되지 않습니다.",
+        "크기": "중간",
+        "기부 가능 여부": "가능",
+        "기부 불가 사유": "플라스틱 건전지 장난감, 상태 양호",
+        "수리/분해": "수리 불필요(완제품)",
+        "토큰 사용량": {
+          "type_agent": 1462,
+          "material_agent": 2062,
+          "damage_agent": 2063,
+          "soil_agent": 1368,
+          "total": 6955
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "있음",
+          "correct": true
+        },
+        "material": {
+          "predicted": "플라스틱",
+          "actual": "플라스틱",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "건전지 장난감",
+          "actual": "건전지 장난감 (사운드북 포함)",
+          "correct": true
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "건전지 장난감 (사운드북 포함)",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0061",
+      "image_file": "img_0061_front",
+      "ground_truth": "가능",
+      "ai_prediction": "가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "건전지",
+        "재료": "플라스틱",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "건전지 장난감은 전자부품 상태 확인 필요 | 플라스틱 소재는 균열이나 변형 확인 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 4개 각도 모두에서 장난감 본체가 균일한 색상과 질감의 플라스틱으로 구성되어 있습니다. 투명하거나 금속, 섬유, 실리콘, 유리, 고무 재질은 관찰되지 않습니다.",
+        "크기": "작음",
+        "기부 가능 여부": "가능",
+        "기부 불가 사유": "플라스틱 건전지 장난감, 상태 양호",
+        "수리/분해": "수리 불필요(완제품)",
+        "토큰 사용량": {
+          "type_agent": 1458,
+          "material_agent": 2048,
+          "damage_agent": 2050,
+          "soil_agent": 1368,
+          "total": 6924
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "있음",
+          "correct": true
+        },
+        "material": {
+          "predicted": "플라스틱",
+          "actual": "플라스틱",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "건전지 장난감 (사운드북 포함)",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "건전지 장난감 (사운드북 포함)",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0062",
+      "image_file": "img_0062_front",
+      "ground_truth": "가능",
+      "ai_prediction": "불가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "자동차 장난감",
+        "건전지 여부": "건전지",
+        "재료": "플라스틱,고무",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "자동차 장난감은 바퀴와 동작부위 상태 중요 | 건전지 장난감은 전자부품 상태 확인 필요 | 혼합 소재는 각 재료별 상태 확인 필요 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 장난감 버스의 본체는 플라스틱으로 보이며, 바퀴는 고무 재질로 추정됩니다. 4개 각도 모두에서 플라스틱 본체와 고무 바퀴가 확인됩니다.",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "실리콘/고무 소재는 재활용 불가능",
+        "수리/분해": "분해/부품 추출(업사이클)",
+        "토큰 사용량": {
+          "type_agent": 1460,
+          "material_agent": 2046,
+          "damage_agent": 2050,
+          "soil_agent": 1368,
+          "total": 6924
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "있음",
+          "correct": true
+        },
+        "material": {
+          "predicted": "플라스틱,고무",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "자동차 장난감",
+          "actual": "자동차 장난감",
+          "correct": true
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "자동차 장난감",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0063",
+      "image_file": "img_0063_front",
+      "ground_truth": "가능",
+      "ai_prediction": "가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "자동차 장난감",
+        "건전지 여부": "비건전지",
+        "재료": "플라스틱,금속",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "자동차 장난감은 바퀴와 동작부위 상태 중요 | 비건전지 장난감은 기계적 동작 확인 | 혼합 소재는 각 재료별 상태 확인 필요 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 차량 본체는 플라스틱으로 보이며, 바퀴 축 부분에 금속 재질이 확인됩니다.",
+        "크기": "작음",
+        "기부 가능 여부": "가능",
+        "기부 불가 사유": "플라스틱 비건전지 장난감, 상태 양호",
+        "수리/분해": "수리 불필요(완제품)",
+        "토큰 사용량": {
+          "type_agent": 1461,
+          "material_agent": 2023,
+          "damage_agent": 2053,
+          "soil_agent": 1368,
+          "total": 6905
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "있음",
+          "correct": true
+        },
+        "material": {
+          "predicted": "플라스틱,금속",
+          "actual": "플라스틱",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "자동차 장난감",
+          "actual": "자동차 장난감",
+          "correct": true
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "자동차 장난감",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0064",
+      "image_file": "img_0064_front",
+      "ground_truth": "가능",
+      "ai_prediction": "가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "건전지 장난감",
+        "건전지 여부": "건전지",
+        "재료": "플라스틱,금속",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "건전지 장난감은 전자부품 상태 확인 필요 | 혼합 소재는 각 재료별 상태 확인 필요 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 장난감 본체는 플라스틱으로 보이며, 뒷면에 나사 두 개가 금속 재질로 확인됩니다.",
+        "크기": "작음",
+        "기부 가능 여부": "가능",
+        "기부 불가 사유": "플라스틱 건전지 장난감, 상태 양호",
+        "수리/분해": "수리 불필요(완제품)",
+        "토큰 사용량": {
+          "type_agent": 1462,
+          "material_agent": 2026,
+          "damage_agent": 2051,
+          "soil_agent": 1368,
+          "total": 6907
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "있음",
+          "correct": true
+        },
+        "material": {
+          "predicted": "플라스틱,금속",
+          "actual": "플라스틱",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "건전지 장난감",
+          "actual": "건전지 장난감 (사운드북 포함)",
+          "correct": true
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "건전지 장난감 (사운드북 포함)",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0065",
+      "image_file": "img_0065_front",
+      "ground_truth": "가능",
+      "ai_prediction": "가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "자동차 장난감",
+        "건전지 여부": "비건전지",
+        "재료": "플라스틱",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "자동차 장난감은 바퀴와 동작부위 상태 중요 | 비건전지 장난감은 기계적 동작 확인 | 플라스틱 소재는 균열이나 변형 확인 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 4개 각도 모두 플라스틱으로만 구성된 것으로 보이며, 별도의 금속, 섬유, 실리콘, 고무, 유리 재질은 확인되지 않습니다. 표면 질감과 색상으로 보아 사출 성형된 플라스틱으로 판단됩니다.",
+        "크기": "작음",
+        "기부 가능 여부": "가능",
+        "기부 불가 사유": "플라스틱 비건전지 장난감, 상태 양호",
+        "수리/분해": "수리 불필요(완제품)",
+        "토큰 사용량": {
+          "type_agent": 1461,
+          "material_agent": 2056,
+          "damage_agent": 2067,
+          "soil_agent": 1368,
+          "total": 6952
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "있음",
+          "correct": true
+        },
+        "material": {
+          "predicted": "플라스틱",
+          "actual": "플라스틱",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "자동차 장난감",
+          "actual": "비건전지 장난감 (",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "비건전지 장난감 (",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0066",
+      "image_file": "img_0066_front",
+      "ground_truth": "가능",
+      "ai_prediction": "가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "피규어",
+        "건전지 여부": "비건전지",
+        "재료": "플라스틱,나무",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "피규어/모형류는 세밀한 파손 여부 확인 필요 | 비건전지 장난감은 기계적 동작 확인 | 혼합 소재는 각 재료별 상태 확인 필요 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 장난감 본체는 플라스틱으로 보이며, 토스터기에 들어가는 빵 부분은 나무 재질로 보입니다.",
+        "크기": "작음",
+        "기부 가능 여부": "가능",
+        "기부 불가 사유": "플라스틱 비건전지 장난감, 상태 양호",
+        "수리/분해": "수리 불필요(완제품)",
+        "토큰 사용량": {
+          "type_agent": 1460,
+          "material_agent": 2026,
+          "damage_agent": 2051,
+          "soil_agent": 1368,
+          "total": 6905
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "있음",
+          "correct": true
+        },
+        "material": {
+          "predicted": "플라스틱,나무",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "피규어",
+          "actual": "비건전지 장난감 (",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "비건전지 장난감 (",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0067",
+      "image_file": "img_0067_front",
+      "ground_truth": "가능",
+      "ai_prediction": "불가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "건전지",
+        "재료": "플라스틱,고무",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "건전지 장난감은 전자부품 상태 확인 필요 | 혼합 소재는 각 재료별 상태 확인 필요 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 장난감의 주된 재질은 플라스틱으로 보이며, 회색 부분은 고무 재질로 추정됩니다. 4개 각도 모두에서 플라스틱 본체와 고무로 보이는 부분이 확인됩니다.",
+        "크기": "작음",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "실리콘/고무 소재는 재활용 불가능",
+        "수리/분해": "분해/부품 추출(업사이클)",
+        "토큰 사용량": {
+          "type_agent": 1458,
+          "material_agent": 2048,
+          "damage_agent": 2054,
+          "soil_agent": 1368,
+          "total": 6928
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "있음",
+          "correct": true
+        },
+        "material": {
+          "predicted": "플라스틱,고무",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "건전지 장난감 (사운드북 포함)",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "건전지 장난감 (사운드북 포함)",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0068",
+      "image_file": "img_0068_front",
+      "ground_truth": "가능",
+      "ai_prediction": "가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "비건전지",
+        "재료": "플라스틱,금속",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "비건전지 장난감은 기계적 동작 확인 | 혼합 소재는 각 재료별 상태 확인 필요 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 보라색 본체는 플라스틱으로 보이며, 검은색 부품(연결 고리, 내부 메커니즘 일부)은 금속 또는 다른 종류의 플라스틱일 수 있습니다. 하지만 금속 연결 부품이 확인되어 혼합 소재로 분류합니다.",
+        "크기": "작음",
+        "기부 가능 여부": "가능",
+        "기부 불가 사유": "플라스틱 비건전지 장난감, 상태 양호",
+        "수리/분해": "수리 불필요(완제품)",
+        "토큰 사용량": {
+          "type_agent": 1459,
+          "material_agent": 2059,
+          "damage_agent": 2051,
+          "soil_agent": 1368,
+          "total": 6937
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "있음",
+          "correct": true
+        },
+        "material": {
+          "predicted": "플라스틱,금속",
+          "actual": "플라스틱",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "비건전지 장난감 (",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "비건전지 장난감 (",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0069",
+      "image_file": "img_0069_front",
+      "ground_truth": "가능",
+      "ai_prediction": "가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "건전지 장난감",
+        "건전지 여부": "건전지",
+        "재료": "플라스틱",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "건전지 장난감은 전자부품 상태 확인 필요 | 플라스틱 소재는 균열이나 변형 확인 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 4개 각도 모두에서 장난감의 본체와 부품이 플라스틱으로 제작된 것으로 보입니다. 특별한 금속, 천, 실리콘, 유리 또는 고무 재질은 관찰되지 않았습니다.",
+        "크기": "작음",
+        "기부 가능 여부": "가능",
+        "기부 불가 사유": "플라스틱 건전지 장난감, 상태 양호",
+        "수리/분해": "수리 불필요(완제품)",
+        "토큰 사용량": {
+          "type_agent": 1462,
+          "material_agent": 2045,
+          "damage_agent": 2063,
+          "soil_agent": 1368,
+          "total": 6938
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "있음",
+          "correct": true
+        },
+        "material": {
+          "predicted": "플라스틱",
+          "actual": "플라스틱",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "건전지 장난감",
+          "actual": "건전지 장난감 (사운드북 포함)",
+          "correct": true
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "건전지 장난감 (사운드북 포함)",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0070",
+      "image_file": "img_0070_front",
+      "ground_truth": "가능",
+      "ai_prediction": "가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "플라스틱,금속",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "혼합 소재는 각 재료별 상태 확인 필요 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 투명한 플라스틱 본체와 분홍색 플라스틱 장식이 확인되며, 금색으로 보이는 금속 장식이 포함되어 있습니다.",
+        "크기": "중간",
+        "기부 가능 여부": "가능",
+        "기부 불가 사유": "플라스틱 비건전지 장난감, 상태 양호",
+        "수리/분해": "수리 불필요(완제품)",
+        "토큰 사용량": {
+          "type_agent": 1457,
+          "material_agent": 2030,
+          "damage_agent": 2053,
+          "soil_agent": 1368,
+          "total": 6908
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "있음",
+          "correct": true
+        },
+        "material": {
+          "predicted": "플라스틱,금속",
+          "actual": "플라스틱",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "비건전지 장난감 (",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "비건전지 장난감 (",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0071",
+      "image_file": "img_0071_front",
+      "ground_truth": "가능",
+      "ai_prediction": "가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "피규어",
+        "건전지 여부": "비건전지",
+        "재료": "플라스틱",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "피규어/모형류는 세밀한 파손 여부 확인 필요 | 비건전지 장난감은 기계적 동작 확인 | 플라스틱 소재는 균열이나 변형 확인 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 4개 각도 모두에서 보이는 장난감은 플라스틱으로만 구성되어 있으며, 균일한 색상과 질감을 가지고 있습니다. 금속, 섬유, 실리콘, 유리, 고무 재질은 관찰되지 않았습니다.",
+        "크기": "작음",
+        "기부 가능 여부": "가능",
+        "기부 불가 사유": "플라스틱 비건전지 장난감, 상태 양호",
+        "수리/분해": "수리 불필요(완제품)",
+        "토큰 사용량": {
+          "type_agent": 1460,
+          "material_agent": 2049,
+          "damage_agent": 2051,
+          "soil_agent": 1368,
+          "total": 6928
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "있음",
+          "correct": true
+        },
+        "material": {
+          "predicted": "플라스틱",
+          "actual": "플라스틱",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "피규어",
+          "actual": "피규어",
+          "correct": true
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "피규어",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0072",
+      "image_file": "img_0072_front",
+      "ground_truth": "가능",
+      "ai_prediction": "가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "피규어",
+        "건전지 여부": "불명",
+        "재료": "플라스틱,금속",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "피규어/모형류는 세밀한 파손 여부 확인 필요 | 혼합 소재는 각 재료별 상태 확인 필요 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 장난감 본체는 분홍색 플라스틱으로 보이며, 렌즈 주변에 금속 재질의 링이 사용되었습니다. 또한 투명한 플라스틱 부품도 확인됩니다.",
+        "크기": "작음",
+        "기부 가능 여부": "가능",
+        "기부 불가 사유": "플라스틱 비건전지 장난감, 상태 양호",
+        "수리/분해": "수리 불필요(완제품)",
+        "토큰 사용량": {
+          "type_agent": 1458,
+          "material_agent": 2043,
+          "damage_agent": 2053,
+          "soil_agent": 1368,
+          "total": 6922
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "일부 없음",
+          "correct": false
+        },
+        "material": {
+          "predicted": "플라스틱,금속",
+          "actual": "플라스틱",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "보통",
+          "correct": true
+        },
+        "type": {
+          "predicted": "피규어",
+          "actual": "비건전지 장난감 (",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "비건전지 장난감 (",
+        "material": "플라스틱",
+        "parts_complete": "일부 없음",
+        "soil_level": "보통",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0073",
+      "image_file": "img_0073_front",
+      "ground_truth": "가능",
+      "ai_prediction": "가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "피규어",
+        "건전지 여부": "비건전지",
+        "재료": "플라스틱",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "피규어/모형류는 세밀한 파손 여부 확인 필요 | 비건전지 장난감은 기계적 동작 확인 | 플라스틱 소재는 균열이나 변형 확인 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 4개 각도 모두에서 장난감의 본체와 장식 요소가 플라스틱으로 보이며, 다른 재질의 혼합은 관찰되지 않습니다.",
+        "크기": "작음",
+        "기부 가능 여부": "가능",
+        "기부 불가 사유": "플라스틱 비건전지 장난감, 상태 양호",
+        "수리/분해": "수리 불필요(완제품)",
+        "토큰 사용량": {
+          "type_agent": 1460,
+          "material_agent": 2031,
+          "damage_agent": 2053,
+          "soil_agent": 1368,
+          "total": 6912
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "있음",
+          "correct": true
+        },
+        "material": {
+          "predicted": "플라스틱",
+          "actual": "플라스틱",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "피규어",
+          "actual": "피규어",
+          "correct": true
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "피규어",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0074",
+      "image_file": "img_0074_front",
+      "ground_truth": "가능",
+      "ai_prediction": "불가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "피규어",
+        "건전지 여부": "비건전지",
+        "재료": "플라스틱,섬유",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "피규어/모형류는 세밀한 파손 여부 확인 필요 | 비건전지 장난감은 기계적 동작 확인 | 혼합 소재는 각 재료별 상태 확인 필요 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 장난감 본체는 투명한 플라스틱으로 보이며, 빨간색 구슬이 달린 끈이 달려 있어 섬유 소재가 혼합된 것으로 판단됩니다.",
+        "크기": "작음",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "천/섬유 소재는 위생상 기부 불가",
+        "수리/분해": "분해/부품 추출(업사이클)",
+        "토큰 사용량": {
+          "type_agent": 1460,
+          "material_agent": 2038,
+          "damage_agent": 2053,
+          "soil_agent": 1368,
+          "total": 6919
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "있음",
+          "correct": true
+        },
+        "material": {
+          "predicted": "플라스틱,섬유",
+          "actual": "플라스틱",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "피규어",
+          "actual": "피규어",
+          "correct": true
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "피규어",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0075",
+      "image_file": "img_0075_front",
+      "ground_truth": "가능",
+      "ai_prediction": "가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "플라스틱",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "플라스틱 소재는 균열이나 변형 확인 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 장난감 전체가 투명한 플라스틱과 불투명한 플라스틱으로 구성되어 있으며, 다른 재질의 요소는 보이지 않습니다.",
+        "크기": "중간",
+        "기부 가능 여부": "가능",
+        "기부 불가 사유": "플라스틱 비건전지 장난감, 상태 양호",
+        "수리/분해": "수리 불필요(완제품)",
+        "토큰 사용량": {
+          "type_agent": 1457,
+          "material_agent": 2029,
+          "damage_agent": 2063,
+          "soil_agent": 1368,
+          "total": 6917
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "있음",
+          "correct": true
+        },
+        "material": {
+          "predicted": "플라스틱",
+          "actual": "플라스틱",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "비건전지 장난감 (",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "비건전지 장난감 (",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0076",
+      "image_file": "img_0076_front",
+      "ground_truth": "가능",
+      "ai_prediction": "가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "피규어",
+        "건전지 여부": "비건전지",
+        "재료": "플라스틱",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "피규어/모형류는 세밀한 파손 여부 확인 필요 | 비건전지 장난감은 기계적 동작 확인 | 플라스틱 소재는 균열이나 변형 확인 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 모든 각도에서 관찰했을 때 장난감 전체가 플라스틱으로 제작된 것으로 보입니다. 다양한 색상의 플라스틱 부품들이 조립되어 있으며, 금속, 섬유, 실리콘, 유리, 고무 등의 다른 재질은 관찰되지 않습니다.",
+        "크기": "중간",
+        "기부 가능 여부": "가능",
+        "기부 불가 사유": "플라스틱 비건전지 장난감, 상태 양호",
+        "수리/분해": "수리 불필요(완제품)",
+        "토큰 사용량": {
+          "type_agent": 1460,
+          "material_agent": 2057,
+          "damage_agent": 2051,
+          "soil_agent": 1368,
+          "total": 6936
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "있음",
+          "correct": true
+        },
+        "material": {
+          "predicted": "플라스틱",
+          "actual": "플라스틱",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "피규어",
+          "actual": "비건전지 장난감 (",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "비건전지 장난감 (",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0077",
+      "image_file": "img_0077_front",
+      "ground_truth": "가능",
+      "ai_prediction": "가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "비건전지",
+        "재료": "플라스틱",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "비건전지 장난감은 기계적 동작 확인 | 플라스틱 소재는 균열이나 변형 확인 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 4개 각도 모두에서 장난감의 본체, 손잡이, 지붕, 창문 등 모든 부분이 플라스틱으로 제작된 것으로 보입니다. 다른 재질의 혼합은 관찰되지 않았습니다.",
+        "크기": "중간",
+        "기부 가능 여부": "가능",
+        "기부 불가 사유": "플라스틱 비건전지 장난감, 상태 양호",
+        "수리/분해": "수리 불필요(완제품)",
+        "토큰 사용량": {
+          "type_agent": 1459,
+          "material_agent": 2043,
+          "damage_agent": 2051,
+          "soil_agent": 1368,
+          "total": 6921
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "있음",
+          "correct": true
+        },
+        "material": {
+          "predicted": "플라스틱",
+          "actual": "플라스틱",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "비건전지 장난감 (",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "비건전지 장난감 (",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0078",
+      "image_file": "img_0078_front",
+      "ground_truth": "가능",
+      "ai_prediction": "가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "건전지 장난감",
+        "건전지 여부": "건전지",
+        "재료": "플라스틱",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "건전지 장난감은 전자부품 상태 확인 필요 | 플라스틱 소재는 균열이나 변형 확인 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 4개 각도 모두에서 장난감의 본체, 머리, 날개, 발 등이 플라스틱으로 제작된 것으로 보입니다. 다양한 색상의 플라스틱이 사용되었지만, 다른 재질의 혼합은 관찰되지 않습니다.",
+        "크기": "중간",
+        "기부 가능 여부": "가능",
+        "기부 불가 사유": "플라스틱 건전지 장난감, 상태 양호",
+        "수리/분해": "수리 불필요(완제품)",
+        "토큰 사용량": {
+          "type_agent": 1462,
+          "material_agent": 2049,
+          "damage_agent": 2054,
+          "soil_agent": 1368,
+          "total": 6933
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "있음",
+          "correct": true
+        },
+        "material": {
+          "predicted": "플라스틱",
+          "actual": "플라스틱",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "건전지 장난감",
+          "actual": "건전지 장난감 (사운드북 포함)",
+          "correct": true
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "건전지 장난감 (사운드북 포함)",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0079",
+      "image_file": "img_0079_front",
+      "ground_truth": "가능",
+      "ai_prediction": "가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "건전지 장난감",
+        "건전지 여부": "건전지",
+        "재료": "플라스틱",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "건전지 장난감은 전자부품 상태 확인 필요 | 플라스틱 소재는 균열이나 변형 확인 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 4개 각도 모두에서 장난감의 본체, 얼굴, 모자, 팔, 다리 등이 모두 플라스틱으로 제작된 것으로 보입니다. 색상과 질감이 균일하며, 다른 재질의 요소는 관찰되지 않습니다.",
+        "크기": "작음",
+        "기부 가능 여부": "가능",
+        "기부 불가 사유": "플라스틱 건전지 장난감, 상태 양호",
+        "수리/분해": "수리 불필요(완제품)",
+        "토큰 사용량": {
+          "type_agent": 1462,
+          "material_agent": 2049,
+          "damage_agent": 2051,
+          "soil_agent": 1368,
+          "total": 6930
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "있음",
+          "correct": true
+        },
+        "material": {
+          "predicted": "플라스틱",
+          "actual": "플라스틱",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "건전지 장난감",
+          "actual": "비건전지 장난감 (",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "비건전지 장난감 (",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0080",
+      "image_file": "img_0080_front",
+      "ground_truth": "가능",
+      "ai_prediction": "가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "피규어",
+        "건전지 여부": "건전지",
+        "재료": "플라스틱",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "피규어/모형류는 세밀한 파손 여부 확인 필요 | 건전지 장난감은 전자부품 상태 확인 필요 | 플라스틱 소재는 균열이나 변형 확인 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 4개 각도 모두에서 장난감 전체가 균일한 색상과 질감의 플라스틱으로 구성된 것으로 보입니다. 특별한 금속, 섬유, 실리콘, 유리 또는 고무 부품은 관찰되지 않았습니다.",
+        "크기": "작음",
+        "기부 가능 여부": "가능",
+        "기부 불가 사유": "플라스틱 건전지 장난감, 상태 양호",
+        "수리/분해": "수리 불필요(완제품)",
+        "토큰 사용량": {
+          "type_agent": 1459,
+          "material_agent": 2050,
+          "damage_agent": 2051,
+          "soil_agent": 1368,
+          "total": 6928
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "있음",
+          "correct": true
+        },
+        "material": {
+          "predicted": "플라스틱",
+          "actual": "플라스틱",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "피규어",
+          "actual": "건전지 장난감 (사운드북 포함)",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "건전지 장난감 (사운드북 포함)",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0081",
+      "image_file": "img_0081_front",
+      "ground_truth": "가능",
+      "ai_prediction": "가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "피규어",
+        "건전지 여부": "건전지",
+        "재료": "플라스틱",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "피규어/모형류는 세밀한 파손 여부 확인 필요 | 건전지 장난감은 전자부품 상태 확인 필요 | 플라스틱 소재는 균열이나 변형 확인 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 4개 각도 모두에서 장난감의 본체와 부품들이 플라스틱으로 제작된 것으로 보입니다. 특별한 금속, 천, 실리콘, 유리, 고무 재질은 관찰되지 않았습니다.",
+        "크기": "작음",
+        "기부 가능 여부": "가능",
+        "기부 불가 사유": "플라스틱 건전지 장난감, 상태 양호",
+        "수리/분해": "수리 불필요(완제품)",
+        "토큰 사용량": {
+          "type_agent": 1459,
+          "material_agent": 2045,
+          "damage_agent": 2050,
+          "soil_agent": 1368,
+          "total": 6922
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "있음",
+          "correct": true
+        },
+        "material": {
+          "predicted": "플라스틱",
+          "actual": "플라스틱",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "피규어",
+          "actual": "건전지 장난감 (사운드북 포함)",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "건전지 장난감 (사운드북 포함)",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0082",
+      "image_file": "img_0082_front",
+      "ground_truth": "가능",
+      "ai_prediction": "불가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "자동차 장난감",
+        "건전지 여부": "비건전지",
+        "재료": "플라스틱,고무",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "자동차 장난감은 바퀴와 동작부위 상태 중요 | 비건전지 장난감은 기계적 동작 확인 | 혼합 소재는 각 재료별 상태 확인 필요 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 장난감 자동차의 본체는 플라스틱으로 보이며, 바퀴는 검은색 고무 재질로 보입니다. 따라서 혼합 소재로 분류됩니다.",
+        "크기": "작음",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "실리콘/고무 소재는 재활용 불가능",
+        "수리/분해": "분해/부품 추출(업사이클)",
+        "토큰 사용량": {
+          "type_agent": 1461,
+          "material_agent": 2035,
+          "damage_agent": 2053,
+          "soil_agent": 1368,
+          "total": 6917
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "있음",
+          "correct": true
+        },
+        "material": {
+          "predicted": "플라스틱,고무",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "자동차 장난감",
+          "actual": "변신 로봇",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "변신 로봇",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0083",
+      "image_file": "img_0083_front",
+      "ground_truth": "가능",
+      "ai_prediction": "가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "블록",
+        "건전지 여부": "비건전지",
+        "재료": "플라스틱",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "블록류는 결합부위 마모 상태 확인 | 비건전지 장난감은 기계적 동작 확인 | 플라스틱 소재는 균열이나 변형 확인 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 4개 각도 모두에서 장난감의 모든 부분이 플라스틱으로 구성되어 있으며, 다른 재질의 요소는 관찰되지 않습니다. 다양한 색상의 플라스틱 부품이 조립되어 있습니다.",
+        "크기": "작음",
+        "기부 가능 여부": "가능",
+        "기부 불가 사유": "플라스틱 비건전지 장난감, 상태 양호",
+        "수리/분해": "수리 불필요(완제품)",
+        "토큰 사용량": {
+          "type_agent": 1459,
+          "material_agent": 2040,
+          "damage_agent": 2062,
+          "soil_agent": 1368,
+          "total": 6929
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "있음",
+          "correct": true
+        },
+        "material": {
+          "predicted": "플라스틱",
+          "actual": "플라스틱",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "블록",
+          "actual": "비건전지 장난감 (",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "비건전지 장난감 (",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0084",
+      "image_file": "img_0084_front",
+      "ground_truth": "가능",
+      "ai_prediction": "가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "피규어",
+        "건전지 여부": "비건전지",
+        "재료": "플라스틱",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "피규어/모형류는 세밀한 파손 여부 확인 필요 | 비건전지 장난감은 기계적 동작 확인 | 플라스틱 소재는 균열이나 변형 확인 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 4개 각도 모두에서 장난감의 주요 재질이 플라스틱으로 보이며, 다른 재질의 혼합은 관찰되지 않습니다. 색상과 질감이 균일한 플라스틱으로 판단됩니다.",
+        "크기": "작음",
+        "기부 가능 여부": "가능",
+        "기부 불가 사유": "플라스틱 비건전지 장난감, 상태 양호",
+        "수리/분해": "수리 불필요(완제품)",
+        "토큰 사용량": {
+          "type_agent": 1460,
+          "material_agent": 2043,
+          "damage_agent": 2051,
+          "soil_agent": 1368,
+          "total": 6922
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "있음",
+          "correct": true
+        },
+        "material": {
+          "predicted": "플라스틱",
+          "actual": "플라스틱",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "피규어",
+          "actual": "피규어",
+          "correct": true
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "피규어",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0085",
+      "image_file": "img_0085_front",
+      "ground_truth": "가능",
+      "ai_prediction": "가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "자동차 장난감",
+        "건전지 여부": "비건전지",
+        "재료": "플라스틱,금속",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "자동차 장난감은 바퀴와 동작부위 상태 중요 | 비건전지 장난감은 기계적 동작 확인 | 혼합 소재는 각 재료별 상태 확인 필요 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 장난감 자동차의 본체는 플라스틱으로 보이며, 바퀴 축 부분에 금속 재질이 사용된 것으로 추정됩니다. 또한, 뒷면에 보이는 빨간색 부품도 금속일 가능성이 있습니다.",
+        "크기": "작음",
+        "기부 가능 여부": "가능",
+        "기부 불가 사유": "플라스틱 비건전지 장난감, 상태 양호",
+        "수리/분해": "수리 불필요(완제품)",
+        "토큰 사용량": {
+          "type_agent": 1461,
+          "material_agent": 2048,
+          "damage_agent": 2053,
+          "soil_agent": 1368,
+          "total": 6930
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "있음",
+          "correct": true
+        },
+        "material": {
+          "predicted": "플라스틱,금속",
+          "actual": "플라스틱",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "자동차 장난감",
+          "actual": "자동차 장난감",
+          "correct": true
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "자동차 장난감",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0086",
+      "image_file": "img_0086_front",
+      "ground_truth": "가능",
+      "ai_prediction": "가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "건전지 장난감",
+        "건전지 여부": "건전지",
+        "재료": "플라스틱,금속",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "건전지 장난감은 전자부품 상태 확인 필요 | 혼합 소재는 각 재료별 상태 확인 필요 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 장난감 본체는 플라스틱으로 보이며, 실로폰 부분의 타악기는 금속 재질로 보입니다.",
+        "크기": "중간",
+        "기부 가능 여부": "가능",
+        "기부 불가 사유": "플라스틱 건전지 장난감, 상태 양호",
+        "수리/분해": "수리 불필요(완제품)",
+        "토큰 사용량": {
+          "type_agent": 1462,
+          "material_agent": 2027,
+          "damage_agent": 2074,
+          "soil_agent": 1368,
+          "total": 6931
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "있음",
+          "correct": true
+        },
+        "material": {
+          "predicted": "플라스틱,금속",
+          "actual": "플라스틱",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "건전지 장난감",
+          "actual": "비건전지 장난감 (",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "비건전지 장난감 (",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0087",
+      "image_file": "img_0087_front",
+      "ground_truth": "가능",
+      "ai_prediction": "가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "건전지 장난감",
+        "건전지 여부": "건전지",
+        "재료": "플라스틱",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "건전지 장난감은 전자부품 상태 확인 필요 | 플라스틱 소재는 균열이나 변형 확인 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 4개 각도 모두에서 장난감의 주요 재질이 플라스틱으로 보이며, 다른 재질의 혼합은 관찰되지 않습니다. 투명한 부분은 플라스틱으로 추정됩니다.",
+        "크기": "중간",
+        "기부 가능 여부": "가능",
+        "기부 불가 사유": "플라스틱 건전지 장난감, 상태 양호",
+        "수리/분해": "수리 불필요(완제품)",
+        "토큰 사용량": {
+          "type_agent": 1462,
+          "material_agent": 2041,
+          "damage_agent": 2051,
+          "soil_agent": 1368,
+          "total": 6922
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "있음",
+          "correct": true
+        },
+        "material": {
+          "predicted": "플라스틱",
+          "actual": "플라스틱",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "건전지 장난감",
+          "actual": "건전지 장난감 (사운드북 포함)",
+          "correct": true
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "건전지 장난감 (사운드북 포함)",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0088",
+      "image_file": "img_0088_front",
+      "ground_truth": "가능",
+      "ai_prediction": "가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "자동차 장난감",
+        "건전지 여부": "비건전지",
+        "재료": "플라스틱",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "자동차 장난감은 바퀴와 동작부위 상태 중요 | 비건전지 장난감은 기계적 동작 확인 | 플라스틱 소재는 균열이나 변형 확인 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 4개 각도 모두에서 장난감 전체가 플라스틱으로 제작된 것으로 보입니다. 붉은색 부분도 플라스틱으로 사료되며, 다른 재질의 혼합은 관찰되지 않습니다.",
+        "크기": "작음",
+        "기부 가능 여부": "가능",
+        "기부 불가 사유": "플라스틱 비건전지 장난감, 상태 양호",
+        "수리/분해": "수리 불필요(완제품)",
+        "토큰 사용량": {
+          "type_agent": 1461,
+          "material_agent": 2042,
+          "damage_agent": 2053,
+          "soil_agent": 1368,
+          "total": 6924
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "있음",
+          "correct": true
+        },
+        "material": {
+          "predicted": "플라스틱",
+          "actual": "플라스틱",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "자동차 장난감",
+          "actual": "비건전지 장난감 (",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "비건전지 장난감 (",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0089",
+      "image_file": "img_0089_front",
+      "ground_truth": "가능",
+      "ai_prediction": "가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "비건전지",
+        "재료": "플라스틱,금속",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "비건전지 장난감은 기계적 동작 확인 | 혼합 소재는 각 재료별 상태 확인 필요 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 장난감의 본체는 투명한 플라스틱으로 보이며, 내부의 핀볼 공은 금속 재질로 보입니다. 또한, 빨간색 레버와 일부 부품에서도 플라스틱 외 다른 재질이 혼합되었을 가능성이 있습니다.",
+        "크기": "작음",
+        "기부 가능 여부": "가능",
+        "기부 불가 사유": "플라스틱 비건전지 장난감, 상태 양호",
+        "수리/분해": "수리 불필요(완제품)",
+        "토큰 사용량": {
+          "type_agent": 1459,
+          "material_agent": 2058,
+          "damage_agent": 2063,
+          "soil_agent": 1368,
+          "total": 6948
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "있음",
+          "correct": true
+        },
+        "material": {
+          "predicted": "플라스틱,금속",
+          "actual": "플라스틱",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "비건전지 장난감 (",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "비건전지 장난감 (",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0090",
+      "image_file": "img_0090_front",
+      "ground_truth": "가능",
+      "ai_prediction": "가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "변신 로봇",
+        "건전지 여부": "비건전지",
+        "재료": "플라스틱,금속",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "변신 로봇은 관절부위 파손 여부 확인 필요 | 비건전지 장난감은 기계적 동작 확인 | 혼합 소재는 각 재료별 상태 확인 필요 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 전반적으로 플라스틱 재질로 보이나, 일부 부품에서 금속성 광택이 관찰되어 혼합 소재로 판단됩니다. 특히 바퀴 부분이나 관절 부위에 금속 부품이 사용되었을 가능성이 높습니다.",
+        "크기": "작음",
+        "기부 가능 여부": "가능",
+        "기부 불가 사유": "플라스틱 비건전지 장난감, 상태 양호",
+        "수리/분해": "수리 불필요(완제품)",
+        "토큰 사용량": {
+          "type_agent": 1461,
+          "material_agent": 2052,
+          "damage_agent": 2051,
+          "soil_agent": 1368,
+          "total": 6932
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "있음",
+          "correct": true
+        },
+        "material": {
+          "predicted": "플라스틱,금속",
+          "actual": "플라스틱",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "변신 로봇",
+          "actual": "피규어",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "피규어",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0091",
+      "image_file": "img_0091_front",
+      "ground_truth": "가능",
+      "ai_prediction": "가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "변신 로봇",
+        "건전지 여부": "비건전지",
+        "재료": "플라스틱",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "변신 로봇은 관절부위 파손 여부 확인 필요 | 비건전지 장난감은 기계적 동작 확인 | 플라스틱 소재는 균열이나 변형 확인 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 4개 각도 모두에서 장난감의 주요 재질이 플라스틱으로 보이며, 다양한 색상의 플라스틱 부품들이 조립되어 있습니다. 금속, 섬유, 실리콘, 유리, 고무 재질은 관찰되지 않습니다.",
+        "크기": "중간",
+        "기부 가능 여부": "가능",
+        "기부 불가 사유": "플라스틱 비건전지 장난감, 상태 양호",
+        "수리/분해": "수리 불필요(완제품)",
+        "토큰 사용량": {
+          "type_agent": 1461,
+          "material_agent": 2052,
+          "damage_agent": 2062,
+          "soil_agent": 1368,
+          "total": 6943
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "있음",
+          "correct": true
+        },
+        "material": {
+          "predicted": "플라스틱",
+          "actual": "플라스틱",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "변신 로봇",
+          "actual": "피규어",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "피규어",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0092",
+      "image_file": "img_0092_front",
+      "ground_truth": "가능",
+      "ai_prediction": "불가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "자동차 장난감",
+        "건전지 여부": "비건전지",
+        "재료": "플라스틱,고무",
+        "파손": "없음",
+        "오염도": "보통",
+        "관찰사항": "자동차 장난감은 바퀴와 동작부위 상태 중요 | 비건전지 장난감은 기계적 동작 확인 | 혼합 소재는 각 재료별 상태 확인 필요 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 장난감 소방차의 본체는 플라스틱으로 보이며, 바퀴는 고무 재질로 확인됩니다.",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "실리콘/고무 소재는 재활용 불가능",
+        "수리/분해": "분해/부품 추출(업사이클)",
+        "토큰 사용량": {
+          "type_agent": 1461,
+          "material_agent": 2026,
+          "damage_agent": 2051,
+          "soil_agent": 1391,
+          "total": 6929
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "있음",
+          "correct": true
+        },
+        "material": {
+          "predicted": "플라스틱,고무",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "보통",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "자동차 장난감",
+          "actual": "자동차 장난감",
+          "correct": true
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "자동차 장난감",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0093",
+      "image_file": "img_0093_front",
+      "ground_truth": "가능",
+      "ai_prediction": "불가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "자동차 장난감",
+        "건전지 여부": "비건전지",
+        "재료": "플라스틱,고무",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "자동차 장난감은 바퀴와 동작부위 상태 중요 | 비건전지 장난감은 기계적 동작 확인 | 혼합 소재는 각 재료별 상태 확인 필요 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 차량 본체는 플라스틱으로 보이며, 바퀴는 고무 재질로 확인됩니다.",
+        "크기": "작음",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "실리콘/고무 소재는 재활용 불가능",
+        "수리/분해": "분해/부품 추출(업사이클)",
+        "토큰 사용량": {
+          "type_agent": 1461,
+          "material_agent": 2021,
+          "damage_agent": 2050,
+          "soil_agent": 1368,
+          "total": 6900
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "있음",
+          "correct": true
+        },
+        "material": {
+          "predicted": "플라스틱,고무",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "자동차 장난감",
+          "actual": "자동차 장난감",
+          "correct": true
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "자동차 장난감",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0094",
+      "image_file": "img_0094_front",
+      "ground_truth": "가능",
+      "ai_prediction": "불가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "자동차 장난감",
+        "건전지 여부": "비건전지",
+        "재료": "플라스틱,고무",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "자동차 장난감은 바퀴와 동작부위 상태 중요 | 비건전지 장난감은 기계적 동작 확인 | 혼합 소재는 각 재료별 상태 확인 필요 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 장난감 소방차의 본체는 플라스틱으로 보이며, 바퀴는 고무 재질로 보입니다. 4개 각도 모두에서 이러한 특징이 확인됩니다.",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "실리콘/고무 소재는 재활용 불가능",
+        "수리/분해": "분해/부품 추출(업사이클)",
+        "토큰 사용량": {
+          "type_agent": 1461,
+          "material_agent": 2039,
+          "damage_agent": 2053,
+          "soil_agent": 1368,
+          "total": 6921
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "있음",
+          "correct": true
+        },
+        "material": {
+          "predicted": "플라스틱,고무",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "자동차 장난감",
+          "actual": "자동차 장난감",
+          "correct": true
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "자동차 장난감",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0095",
+      "image_file": "img_0095_front",
+      "ground_truth": "가능",
+      "ai_prediction": "가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "피규어",
+        "건전지 여부": "비건전지",
+        "재료": "플라스틱",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "피규어/모형류는 세밀한 파손 여부 확인 필요 | 비건전지 장난감은 기계적 동작 확인 | 플라스틱 소재는 균열이나 변형 확인 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 4개 각도 모두에서 장난감 전체가 균일한 질감과 색상의 플라스틱으로 제작된 것으로 보입니다. 특별한 금속, 천, 실리콘, 유리 또는 고무 부품은 관찰되지 않았습니다.",
+        "크기": "중간",
+        "기부 가능 여부": "가능",
+        "기부 불가 사유": "플라스틱 비건전지 장난감, 상태 양호",
+        "수리/분해": "수리 불필요(완제품)",
+        "토큰 사용량": {
+          "type_agent": 1460,
+          "material_agent": 2048,
+          "damage_agent": 2053,
+          "soil_agent": 1368,
+          "total": 6929
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "있음",
+          "correct": true
+        },
+        "material": {
+          "predicted": "플라스틱",
+          "actual": "플라스틱",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "피규어",
+          "actual": "피규어",
+          "correct": true
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "피규어",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0096",
+      "image_file": "img_0096_front",
+      "ground_truth": "가능",
+      "ai_prediction": "가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "건전지",
+        "재료": "플라스틱",
+        "파손": "없음",
+        "오염도": "깨끗",
+        "관찰사항": "건전지 장난감은 전자부품 상태 확인 필요 | 플라스틱 소재는 균열이나 변형 확인 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 4개 각도 모두에서 장난감 기타의 본체, 넥, 헤드 부분이 균일한 색상과 질감의 플라스틱으로 제작된 것으로 보입니다. 금속, 천, 실리콘, 고무, 유리 등의 다른 재질은 관찰되지 않습니다.",
+        "크기": "중간",
+        "기부 가능 여부": "가능",
+        "기부 불가 사유": "플라스틱 건전지 장난감, 상태 양호",
+        "수리/분해": "수리 불필요(완제품)",
+        "토큰 사용량": {
+          "type_agent": 1458,
+          "material_agent": 2057,
+          "damage_agent": 2051,
+          "soil_agent": 1368,
+          "total": 6934
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "있음",
+          "correct": true
+        },
+        "material": {
+          "predicted": "플라스틱",
+          "actual": "플라스틱",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "비건전지 장난감 (",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "비건전지 장난감 (",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0097",
+      "image_file": "img_0097_front",
+      "ground_truth": "가능",
+      "ai_prediction": "불가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "자동차 장난감",
+        "건전지 여부": "비건전지",
+        "재료": "플라스틱,고무",
+        "파손": "미세한 파손",
+        "오염도": "보통",
+        "관찰사항": "자동차 장난감은 바퀴와 동작부위 상태 중요 | 비건전지 장난감은 기계적 동작 확인 | 혼합 소재는 각 재료별 상태 확인 필요 | 경미한 파손 - 수리 후 기부 가능 | 오염 없음 - 기부 적합 | 재료 분석: 장난감의 본체는 플라스틱으로 보이며, 바퀴는 고무 재질로 보입니다.",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "실리콘/고무 소재는 재활용 불가능",
+        "수리/분해": "분해/부품 추출(업사이클)",
+        "토큰 사용량": {
+          "type_agent": 1461,
+          "material_agent": 2023,
+          "damage_agent": 2070,
+          "soil_agent": 1399,
+          "total": 6953
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "미세한 파손",
+          "actual": "있음",
+          "correct": false
+        },
+        "material": {
+          "predicted": "플라스틱,고무",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "보통",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "자동차 장난감",
+          "actual": "자동차 장난감",
+          "correct": true
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "자동차 장난감",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0098",
+      "image_file": "img_0098_front",
+      "ground_truth": "가능",
+      "ai_prediction": "불가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "자동차 장난감",
+        "건전지 여부": "건전지",
+        "재료": "플라스틱,고무",
+        "파손": "미세한 파손",
+        "오염도": "보통",
+        "관찰사항": "자동차 장난감은 바퀴와 동작부위 상태 중요 | 건전지 장난감은 전자부품 상태 확인 필요 | 혼합 소재는 각 재료별 상태 확인 필요 | 경미한 파손 - 수리 후 기부 가능 | 약간의 사용 흔적 - 세척 후 기부 가능 | 재료 분석: 장난감 탱크의 본체는 플라스틱으로 보이며, 바퀴 부분은 고무 재질로 보입니다. 4개 각도 모두에서 이러한 재질 혼합을 확인할 수 있습니다.",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "실리콘/고무 소재는 재활용 불가능",
+        "수리/분해": "분해/부품 추출(업사이클)",
+        "토큰 사용량": {
+          "type_agent": 1460,
+          "material_agent": 2042,
+          "damage_agent": 2049,
+          "soil_agent": 1389,
+          "total": 6940
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "미세한 파손",
+          "actual": "있음",
+          "correct": false
+        },
+        "material": {
+          "predicted": "플라스틱,고무",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "보통",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "자동차 장난감",
+          "actual": "자동차 장난감",
+          "correct": true
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "자동차 장난감",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0099",
+      "image_file": "img_0099_front",
+      "ground_truth": "가능",
+      "ai_prediction": "가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "건전지 장난감",
+        "건전지 여부": "건전지",
+        "재료": "플라스틱",
+        "파손": "없음",
+        "오염도": "보통",
+        "관찰사항": "건전지 장난감은 전자부품 상태 확인 필요 | 플라스틱 소재는 균열이나 변형 확인 | 파손 없음, 부품 완전 - 기부 적합 | 오염 없음 - 기부 적합 | 재료 분석: 4개 각도 모두에서 장난감의 주요 재질이 플라스틱으로 보입니다. 특별한 금속, 천, 실리콘, 유리 또는 고무 부품은 확인되지 않았습니다. 전체적으로 균일한 플라스틱 질감과 색상을 가지고 있습니다.",
+        "크기": "중간",
+        "기부 가능 여부": "가능",
+        "기부 불가 사유": "플라스틱 건전지 장난감, 상태 양호",
+        "수리/분해": "수리 불필요(완제품)",
+        "토큰 사용량": {
+          "type_agent": 1462,
+          "material_agent": 2055,
+          "damage_agent": 2062,
+          "soil_agent": 1387,
+          "total": 6966
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "없음",
+          "actual": "있음",
+          "correct": true
+        },
+        "material": {
+          "predicted": "플라스틱",
+          "actual": "플라스틱",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "보통",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "건전지 장난감",
+          "actual": "건전지 장난감 (사운드북 포함)",
+          "correct": true
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "건전지 장난감 (사운드북 포함)",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    }
+  ]
+}

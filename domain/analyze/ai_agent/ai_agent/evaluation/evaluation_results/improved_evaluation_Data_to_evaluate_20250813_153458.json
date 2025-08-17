@@ -1,0 +1,5610 @@
+{
+  "evaluation_summary": {
+    "timestamp": "20250813_153458",
+    "total_images": 100,
+    "overall_accuracy": 44.0,
+    "csv_source": "Data_to_evaluate.csv"
+  },
+  "detailed_results": [
+    {
+      "img_no": "0000",
+      "image_file": "img_0000_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "불가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "mixed",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1333,
+          "material_agent": 1369,
+          "damage_agent": 1365,
+          "soil_agent": 1326,
+          "total": 5393
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "있음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "mixed",
+          "actual": "플라스틱, 천",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "피규어",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "피규어",
+        "material": "플라스틱, 천",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": "천 소재가 포함되어 있음."
+      }
+    },
+    {
+      "img_no": "0001",
+      "image_file": "img_0001_front",
+      "ground_truth": "가능",
+      "ai_prediction": "불가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "mixed",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1333,
+          "material_agent": 1350,
+          "damage_agent": 1363,
+          "soil_agent": 1335,
+          "total": 5381
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "있음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "mixed",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "건전지 장난감 (사운드북 포함)",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "건전지 장난감 (사운드북 포함)",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0002",
+      "image_file": "img_0002_front",
+      "ground_truth": "가능",
+      "ai_prediction": "불가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "mixed",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1335,
+          "material_agent": 1350,
+          "damage_agent": 1359,
+          "soil_agent": 1341,
+          "total": 5385
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "있음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "mixed",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "피규어",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "피규어",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0003",
+      "image_file": "img_0003_front",
+      "ground_truth": "가능",
+      "ai_prediction": "불가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "plastic",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1330,
+          "material_agent": 1347,
+          "damage_agent": 1363,
+          "soil_agent": 1335,
+          "total": 5375
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "있음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "plastic",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "변신 로봇",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "변신 로봇",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0004",
+      "image_file": "img_0004_front",
+      "ground_truth": "가능",
+      "ai_prediction": "불가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "plastic",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1331,
+          "material_agent": 1347,
+          "damage_agent": 1365,
+          "soil_agent": 1336,
+          "total": 5379
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "있음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "plastic",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "자동차 장난감",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "자동차 장난감",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0005",
+      "image_file": "img_0005_front",
+      "ground_truth": "가능",
+      "ai_prediction": "불가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "plastic",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1328,
+          "material_agent": 1358,
+          "damage_agent": 1374,
+          "soil_agent": 1338,
+          "total": 5398
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "있음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "plastic",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "비건전지 장난감 (",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "비건전지 장난감 (",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0006",
+      "image_file": "img_0006_front",
+      "ground_truth": "가능",
+      "ai_prediction": "불가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "plastic",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1348,
+          "material_agent": 1367,
+          "damage_agent": 1359,
+          "soil_agent": 1338,
+          "total": 5412
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "있음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "plastic",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "건전지 장난감 (사운드북 포함)",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "건전지 장난감 (사운드북 포함)",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0007",
+      "image_file": "img_0007_front",
+      "ground_truth": "가능",
+      "ai_prediction": "불가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "plastic",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1329,
+          "material_agent": 1363,
+          "damage_agent": 1363,
+          "soil_agent": 1335,
+          "total": 5390
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "있음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "plastic",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "자동차 장난감",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "자동차 장난감",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0008",
+      "image_file": "img_0008_front",
+      "ground_truth": "가능",
+      "ai_prediction": "불가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "plastic",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1328,
+          "material_agent": 1358,
+          "damage_agent": 1359,
+          "soil_agent": 1337,
+          "total": 5382
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "있음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "plastic",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "비건전지 장난감 (",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "비건전지 장난감 (",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0009",
+      "image_file": "img_0009_front",
+      "ground_truth": "가능",
+      "ai_prediction": "불가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "plastic",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1330,
+          "material_agent": 1343,
+          "damage_agent": 1347,
+          "soil_agent": 1337,
+          "total": 5357
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "있음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "plastic",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "건전지 장난감 (사운드북 포함)",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "건전지 장난감 (사운드북 포함)",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0010",
+      "image_file": "img_0010_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "불가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "mixed",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1331,
+          "material_agent": 1347,
+          "damage_agent": 1363,
+          "soil_agent": 1337,
+          "total": 5378
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "판단 불가",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "mixed",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "비건전지 장난감 (",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "비건전지 장난감 (",
+        "material": "플라스틱",
+        "parts_complete": "판단 불가",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": "장난감 용도 불분명"
+      }
+    },
+    {
+      "img_no": "0011",
+      "image_file": "img_0011_front",
+      "ground_truth": "가능",
+      "ai_prediction": "불가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "plastic",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1332,
+          "material_agent": 1354,
+          "damage_agent": 1363,
+          "soil_agent": 1342,
+          "total": 5391
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "있음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "plastic",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "피규어",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "피규어",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0012",
+      "image_file": "img_0012_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "불가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "mixed",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1330,
+          "material_agent": 1351,
+          "damage_agent": 1382,
+          "soil_agent": 1343,
+          "total": 5406
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "있음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "mixed",
+          "actual": "나무",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "나무 장난감",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "나무 장난감",
+        "material": "나무",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": "나무 소재"
+      }
+    },
+    {
+      "img_no": "0013",
+      "image_file": "img_0013_front",
+      "ground_truth": "가능",
+      "ai_prediction": "불가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "plastic",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1331,
+          "material_agent": 1351,
+          "damage_agent": 1362,
+          "soil_agent": 1340,
+          "total": 5384
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "있음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "plastic",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "비건전지 장난감 (",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "비건전지 장난감 (",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0014",
+      "image_file": "img_0014_front",
+      "ground_truth": "가능",
+      "ai_prediction": "불가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "plastic",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1332,
+          "material_agent": 1345,
+          "damage_agent": 1359,
+          "soil_agent": 1338,
+          "total": 5374
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "있음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "plastic",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "보통",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "건전지 장난감 (사운드북 포함)",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "건전지 장난감 (사운드북 포함)",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "보통",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0015",
+      "image_file": "img_0015_front",
+      "ground_truth": "가능",
+      "ai_prediction": "불가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "plastic",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1338,
+          "material_agent": 1351,
+          "damage_agent": 1365,
+          "soil_agent": 1336,
+          "total": 5390
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "있음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "plastic",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "건전지 장난감 (사운드북 포함)",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "건전지 장난감 (사운드북 포함)",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0016",
+      "image_file": "img_0016_front",
+      "ground_truth": "가능",
+      "ai_prediction": "불가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "plastic",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1335,
+          "material_agent": 1355,
+          "damage_agent": 1364,
+          "soil_agent": 1336,
+          "total": 5390
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "있음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "plastic",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "건전지 장난감 (사운드북 포함)",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "건전지 장난감 (사운드북 포함)",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0017",
+      "image_file": "img_0017_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "불가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "wood",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1329,
+          "material_agent": 1371,
+          "damage_agent": 1363,
+          "soil_agent": 1341,
+          "total": 5404
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "있음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "wood",
+          "actual": "나무",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "나무 장난감",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "나무 장난감",
+        "material": "나무",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": "나무 소재"
+      }
+    },
+    {
+      "img_no": "0018",
+      "image_file": "img_0018_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "불가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "wood",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1330,
+          "material_agent": 1334,
+          "damage_agent": 1345,
+          "soil_agent": 1343,
+          "total": 5352
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "있음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "wood",
+          "actual": "나무",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "나무 장난감",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "나무 장난감",
+        "material": "나무",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": "나무 소재"
+      }
+    },
+    {
+      "img_no": "0019",
+      "image_file": "img_0019_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "불가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "plastic",
+        "파손": "minor_damage",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1328,
+          "material_agent": 1349,
+          "damage_agent": 1383,
+          "soil_agent": 1356,
+          "total": 5416
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "minor_damage",
+          "actual": "있음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "plastic",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "보통",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "자동차 장난감",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "자동차 장난감",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "보통",
+        "recycling_reason": "파손"
+      }
+    },
+    {
+      "img_no": "0020",
+      "image_file": "img_0020_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "불가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "mixed",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1333,
+          "material_agent": 1423,
+          "damage_agent": 1364,
+          "soil_agent": 1338,
+          "total": 5458
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "있음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "mixed",
+          "actual": "나무, 천",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "보통",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "인형",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "인형",
+        "material": "나무, 천",
+        "parts_complete": "있음",
+        "soil_level": "보통",
+        "recycling_reason": "천, 나무 소재"
+      }
+    },
+    {
+      "img_no": "0021",
+      "image_file": "img_0021_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "불가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "plastic",
+        "파손": "moderate_damage",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1332,
+          "material_agent": 1372,
+          "damage_agent": 1367,
+          "soil_agent": 1375,
+          "total": 5446
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "moderate_damage",
+          "actual": "일부 없음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "plastic",
+          "actual": "플라스틱, 실리콘",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "더러움 (재활용 불가)",
+          "correct": false
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "피규어",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "피규어",
+        "material": "플라스틱, 실리콘",
+        "parts_complete": "일부 없음",
+        "soil_level": "더러움 (재활용 불가)",
+        "recycling_reason": "소재 혼합(완전 분해 가능성 낮음), 파손"
+      }
+    },
+    {
+      "img_no": "0022",
+      "image_file": "img_0022_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "불가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "fabric",
+        "파손": "minor_damage",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1332,
+          "material_agent": 1376,
+          "damage_agent": 1356,
+          "soil_agent": 1367,
+          "total": 5431
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "minor_damage",
+          "actual": "있음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "fabric",
+          "actual": "천",
+          "correct": true
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "보통",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "인형",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "인형",
+        "material": "천",
+        "parts_complete": "있음",
+        "soil_level": "보통",
+        "recycling_reason": "천 소재"
+      }
+    },
+    {
+      "img_no": "0023",
+      "image_file": "img_0023_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "불가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "plastic",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1328,
+          "material_agent": 1350,
+          "damage_agent": 1363,
+          "soil_agent": 1335,
+          "total": 5376
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "있음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "plastic",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "자동차 장난감",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "자동차 장난감",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": "오른쪽 앞바퀴 파손"
+      }
+    },
+    {
+      "img_no": "0024",
+      "image_file": "img_0024_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "불가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "plastic",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1327,
+          "material_agent": 1341,
+          "damage_agent": 1363,
+          "soil_agent": 1339,
+          "total": 5370
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "일부 없음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "plastic",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "더러움 (재활용 불가)",
+          "correct": false
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "건전지 장난감 (사운드북 포함)",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "건전지 장난감 (사운드북 포함)",
+        "material": "플라스틱",
+        "parts_complete": "일부 없음",
+        "soil_level": "더러움 (재활용 불가)",
+        "recycling_reason": "대부분 부품이 없음"
+      }
+    },
+    {
+      "img_no": "0025",
+      "image_file": "img_0025_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "불가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "plastic",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1339,
+          "material_agent": 1317,
+          "damage_agent": 1377,
+          "soil_agent": 1341,
+          "total": 5374
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "있음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "plastic",
+          "actual": "실리콘",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "비건전지 장난감 (",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "비건전지 장난감 (",
+        "material": "실리콘",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": "실리콘 소재"
+      }
+    },
+    {
+      "img_no": "0026",
+      "image_file": "img_0026_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "불가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "mixed",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1334,
+          "material_agent": 1351,
+          "damage_agent": 1365,
+          "soil_agent": 1336,
+          "total": 5386
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "일부 없음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "mixed",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "보통",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "건전지 장난감 (사운드북 포함)",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "건전지 장난감 (사운드북 포함)",
+        "material": "플라스틱",
+        "parts_complete": "일부 없음",
+        "soil_level": "보통",
+        "recycling_reason": "드럼스틱과 드럼 없음"
+      }
+    },
+    {
+      "img_no": "0027",
+      "image_file": "img_0027_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "불가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "plastic",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1328,
+          "material_agent": 1362,
+          "damage_agent": 1363,
+          "soil_agent": 1336,
+          "total": 5389
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "일부 없음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "plastic",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "보통",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "건전지 장난감 (사운드북 포함)",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "건전지 장난감 (사운드북 포함)",
+        "material": "플라스틱",
+        "parts_complete": "일부 없음",
+        "soil_level": "보통",
+        "recycling_reason": "4번째 문 부품 없음"
+      }
+    },
+    {
+      "img_no": "0028",
+      "image_file": "img_0028_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "불가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "plastic",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1328,
+          "material_agent": 1370,
+          "damage_agent": 1363,
+          "soil_agent": 1339,
+          "total": 5400
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "있음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "plastic",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "보통",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "플라스틱으로만 된 장난감부품 (큰것)",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "플라스틱으로만 된 장난감부품 (큰것)",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "보통",
+        "recycling_reason": "스크래치 많음"
+      }
+    },
+    {
+      "img_no": "0029",
+      "image_file": "img_0029_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "불가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "mixed",
+        "파손": "severe_damage",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1330,
+          "material_agent": 1367,
+          "damage_agent": 1392,
+          "soil_agent": 1386,
+          "total": 5475
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "severe_damage",
+          "actual": "일부 없음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "mixed",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "더러움 (재활용 불가)",
+          "correct": false
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "건전지 장난감 (사운드북 포함)",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "건전지 장난감 (사운드북 포함)",
+        "material": "플라스틱",
+        "parts_complete": "일부 없음",
+        "soil_level": "더러움 (재활용 불가)",
+        "recycling_reason": "많이 부서짐"
+      }
+    },
+    {
+      "img_no": "0030",
+      "image_file": "img_0030_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "불가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "plastic",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1328,
+          "material_agent": 1361,
+          "damage_agent": 1365,
+          "soil_agent": 1338,
+          "total": 5392
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "있음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "plastic",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "보통",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "자동차 장난감",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "자동차 장난감",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "보통",
+        "recycling_reason": "창문 스크래치 많음"
+      }
+    },
+    {
+      "img_no": "0031",
+      "image_file": "img_0031_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "불가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "mixed",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1335,
+          "material_agent": 1352,
+          "damage_agent": 1365,
+          "soil_agent": 1348,
+          "total": 5400
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "일부 없음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "mixed",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "보통",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "건전지 장난감 (사운드북 포함)",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "건전지 장난감 (사운드북 포함)",
+        "material": "플라스틱",
+        "parts_complete": "일부 없음",
+        "soil_level": "보통",
+        "recycling_reason": "부서진 부분, 사용감 많음"
+      }
+    },
+    {
+      "img_no": "0032",
+      "image_file": "img_0032_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "불가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "plastic",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1328,
+          "material_agent": 1350,
+          "damage_agent": 1365,
+          "soil_agent": 1338,
+          "total": 5381
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "일부 없음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "plastic",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "보통",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "자동차 장난감",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "자동차 장난감",
+        "material": "플라스틱",
+        "parts_complete": "일부 없음",
+        "soil_level": "보통",
+        "recycling_reason": "사용감 많음"
+      }
+    },
+    {
+      "img_no": "0033",
+      "image_file": "img_0033_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "불가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "plastic",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1329,
+          "material_agent": 1331,
+          "damage_agent": 1363,
+          "soil_agent": 1332,
+          "total": 5355
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "있음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "plastic",
+          "actual": "실리콘",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "비건전지 장난감 (",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "비건전지 장난감 (",
+        "material": "실리콘",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": "실리콘"
+      }
+    },
+    {
+      "img_no": "0034",
+      "image_file": "img_0034_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "불가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "plastic",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1328,
+          "material_agent": 1350,
+          "damage_agent": 1365,
+          "soil_agent": 1342,
+          "total": 5385
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "일부 없음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "plastic",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "더러움 (재활용 불가)",
+          "correct": false
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "건전지 장난감 (사운드북 포함)",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "건전지 장난감 (사운드북 포함)",
+        "material": "플라스틱",
+        "parts_complete": "일부 없음",
+        "soil_level": "더러움 (재활용 불가)",
+        "recycling_reason": "더러움"
+      }
+    },
+    {
+      "img_no": "0035",
+      "image_file": "img_0035_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "불가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "mixed",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1329,
+          "material_agent": 1350,
+          "damage_agent": 1363,
+          "soil_agent": 1336,
+          "total": 5378
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "일부 없음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "mixed",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "더러움 (재활용 불가)",
+          "correct": false
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "자동차 장난감",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "자동차 장난감",
+        "material": "플라스틱",
+        "parts_complete": "일부 없음",
+        "soil_level": "더러움 (재활용 불가)",
+        "recycling_reason": "파손이 많이 됨"
+      }
+    },
+    {
+      "img_no": "0036",
+      "image_file": "img_0036_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "불가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "plastic",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1332,
+          "material_agent": 1392,
+          "damage_agent": 1345,
+          "soil_agent": 1338,
+          "total": 5407
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "판단 불가",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "plastic",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "보통",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "기타",
+          "correct": true
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "기타",
+        "material": "플라스틱",
+        "parts_complete": "판단 불가",
+        "soil_level": "보통",
+        "recycling_reason": "용도 불분명"
+      }
+    },
+    {
+      "img_no": "0037",
+      "image_file": "img_0037_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "불가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "mixed",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1328,
+          "material_agent": 1348,
+          "damage_agent": 1364,
+          "soil_agent": 1339,
+          "total": 5379
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "일부 없음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "mixed",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "보통",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "자동차 장난감",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "자동차 장난감",
+        "material": "플라스틱",
+        "parts_complete": "일부 없음",
+        "soil_level": "보통",
+        "recycling_reason": "자동차 바퀴 부품 없음"
+      }
+    },
+    {
+      "img_no": "0038",
+      "image_file": "img_0038_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "불가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "mixed",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1328,
+          "material_agent": 1361,
+          "damage_agent": 1363,
+          "soil_agent": 1340,
+          "total": 5392
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "일부 없음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "mixed",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "보통",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "자동차 장난감",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "자동차 장난감",
+        "material": "플라스틱",
+        "parts_complete": "일부 없음",
+        "soil_level": "보통",
+        "recycling_reason": "빨간 창문 부서짐"
+      }
+    },
+    {
+      "img_no": "0039",
+      "image_file": "img_0039_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "불가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "mixed",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1330,
+          "material_agent": 1369,
+          "damage_agent": 1363,
+          "soil_agent": 1343,
+          "total": 5405
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "판단 불가",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "mixed",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "보통",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "건전지 장난감 (사운드북 포함)",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "건전지 장난감 (사운드북 포함)",
+        "material": "플라스틱",
+        "parts_complete": "판단 불가",
+        "soil_level": "보통",
+        "recycling_reason": "부품이 일부 없음"
+      }
+    },
+    {
+      "img_no": "0040",
+      "image_file": "img_0040_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "불가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "mixed",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1331,
+          "material_agent": 1352,
+          "damage_agent": 1360,
+          "soil_agent": 1330,
+          "total": 5373
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "판단 불가",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "mixed",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "보통",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "플라스틱으로만 된 장난감부품 (큰것)",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "플라스틱으로만 된 장난감부품 (큰것)",
+        "material": "플라스틱",
+        "parts_complete": "판단 불가",
+        "soil_level": "보통",
+        "recycling_reason": "완제품 아님"
+      }
+    },
+    {
+      "img_no": "0041",
+      "image_file": "img_0041_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "불가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "plastic",
+        "파손": "minor_damage",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1335,
+          "material_agent": 1342,
+          "damage_agent": 1361,
+          "soil_agent": 1353,
+          "total": 5391
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "minor_damage",
+          "actual": "있음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "plastic",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "더러움 (재활용 불가)",
+          "correct": false
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "플라스틱으로만 된 장난감부품 (큰것)",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "플라스틱으로만 된 장난감부품 (큰것)",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "더러움 (재활용 불가)",
+        "recycling_reason": "어느 장난감 부품인 거 같음. 완제품 아님"
+      }
+    },
+    {
+      "img_no": "0042",
+      "image_file": "img_0042_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "불가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "mixed",
+        "파손": "moderate_damage",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1328,
+          "material_agent": 1419,
+          "damage_agent": 1367,
+          "soil_agent": 1369,
+          "total": 5483
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "moderate_damage",
+          "actual": "일부 없음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "mixed",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "더러움 (재활용 불가)",
+          "correct": false
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "자동차 장난감",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "자동차 장난감",
+        "material": "플라스틱",
+        "parts_complete": "일부 없음",
+        "soil_level": "더러움 (재활용 불가)",
+        "recycling_reason": "파손이 많음"
+      }
+    },
+    {
+      "img_no": "0043",
+      "image_file": "img_0043_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "불가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "plastic",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1332,
+          "material_agent": 1352,
+          "damage_agent": 1363,
+          "soil_agent": 1332,
+          "total": 5379
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "일부 없음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "plastic",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "더러움 (재활용 불가)",
+          "correct": false
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "변신 로봇",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "변신 로봇",
+        "material": "플라스틱",
+        "parts_complete": "일부 없음",
+        "soil_level": "더러움 (재활용 불가)",
+        "recycling_reason": "파손이 많음"
+      }
+    },
+    {
+      "img_no": "0044",
+      "image_file": "img_0044_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "불가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "plastic",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1328,
+          "material_agent": 1341,
+          "damage_agent": 1365,
+          "soil_agent": 1340,
+          "total": 5374
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "판단 불가",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "plastic",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "보통",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "건전지 장난감 (사운드북 포함)",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "건전지 장난감 (사운드북 포함)",
+        "material": "플라스틱",
+        "parts_complete": "판단 불가",
+        "soil_level": "보통",
+        "recycling_reason": "완제품 아닌거 같음"
+      }
+    },
+    {
+      "img_no": "0045",
+      "image_file": "img_0045_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "불가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "plastic",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1332,
+          "material_agent": 1355,
+          "damage_agent": 1363,
+          "soil_agent": 1386,
+          "total": 5436
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "일부 없음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "plastic",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "보통",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "피규어",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "피규어",
+        "material": "플라스틱",
+        "parts_complete": "일부 없음",
+        "soil_level": "보통",
+        "recycling_reason": "팔이 없음"
+      }
+    },
+    {
+      "img_no": "0046",
+      "image_file": "img_0046_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "불가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "mixed",
+        "파손": "minor_damage",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1328,
+          "material_agent": 1390,
+          "damage_agent": 1357,
+          "soil_agent": 1334,
+          "total": 5409
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "minor_damage",
+          "actual": "일부 없음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "mixed",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "더러움 (재활용 불가)",
+          "correct": false
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "자동차 장난감",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "자동차 장난감",
+        "material": "플라스틱",
+        "parts_complete": "일부 없음",
+        "soil_level": "더러움 (재활용 불가)",
+        "recycling_reason": "파란 등 깨짐, 더러움"
+      }
+    },
+    {
+      "img_no": "0047",
+      "image_file": "img_0047_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "불가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "mixed",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1330,
+          "material_agent": 1353,
+          "damage_agent": 1363,
+          "soil_agent": 1332,
+          "total": 5378
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "일부 없음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "mixed",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "더러움 (재활용 불가)",
+          "correct": false
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "자동차 장난감",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "자동차 장난감",
+        "material": "플라스틱",
+        "parts_complete": "일부 없음",
+        "soil_level": "더러움 (재활용 불가)",
+        "recycling_reason": "차가 쪼개짐"
+      }
+    },
+    {
+      "img_no": "0048",
+      "image_file": "img_0048_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "불가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "plastic",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1333,
+          "material_agent": 1367,
+          "damage_agent": 1362,
+          "soil_agent": 1325,
+          "total": 5387
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "판단 불가",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "plastic",
+          "actual": "플라스틱, 실리콘",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "보통",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "피규어",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "피규어",
+        "material": "플라스틱, 실리콘",
+        "parts_complete": "판단 불가",
+        "soil_level": "보통",
+        "recycling_reason": "겉소재가 실리콘"
+      }
+    },
+    {
+      "img_no": "0049",
+      "image_file": "img_0049_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "불가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "plastic",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1333,
+          "material_agent": 1377,
+          "damage_agent": 1366,
+          "soil_agent": 1325,
+          "total": 5401
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "일부 없음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "plastic",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "보통",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "건전지 장난감 (사운드북 포함)",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "건전지 장난감 (사운드북 포함)",
+        "material": "플라스틱",
+        "parts_complete": "일부 없음",
+        "soil_level": "보통",
+        "recycling_reason": "팔 부서짐"
+      }
+    },
+    {
+      "img_no": "0050",
+      "image_file": "img_0050_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "불가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "plastic",
+        "파손": "minor_damage",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1328,
+          "material_agent": 1349,
+          "damage_agent": 1374,
+          "soil_agent": 1339,
+          "total": 5390
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "minor_damage",
+          "actual": "있음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "plastic",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "더러움 (재활용 불가)",
+          "correct": false
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "자동차 장난감",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "자동차 장난감",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "더러움 (재활용 불가)",
+        "recycling_reason": "더러움"
+      }
+    },
+    {
+      "img_no": "0051",
+      "image_file": "img_0051_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "불가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "mixed",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1328,
+          "material_agent": 1362,
+          "damage_agent": 1363,
+          "soil_agent": 1352,
+          "total": 5405
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "일부 없음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "mixed",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "더러움 (재활용 불가)",
+          "correct": false
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "자동차 장난감",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "자동차 장난감",
+        "material": "플라스틱",
+        "parts_complete": "일부 없음",
+        "soil_level": "더러움 (재활용 불가)",
+        "recycling_reason": "바퀴 파손, 더러움"
+      }
+    },
+    {
+      "img_no": "0052",
+      "image_file": "img_0052_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "불가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "mixed",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1328,
+          "material_agent": 1349,
+          "damage_agent": 1363,
+          "soil_agent": 1335,
+          "total": 5375
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "일부 없음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "mixed",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "보통",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "변신 로봇",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "변신 로봇",
+        "material": "플라스틱",
+        "parts_complete": "일부 없음",
+        "soil_level": "보통",
+        "recycling_reason": "다리 없음"
+      }
+    },
+    {
+      "img_no": "0053",
+      "image_file": "img_0053_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "불가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "mixed",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1329,
+          "material_agent": 1344,
+          "damage_agent": 1375,
+          "soil_agent": 1342,
+          "total": 5390
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "일부 없음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "mixed",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "보통",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "자동차 장난감",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "자동차 장난감",
+        "material": "플라스틱",
+        "parts_complete": "일부 없음",
+        "soil_level": "보통",
+        "recycling_reason": "자동차 전조등이 없어보임"
+      }
+    },
+    {
+      "img_no": "0054",
+      "image_file": "img_0054_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "불가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "mixed",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1328,
+          "material_agent": 1351,
+          "damage_agent": 1363,
+          "soil_agent": 1337,
+          "total": 5379
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "일부 없음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "mixed",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "더러움 (재활용 불가)",
+          "correct": false
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "자동차 장난감",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "자동차 장난감",
+        "material": "플라스틱",
+        "parts_complete": "일부 없음",
+        "soil_level": "더러움 (재활용 불가)",
+        "recycling_reason": "파손이 많음"
+      }
+    },
+    {
+      "img_no": "0055",
+      "image_file": "img_0055_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "불가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "mixed",
+        "파손": "minor_damage",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1328,
+          "material_agent": 1351,
+          "damage_agent": 1378,
+          "soil_agent": 1348,
+          "total": 5405
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "minor_damage",
+          "actual": "일부 없음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "mixed",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "보통",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "자동차 장난감",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "자동차 장난감",
+        "material": "플라스틱",
+        "parts_complete": "일부 없음",
+        "soil_level": "보통",
+        "recycling_reason": "뒤에 사다리 깨짐"
+      }
+    },
+    {
+      "img_no": "0056",
+      "image_file": "img_0056_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "불가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "mixed",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1332,
+          "material_agent": 1341,
+          "damage_agent": 1377,
+          "soil_agent": 1340,
+          "total": 5390
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "판단 불가",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "mixed",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "보통",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "기타",
+          "correct": true
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "기타",
+        "material": "플라스틱",
+        "parts_complete": "판단 불가",
+        "soil_level": "보통",
+        "recycling_reason": "용도 불분명"
+      }
+    },
+    {
+      "img_no": "0057",
+      "image_file": "img_0057_front",
+      "ground_truth": "불가능",
+      "ai_prediction": "불가능",
+      "is_correct": true,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "plastic",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1332,
+          "material_agent": 1359,
+          "damage_agent": 1362,
+          "soil_agent": 1336,
+          "total": 5389
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "일부 없음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "plastic",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "피규어",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "피규어",
+        "material": "플라스틱",
+        "parts_complete": "일부 없음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": "팔이 없음"
+      }
+    },
+    {
+      "img_no": "0058",
+      "image_file": "img_0058_front",
+      "ground_truth": "가능",
+      "ai_prediction": "불가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "mixed",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1333,
+          "material_agent": 1365,
+          "damage_agent": 1374,
+          "soil_agent": 1345,
+          "total": 5417
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "있음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "mixed",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "건전지 장난감 (사운드북 포함)",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "건전지 장난감 (사운드북 포함)",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0059",
+      "image_file": "img_0059_front",
+      "ground_truth": "가능",
+      "ai_prediction": "불가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "mixed",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1330,
+          "material_agent": 1347,
+          "damage_agent": 1366,
+          "soil_agent": 1336,
+          "total": 5379
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "있음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "mixed",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "비건전지 장난감 (",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "비건전지 장난감 (",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0060",
+      "image_file": "img_0060_front",
+      "ground_truth": "가능",
+      "ai_prediction": "불가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "mixed",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1338,
+          "material_agent": 1357,
+          "damage_agent": 1364,
+          "soil_agent": 1347,
+          "total": 5406
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "있음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "mixed",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "건전지 장난감 (사운드북 포함)",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "건전지 장난감 (사운드북 포함)",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0061",
+      "image_file": "img_0061_front",
+      "ground_truth": "가능",
+      "ai_prediction": "불가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "mixed",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1334,
+          "material_agent": 1356,
+          "damage_agent": 1359,
+          "soil_agent": 1336,
+          "total": 5385
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "있음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "mixed",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "건전지 장난감 (사운드북 포함)",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "건전지 장난감 (사운드북 포함)",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0062",
+      "image_file": "img_0062_front",
+      "ground_truth": "가능",
+      "ai_prediction": "불가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "plastic",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1328,
+          "material_agent": 1346,
+          "damage_agent": 1359,
+          "soil_agent": 1335,
+          "total": 5368
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "있음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "plastic",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "자동차 장난감",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "자동차 장난감",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0063",
+      "image_file": "img_0063_front",
+      "ground_truth": "가능",
+      "ai_prediction": "불가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "mixed",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1329,
+          "material_agent": 1344,
+          "damage_agent": 1363,
+          "soil_agent": 1337,
+          "total": 5373
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "있음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "mixed",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "자동차 장난감",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "자동차 장난감",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0064",
+      "image_file": "img_0064_front",
+      "ground_truth": "가능",
+      "ai_prediction": "불가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "plastic",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1330,
+          "material_agent": 1352,
+          "damage_agent": 1362,
+          "soil_agent": 1342,
+          "total": 5386
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "있음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "plastic",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "건전지 장난감 (사운드북 포함)",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "건전지 장난감 (사운드북 포함)",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0065",
+      "image_file": "img_0065_front",
+      "ground_truth": "가능",
+      "ai_prediction": "불가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "mixed",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1335,
+          "material_agent": 1348,
+          "damage_agent": 1363,
+          "soil_agent": 1338,
+          "total": 5384
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "있음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "mixed",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "비건전지 장난감 (",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "비건전지 장난감 (",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0066",
+      "image_file": "img_0066_front",
+      "ground_truth": "가능",
+      "ai_prediction": "불가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "mixed",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1328,
+          "material_agent": 1359,
+          "damage_agent": 1363,
+          "soil_agent": 1335,
+          "total": 5385
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "있음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "mixed",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "비건전지 장난감 (",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "비건전지 장난감 (",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0067",
+      "image_file": "img_0067_front",
+      "ground_truth": "가능",
+      "ai_prediction": "불가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "mixed",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1332,
+          "material_agent": 1369,
+          "damage_agent": 1364,
+          "soil_agent": 1337,
+          "total": 5402
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "있음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "mixed",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "건전지 장난감 (사운드북 포함)",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "건전지 장난감 (사운드북 포함)",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0068",
+      "image_file": "img_0068_front",
+      "ground_truth": "가능",
+      "ai_prediction": "불가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "mixed",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1329,
+          "material_agent": 1348,
+          "damage_agent": 1392,
+          "soil_agent": 1341,
+          "total": 5410
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "있음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "mixed",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "비건전지 장난감 (",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "비건전지 장난감 (",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0069",
+      "image_file": "img_0069_front",
+      "ground_truth": "가능",
+      "ai_prediction": "불가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "mixed",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1340,
+          "material_agent": 1366,
+          "damage_agent": 1365,
+          "soil_agent": 1336,
+          "total": 5407
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "있음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "mixed",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "건전지 장난감 (사운드북 포함)",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "건전지 장난감 (사운드북 포함)",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0070",
+      "image_file": "img_0070_front",
+      "ground_truth": "가능",
+      "ai_prediction": "불가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "mixed",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1328,
+          "material_agent": 1399,
+          "damage_agent": 1362,
+          "soil_agent": 1334,
+          "total": 5423
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "있음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "mixed",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "비건전지 장난감 (",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "비건전지 장난감 (",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0071",
+      "image_file": "img_0071_front",
+      "ground_truth": "가능",
+      "ai_prediction": "불가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "plastic",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1329,
+          "material_agent": 1352,
+          "damage_agent": 1363,
+          "soil_agent": 1341,
+          "total": 5385
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "있음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "plastic",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "피규어",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "피규어",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0072",
+      "image_file": "img_0072_front",
+      "ground_truth": "가능",
+      "ai_prediction": "불가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "mixed",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1328,
+          "material_agent": 1371,
+          "damage_agent": 1363,
+          "soil_agent": 1340,
+          "total": 5402
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "일부 없음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "mixed",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "보통",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "비건전지 장난감 (",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "비건전지 장난감 (",
+        "material": "플라스틱",
+        "parts_complete": "일부 없음",
+        "soil_level": "보통",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0073",
+      "image_file": "img_0073_front",
+      "ground_truth": "가능",
+      "ai_prediction": "불가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "mixed",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1335,
+          "material_agent": 1352,
+          "damage_agent": 1363,
+          "soil_agent": 1335,
+          "total": 5385
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "있음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "mixed",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "피규어",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "피규어",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0074",
+      "image_file": "img_0074_front",
+      "ground_truth": "가능",
+      "ai_prediction": "불가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "mixed",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1343,
+          "material_agent": 1340,
+          "damage_agent": 1400,
+          "soil_agent": 1341,
+          "total": 5424
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "있음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "mixed",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "피규어",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "피규어",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0075",
+      "image_file": "img_0075_front",
+      "ground_truth": "가능",
+      "ai_prediction": "불가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "mixed",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1332,
+          "material_agent": 1378,
+          "damage_agent": 1362,
+          "soil_agent": 1340,
+          "total": 5412
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "있음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "mixed",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "비건전지 장난감 (",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "비건전지 장난감 (",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0076",
+      "image_file": "img_0076_front",
+      "ground_truth": "가능",
+      "ai_prediction": "불가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "plastic",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1329,
+          "material_agent": 1361,
+          "damage_agent": 1374,
+          "soil_agent": 1336,
+          "total": 5400
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "있음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "plastic",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "비건전지 장난감 (",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "비건전지 장난감 (",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0077",
+      "image_file": "img_0077_front",
+      "ground_truth": "가능",
+      "ai_prediction": "불가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "plastic",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1329,
+          "material_agent": 0,
+          "damage_agent": 1365,
+          "soil_agent": 1338,
+          "total": 4032
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "있음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "plastic",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "비건전지 장난감 (",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "비건전지 장난감 (",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0078",
+      "image_file": "img_0078_front",
+      "ground_truth": "가능",
+      "ai_prediction": "불가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "plastic",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1377,
+          "material_agent": 1370,
+          "damage_agent": 1363,
+          "soil_agent": 1336,
+          "total": 5446
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "있음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "plastic",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "건전지 장난감 (사운드북 포함)",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "건전지 장난감 (사운드북 포함)",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0079",
+      "image_file": "img_0079_front",
+      "ground_truth": "가능",
+      "ai_prediction": "불가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "mixed",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1334,
+          "material_agent": 1348,
+          "damage_agent": 1366,
+          "soil_agent": 1335,
+          "total": 5383
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "있음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "mixed",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "비건전지 장난감 (",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "비건전지 장난감 (",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0080",
+      "image_file": "img_0080_front",
+      "ground_truth": "가능",
+      "ai_prediction": "불가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "plastic",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1335,
+          "material_agent": 1361,
+          "damage_agent": 1364,
+          "soil_agent": 1336,
+          "total": 5396
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "있음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "plastic",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "건전지 장난감 (사운드북 포함)",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "건전지 장난감 (사운드북 포함)",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0081",
+      "image_file": "img_0081_front",
+      "ground_truth": "가능",
+      "ai_prediction": "불가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "mixed",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1329,
+          "material_agent": 1349,
+          "damage_agent": 1363,
+          "soil_agent": 1336,
+          "total": 5377
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "있음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "mixed",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "건전지 장난감 (사운드북 포함)",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "건전지 장난감 (사운드북 포함)",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0082",
+      "image_file": "img_0082_front",
+      "ground_truth": "가능",
+      "ai_prediction": "불가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "mixed",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1329,
+          "material_agent": 1344,
+          "damage_agent": 1363,
+          "soil_agent": 1323,
+          "total": 5359
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "있음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "mixed",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "변신 로봇",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "변신 로봇",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0083",
+      "image_file": "img_0083_front",
+      "ground_truth": "가능",
+      "ai_prediction": "불가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "mixed",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1328,
+          "material_agent": 1365,
+          "damage_agent": 1374,
+          "soil_agent": 1330,
+          "total": 5397
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "있음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "mixed",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "비건전지 장난감 (",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "비건전지 장난감 (",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0084",
+      "image_file": "img_0084_front",
+      "ground_truth": "가능",
+      "ai_prediction": "불가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "mixed",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1332,
+          "material_agent": 1358,
+          "damage_agent": 1363,
+          "soil_agent": 1336,
+          "total": 5389
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "있음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "mixed",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "피규어",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "피규어",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0085",
+      "image_file": "img_0085_front",
+      "ground_truth": "가능",
+      "ai_prediction": "불가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "plastic",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1328,
+          "material_agent": 1365,
+          "damage_agent": 1363,
+          "soil_agent": 1332,
+          "total": 5388
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "있음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "plastic",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "자동차 장난감",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "자동차 장난감",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0086",
+      "image_file": "img_0086_front",
+      "ground_truth": "가능",
+      "ai_prediction": "불가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "mixed",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1328,
+          "material_agent": 1382,
+          "damage_agent": 1345,
+          "soil_agent": 1336,
+          "total": 5391
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "있음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "mixed",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "비건전지 장난감 (",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "비건전지 장난감 (",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0087",
+      "image_file": "img_0087_front",
+      "ground_truth": "가능",
+      "ai_prediction": "불가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "plastic",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1345,
+          "material_agent": 1365,
+          "damage_agent": 1364,
+          "soil_agent": 1336,
+          "total": 5410
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "있음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "plastic",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "건전지 장난감 (사운드북 포함)",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "건전지 장난감 (사운드북 포함)",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0088",
+      "image_file": "img_0088_front",
+      "ground_truth": "가능",
+      "ai_prediction": "불가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "plastic",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1331,
+          "material_agent": 1338,
+          "damage_agent": 1365,
+          "soil_agent": 1332,
+          "total": 5366
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "있음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "plastic",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "비건전지 장난감 (",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "비건전지 장난감 (",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0089",
+      "image_file": "img_0089_front",
+      "ground_truth": "가능",
+      "ai_prediction": "불가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "mixed",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1331,
+          "material_agent": 1368,
+          "damage_agent": 1391,
+          "soil_agent": 1356,
+          "total": 5446
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "있음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "mixed",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "비건전지 장난감 (",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "비건전지 장난감 (",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0090",
+      "image_file": "img_0090_front",
+      "ground_truth": "가능",
+      "ai_prediction": "불가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "mixed",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1332,
+          "material_agent": 1365,
+          "damage_agent": 1363,
+          "soil_agent": 1335,
+          "total": 5395
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "있음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "mixed",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "피규어",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "피규어",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0091",
+      "image_file": "img_0091_front",
+      "ground_truth": "가능",
+      "ai_prediction": "불가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "plastic",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1332,
+          "material_agent": 1338,
+          "damage_agent": 1363,
+          "soil_agent": 1335,
+          "total": 5368
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "있음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "plastic",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "피규어",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "피규어",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0092",
+      "image_file": "img_0092_front",
+      "ground_truth": "가능",
+      "ai_prediction": "불가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "mixed",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1329,
+          "material_agent": 1359,
+          "damage_agent": 1363,
+          "soil_agent": 1332,
+          "total": 5383
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "있음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "mixed",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "자동차 장난감",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "자동차 장난감",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0093",
+      "image_file": "img_0093_front",
+      "ground_truth": "가능",
+      "ai_prediction": "불가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "mixed",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1330,
+          "material_agent": 1374,
+          "damage_agent": 1363,
+          "soil_agent": 1362,
+          "total": 5429
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "있음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "mixed",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "자동차 장난감",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "자동차 장난감",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0094",
+      "image_file": "img_0094_front",
+      "ground_truth": "가능",
+      "ai_prediction": "불가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "mixed",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1333,
+          "material_agent": 1350,
+          "damage_agent": 1363,
+          "soil_agent": 1323,
+          "total": 5369
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "있음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "mixed",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "자동차 장난감",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "자동차 장난감",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0095",
+      "image_file": "img_0095_front",
+      "ground_truth": "가능",
+      "ai_prediction": "불가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "plastic",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1331,
+          "material_agent": 1349,
+          "damage_agent": 1363,
+          "soil_agent": 1338,
+          "total": 5381
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "있음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "plastic",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "피규어",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "피규어",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0096",
+      "image_file": "img_0096_front",
+      "ground_truth": "가능",
+      "ai_prediction": "불가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "plastic",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1328,
+          "material_agent": 1347,
+          "damage_agent": 1365,
+          "soil_agent": 1340,
+          "total": 5380
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "있음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "plastic",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "비건전지 장난감 (",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "비건전지 장난감 (",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0097",
+      "image_file": "img_0097_front",
+      "ground_truth": "가능",
+      "ai_prediction": "불가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "mixed",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1328,
+          "material_agent": 1378,
+          "damage_agent": 1363,
+          "soil_agent": 1348,
+          "total": 5417
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "있음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "mixed",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "자동차 장난감",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "자동차 장난감",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0098",
+      "image_file": "img_0098_front",
+      "ground_truth": "가능",
+      "ai_prediction": "불가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "mixed",
+        "파손": "minor_damage",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1328,
+          "material_agent": 1359,
+          "damage_agent": 1361,
+          "soil_agent": 1363,
+          "total": 5411
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "minor_damage",
+          "actual": "있음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "mixed",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "자동차 장난감",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "자동차 장난감",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    },
+    {
+      "img_no": "0099",
+      "image_file": "img_0099_front",
+      "ground_truth": "가능",
+      "ai_prediction": "불가능",
+      "is_correct": false,
+      "ai_details": {
+        "장난감 종류": "기타",
+        "건전지 여부": "불명",
+        "재료": "plastic",
+        "파손": "none",
+        "오염도": "깨끗",
+        "관찰사항": "오염 없음 - 기부 적합",
+        "크기": "중간",
+        "기부 가능 여부": "불가능",
+        "기부 불가 사유": "경미한 문제로 수리 필요",
+        "수리/분해": "경미 수리 권장",
+        "토큰 사용량": {
+          "type_agent": 1353,
+          "material_agent": 1381,
+          "damage_agent": 1374,
+          "soil_agent": 1336,
+          "total": 5444
+        }
+      },
+      "agent_results": {
+        "damage": {
+          "predicted": "none",
+          "actual": "있음",
+          "correct": false,
+          "missing_parts": "불명"
+        },
+        "material": {
+          "predicted": "plastic",
+          "actual": "플라스틱",
+          "correct": false
+        },
+        "soil": {
+          "predicted": "깨끗",
+          "actual": "깨끗 (미세소독 필요)",
+          "correct": true
+        },
+        "type": {
+          "predicted": "기타",
+          "actual": "건전지 장난감 (사운드북 포함)",
+          "correct": false
+        }
+      },
+      "ground_truth_details": {
+        "toy_type": "건전지 장난감 (사운드북 포함)",
+        "material": "플라스틱",
+        "parts_complete": "있음",
+        "soil_level": "깨끗 (미세소독 필요)",
+        "recycling_reason": NaN
+      }
+    }
+  ]
+}

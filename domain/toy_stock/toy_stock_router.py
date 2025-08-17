@@ -32,6 +32,52 @@ def toystock_list(
         "toystock_list": _toystock_list
     }
 
+# 테스트용: 이미지 URL 포함 장난감 리스트
+@router.get("/toystocklist_test", response_model=toy_stock_schema.ToyStockList)
+def toystock_list_test(
+    toy_type: str = Query("", description="장난감 종류 검색 (없으면 전체 조회)"),
+    page: int = Query(0, ge=0, description="페이지 번호 (0부터 시작)"),
+    size: int = Query(10, ge=1, le=50, description="한 페이지에 보여줄 개수"),
+    keyword: str = Query("", description="검색 키워드 (없으면 전체 조회)"),
+    toy_status: str = Query("for_sale", description="장난감 상태 검색 (없으면 'for sale'로 조회)"),
+    db: Session = Depends(get_db)
+    ):
+    """
+    테스트용: 이미지 URL을 포함한 toystocklist
+    """
+    total, _toystock_list = toy_stock_crud.get_toystock_list(db, toy_type=toy_type, skip=page*size, limit=size, keyword=keyword, toy_status=toy_status)
+    
+    # 테스트용: 이미지 URL 변환
+    for toy in _toystock_list:
+        if isinstance(toy.image_url, dict):
+            # 기존 딕셔너리를 URL로 변환
+            url_dict = {}
+            for key, value in toy.image_url.items():
+                if value:
+                    url_dict[key] = f"/api/toy_stock/images/{value}"
+                else:
+                    url_dict[key] = None
+            toy.image_url = url_dict
+        elif isinstance(toy.image_url, list):
+            # 리스트를 URL 딕셔너리로 변환
+            if toy.image_url:
+                url_dict = {"main": f"/api/toy_stock/images/{toy.image_url[0]}"}
+                for i, img in enumerate(toy.image_url[1:], 1):
+                    url_dict[f"sub{i}"] = f"/api/toy_stock/images/{img}"
+                toy.image_url = url_dict
+            else:
+                toy.image_url = None
+        elif isinstance(toy.image_url, str):
+            # 문자열을 URL로 변환
+            toy.image_url = {"main": f"/api/toy_stock/images/{toy.image_url}"}
+        elif toy.image_url is None:
+            toy.image_url = None
+    
+    return {
+        "total": total, 
+        "toystock_list": _toystock_list
+    }
+
 # 장난감 Detail 정보 불러오기
 @router.get("/detail/{toy_id}", response_model=toy_stock_schema.ToyDetail)
 def toy_detail(toy_id: int, db: Session = Depends(get_db)):
@@ -278,4 +324,65 @@ async def get_sale_history(
     except Exception as e:
         print(f"Error in get_sale_history: {str(e)}")
         raise HTTPException(status_code=500, detail=f"서버 오류가 발생했습니다: {str(e)}")
+
+from pathlib import Path
+from fastapi import HTTPException
+from fastapi.responses import FileResponse
+
+BASE_DIR = Path(__file__).resolve().parent.parent  # domain/toy_stock의 상위 = domain
+MEDIA_DIR = BASE_DIR.parent / "toypics"            # domain의 상위 = 프로젝트 루트의 toypics
+
+# 이미지 직접 서빙 엔드포인트
+@router.get("/images/{image_path:path}")
+async def serve_image(image_path: str):
+    # URL 디코딩 및 공백 제거
+    import urllib.parse
+    image_path = urllib.parse.unquote(image_path).strip()
+    
+    # HTTP/1.1 등 HTTP 헤더 정보 제거
+    if " HTTP/" in image_path:
+        image_path = image_path.split(" HTTP/")[0]
+    
+    # 추가 URL 정리 (공백, 특수문자 등 제거)
+    image_path = image_path.strip()
+    
+    # 백슬래시 → 슬래시 치환(윈도우 경로 대응)
+    p = Path(image_path.replace("\\", "/"))
+
+    # URL에 'toypics/'가 포함돼 들어와도 정상 동작하도록 제거
+    parts = list(p.parts)
+    if parts and parts[0].lower() == "toypics":
+        parts = parts[1:]
+    p = Path(*parts)
+
+    # 최종 실제 파일 경로 만들기 (프로젝트 루트 기준)
+    target = Path("toypics") / p
+
+    # 디렉터리 탈출 방지
+    try:
+        target.resolve().relative_to(Path("toypics").resolve())
+    except ValueError:
+        raise HTTPException(status_code=403, detail="잘못된 경로 요청입니다.")
+
+    if not target.exists():
+        raise HTTPException(status_code=404, detail=f"이미지를 찾을 수 없습니다. 경로: {target}")
+
+    return FileResponse(str(target))
+
+# 테스트용 간단한 이미지 서빙 엔드포인트
+@router.get("/test_image/{filename}")
+async def test_image(filename: str):
+    """
+    테스트용: 간단한 이미지 서빙
+    """
+    import os
+    from fastapi.responses import FileResponse
+    
+    # toypics 폴더의 파일 직접 접근
+    image_path = os.path.join("toypics", filename)
+    
+    if not os.path.exists(image_path):
+        raise HTTPException(status_code=404, detail=f"파일을 찾을 수 없습니다: {image_path}")
+    
+    return FileResponse(image_path)
 
