@@ -38,12 +38,18 @@ domain/analyze/ai_agent/used/
 domain/analyze/ai_agent/products_info.csv
 domain/analyze/ai_agent/old_toy/
 domain/analyze/ai_agent/venv/
+domain/analyze/ai_agent/train/
+domain/analyze/ai_agent/test/
+domain/analyze/ai_agent/carbot_data_final.csv
+domain/analyze/ai_agent/carbot_data_final.xlsx
 
 # AI 모델 캐시 및 빌드 파일
 domain/analyze/ai_agent/__pycache__/
 domain/analyze/ai_agent/*.egg-info/
 domain/analyze/ai_agent/build/
 domain/analyze/ai_agent/dist/
+domain/analyze/ai_agent/ai_agent/__pycache__/
+domain/analyze/ai_agent/ai_agent/evaluation/
 
 # ...existing code...
 alembic.ini

@@ -1,4 +1,4 @@
-# soil_agent.py  (Claude 버전, 기준 이미지 1장, 5단계 상대판정)
+# soil_agent.py  (Claude 버전, 기준 1장, 절대점수/상대등급 A~E 반환)
 import os, io, json, base64
 from typing import Tuple, Dict
 
@@ -9,7 +9,6 @@ from anthropic import Anthropic
 load_dotenv()
 
 def _img_bytes_to_b64jpeg(img_bytes: bytes, max_side: int = 1024) -> str:
-    """바이트 → RGB → 리사이즈 → JPEG → base64"""
     try:
         img = Image.open(io.BytesIO(img_bytes)).convert("RGB")
     except Exception:
@@ -25,24 +24,27 @@ def _img_bytes_to_b64jpeg(img_bytes: bytes, max_side: int = 1024) -> str:
 def _anthropic_img_part(b64: str) -> Dict:
     return {"type": "image", "source": {"type": "base64", "media_type": "image/jpeg", "data": b64}}
 
-def _soil_to_int(s: str) -> int:
-    """
-    오염 라벨 → 정수(클수록 '더 더러움').
-    """
-    t = (s or "").strip()
-    if "깨끗" in t: return 0
-    if "보통" in t: return 1
-    if "약간" in t and "더러움" in t: return 2   # '약간 더러움'
-    if "더러움" in t: return 3                   # 심한 오염
-    if "판단" in t: return 2                     # 판단 불가 → 중간값으로
+# 깨끗함 절대점수: 4(새것 수준) → 0(매우 더러움)
+_SOIL_LABEL_TO_ABS = {
+    "깨끗": 4, "보통": 3, "약간 더러움": 2, "더러움": 1, "판단 불가": 2
+}
+
+def _label_to_abs(s: str) -> int:
+    s = (s or "").strip()
+    for k, v in _SOIL_LABEL_TO_ABS.items():
+        if k in s:
+            return v
     return 2
 
+def _steps_to_grade(steps: int) -> str:
+    # steps = reference_abs - query_abs (신품대비 얼마나 덜 깨끗한지)
+    if steps <= 0: return "A"
+    if steps == 1: return "B"
+    if steps == 2: return "C"
+    if steps == 3: return "D"
+    return "E"
+
 class SoilAgent:
-    """
-    Claude 멀티모달.
-    입력: 사용자 4뷰(앞/좌/후/우) + 기준 1장(ref_image)
-    출력: query/ref 오염 라벨 + 5단계 상대 레벨(soil_delta_level: -2..+2)
-    """
     def __init__(self, model: str = "claude-sonnet-4-20250514"):
         self.model = model
         api_key = os.getenv("ANTHROPIC_API_KEY")
@@ -68,10 +70,6 @@ Guidelines:
     def analyze(self,
                 query_front: bytes, query_left: bytes, query_rear: bytes, query_right: bytes,
                 ref_image: bytes) -> Tuple[dict, dict]:
-        """
-        ref_image: 기준 이미지 1장 (홀수=중앙값 대응, 짝수=유사도 1위는 바깥 로직에서 선택)
-        return: (result_json(dict), usage(dict))
-        """
         # 1) 이미지 준비
         q_b64s = [
             _img_bytes_to_b64jpeg(query_front),
@@ -121,27 +119,19 @@ Guidelines:
                 "reference": {"soil": "판단 불가", "soil_detail": ""}
             }
 
-        # 5) 5단계 상대 레벨 계산 (-2..+2)  ※ 값이 클수록 '더 깨끗'
-        q = _soil_to_int(base.get("query", {}).get("soil"))
-        r = _soil_to_int(base.get("reference", {}).get("soil"))
-        d = r - q   # (양수) = 쿼리가 기준보다 '더 깨끗'
-
-        if d >= 2: level = 2
-        elif d == 1: level = 1
-        elif d == 0: level = 0
-        elif d == -1: level = -1
-        else: level = -2  # d <= -2
-
-        # ✅ 숫자만 반환하도록 변경 (라벨 제거)
-        rel = {
-            "soil_delta_level": int(level)   # -2..+2
-        }
+        # 5) 절대점수/상대등급 산출
+        q_abs = _label_to_abs(base.get("query", {}).get("soil"))
+        r_abs = _label_to_abs(base.get("reference", {}).get("soil"))
+        steps = r_abs - q_abs          # 신품대비 몇 단계 낮은지(>0이면 사용자쪽이 더 오염)
+        grade = _steps_to_grade(steps) # A~E
 
         result = {
-            "soil_level": int(level),        # ✅ 최상위에도 숫자 레벨 제공
             "query": base.get("query", {}),
             "reference": base.get("reference", {}),
-            "relative_vs_ref": rel
+            "query_abs": int(q_abs),
+            "reference_abs": int(r_abs),
+            "grade": grade,  # 상대등급
+            "relative_vs_ref": {"delta": int(q_abs - r_abs), "grade": grade}  # delta는 로그 호환(-1 등)
         }
 
         # (디버그) 콘솔 로그
@@ -151,4 +141,3 @@ Guidelines:
             pass
 
         return result, usage
-

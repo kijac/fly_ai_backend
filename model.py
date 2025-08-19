@@ -69,7 +69,10 @@ class Toy_Stock(Base):
 
     sale_price = Column(BigInteger, nullable=True, default=0)  # 장난감 판매가
     purchase_price = Column(BigInteger, nullable=True, default=0)  # 장난감 매입가
-    
+    material = Column(String(500), nullable=True) # 재료
+    soil = Column(String(500), nullable=True) # 오염도
+    damage = Column(String(500), nullable=True) # 파손도
+
     # 관계 설정
     donor = relationship("User", foreign_keys=[user_id], backref="donated_toys")
     reserved_by = relationship("Donor_Requests", foreign_keys=[reserved_by_request_id], backref="reserved_toys")

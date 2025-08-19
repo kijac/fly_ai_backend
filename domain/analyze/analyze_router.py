@@ -15,7 +15,7 @@ def run_ai_analysis(
     right_image_bytes: Optional[bytes] = None
 ) -> dict:
     """
-    AI 모델을 사용하여 장난감 분석을 수행하고 완전한 JSON 결과를 반환
+    새로운 AI 모델을 사용하여 장난감 분석을 수행하고 완전한 JSON 결과를 반환
     """
     try:
         # 임시 파일로 저장 (AI 모델이 파일 경로를 요구하므로)
@@ -60,9 +60,9 @@ def run_ai_analysis(
         os.chdir(ai_agent_path)
         
         try:
-            from ai_agent_output_json import run_full_pipeline
+            from ai_agent_output import run_full_pipeline_and_get_final_json
             
-            result = run_full_pipeline(
+            result = run_full_pipeline_and_get_final_json(
                 query_image_path=front_temp.name,
                 left=left_temp.name if left_temp else None,
                 rear=rear_temp.name if rear_temp else None,
@@ -95,9 +95,10 @@ async def analyze_images(
     images: List[UploadFile] = File(...)  # 연속으로 받는 이미지들
 ):
     """
-    장난감 이미지를 AI 모델로 분석하여 완전한 JSON 결과를 반환
+    장난감 이미지를 새로운 AI 모델로 분석하여 완전한 JSON 결과를 반환
     
     - images: 연속으로 업로드된 이미지들 (첫 번째가 메인 이미지)
+    - 반환: toy_name, retail_price, purchase_price, soil, damage, toy_type, material
     """
     try:
         if not images:
@@ -131,17 +132,17 @@ async def analyze_images(
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"분석 중 오류 발생: {str(e)}")
 
-# 기존 함수는 호환성을 위해 유지 (선택사항)
+# 기존 호환성을 위한 레거시 함수들
 def convert_result_keys(result):
     return {
-        "toy_type": result.get("장난감 종류"),
-        "battery": result.get("건전지 여부"),
-        "material": result.get("재료"),
-        "damage": result.get("파손"),
-        "donate": result.get("기부 가능 여부") == "가능",
-        "donate_reason": result.get("기부 불가 사유") or "",
-        "repair_or_disassemble": result.get("수리/분해"),
-        "token_usage": result.get("토큰_사용량"),
+        "toy_type": result.get("toy_type"),
+        "battery": result.get("건전지"),
+        "material": result.get("material"),
+        "damage": result.get("damage"),
+        "donate": result.get("donate", False),
+        "donate_reason": result.get("donate_reason", ""),
+        "repair_or_disassemble": result.get("repair_or_disassemble", ""),
+        "token_usage": result.get("에이전트_토큰합", 0),
     }
 
 @router.post("/analyze_legacy", response_model=list[AnalyzeResult])
@@ -149,10 +150,9 @@ async def analyze_images_legacy(photos: list[UploadFile] = File(...)):
     """
     기존 호환성을 위한 레거시 분석 API
     """
-    supervisor = SupervisorAgent()
     results = []
     for file in photos:
         image_bytes = await file.read()
-        result = supervisor.process(image_bytes)
+        result = run_ai_analysis(front_image_bytes=image_bytes)
         results.append(convert_result_keys(result))
     return results

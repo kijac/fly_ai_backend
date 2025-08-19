@@ -7,33 +7,60 @@ from ai_agent.node_agents.damage_agent import DamageAgent
 from ai_agent.node_agents.soil_agent import SoilAgent
 from ai_agent.image_input import optimize_image_size
 
-class SupervisorAgent:
-    def __init__(self, claude_model: str = "claude-sonnet-4-20250514"):
-        self.type_agent = TypeAgent(model=claude_model)
-        self.material_agent = MaterialAgent(model=claude_model)
-        self.damage_agent = DamageAgent(model=claude_model)
-        self.soil_agent = SoilAgent(model=claude_model)
 
-    # ★ CHANGED: 기준 이미지(ref_image_bytes)를 추가 인자로 받도록 변경
+# --- 영어 소재 → 한글 키워드로도 매핑 (기부판정 로직 호환용) ---
+_EN2KO = {
+    "plastic": "플라스틱",
+    "metal": "금속",
+    "wood": "나무",
+    "fabric": "섬유",
+    "silicone": "실리콘",
+    "rubber": "고무",
+    "paper_cardboard": "종이",
+    "electronic": "전자",
+    "mixed": "혼합",
+    "unknown": "불명",
+}
+
+def _join_components_ko(components_en):
+    ko = []
+    for c in components_en or []:
+        ko.append(_EN2KO.get(c, c))
+    return ",".join(ko)
+
+
+class SupervisorAgent:
+    def __init__(self):
+        self.type_agent = TypeAgent()
+        self.material_agent = MaterialAgent()
+        self.damage_agent = DamageAgent()
+        self.soil_agent = SoilAgent()
+
+    # 기준 이미지(ref_image_bytes)를 추가 인자로 받음 (신품 이미지)
     def process(self, front_image, left_image, rear_image, right_image, ref_image_bytes):
-        # 0. 각 이미지 크기 최적화
+        # 0) 각 이미지 크기 최적화
         optimized_front = optimize_image_size(front_image)
         optimized_left = optimize_image_size(left_image)
         optimized_rear = optimize_image_size(rear_image)
         optimized_right = optimize_image_size(right_image)
-        ref_optimized = optimize_image_size(ref_image_bytes)  # ★ CHANGED: 기준 이미지도 최적화
-        
-        # 1. 각 개별 에이전트를 병렬로 실행 (4개 이미지 사용)
+        ref_optimized = optimize_image_size(ref_image_bytes)
+
+        # 1) 각 개별 에이전트를 병렬로 실행 (4개 이미지 사용)
         print("개별 에이전트 분석 중... (4개 이미지 통합 분석)")
-        
         with concurrent.futures.ThreadPoolExecutor(max_workers=4) as executor:
-            # 4개 에이전트를 동시에 실행, 각각 4개 이미지 전달
-            future_type = executor.submit(self.type_agent.analyze, optimized_front, optimized_left, optimized_rear, optimized_right)
-            future_material = executor.submit(self.material_agent.analyze, optimized_front, optimized_left, optimized_rear, optimized_right)
-            # ★ CHANGED: damage/soil 은 기준 1장(ref)도 함께 전달
-            future_damage = executor.submit(self.damage_agent.analyze, optimized_front, optimized_left, optimized_rear, optimized_right, ref_optimized)
-            future_soil = executor.submit(self.soil_agent.analyze, optimized_front, optimized_left, optimized_rear, optimized_right, ref_optimized)
-            
+            future_type = executor.submit(
+                self.type_agent.analyze, optimized_front, optimized_left, optimized_rear, optimized_right
+            )
+            future_material = executor.submit(
+                self.material_agent.analyze, optimized_front, optimized_left, optimized_rear, optimized_right
+            )
+            future_damage = executor.submit(
+                self.damage_agent.analyze, optimized_front, optimized_left, optimized_rear, optimized_right, ref_optimized
+            )
+            future_soil = executor.submit(
+                self.soil_agent.analyze, optimized_front, optimized_left, optimized_rear, optimized_right, ref_optimized
+            )
+
             # 결과 수집 (타임아웃 30초)
             try:
                 type_response, type_tokens = future_type.result(timeout=30)
@@ -42,51 +69,87 @@ class SupervisorAgent:
                 soil_response, soil_tokens = future_soil.result(timeout=30)
             except concurrent.futures.TimeoutError:
                 print("일부 에이전트가 타임아웃되었습니다. 순차 처리로 전환합니다.")
-                # 타임아웃 시 순차 처리로 전환
-                type_response, type_tokens = self.type_agent.analyze(optimized_front, optimized_left, optimized_rear, optimized_right)
-                material_response, material_tokens = self.material_agent.analyze(optimized_front, optimized_left, optimized_rear, optimized_right)
-                # ★ CHANGED: 순차 처리도 ref 전달
-                damage_response, damage_tokens = self.damage_agent.analyze(optimized_front, optimized_left, optimized_rear, optimized_right, ref_optimized)
-                soil_response, soil_tokens = self.soil_agent.analyze(optimized_front, optimized_left, optimized_rear, optimized_right, ref_optimized)
-        
-        # 3. JSON 파싱
+                type_response, type_tokens = self.type_agent.analyze(
+                    optimized_front, optimized_left, optimized_rear, optimized_right
+                )
+                material_response, material_tokens = self.material_agent.analyze(
+                    optimized_front, optimized_left, optimized_rear, optimized_right
+                )
+                damage_response, damage_tokens = self.damage_agent.analyze(
+                    optimized_front, optimized_left, optimized_rear, optimized_right, ref_optimized
+                )
+                soil_response, soil_tokens = self.soil_agent.analyze(
+                    optimized_front, optimized_left, optimized_rear, optimized_right, ref_optimized
+                )
+
+        # 2) JSON 파싱/안전 처리
         try:
             type_result = json.loads(type_response)
-        except:
-            type_result = {"type": "기타", "battery": "불명"}
-            
+        except Exception:
+            type_result = {"type": "others", "battery": "불명", "size": "불명"}
+
+        # MaterialAgent: 영어 출력 + 보조 필드 포함
         try:
             material_result = json.loads(material_response)
-        except:
-            material_result = {"material": "불명", "material_detail": "불명"}
-            
-        # ★ CHANGED: damage/soil 은 dict 혹은 JSON 문자열 모두 안전 처리
+        except Exception:
+            material_result = {
+                "material": "unknown",
+                "components": [],
+                "secondary_hint": None,
+                "confidence": 0.0,
+                "material_detail": "",
+                "notes": ""
+            }
+
+        # damage/soil은 dict 혹은 JSON 문자열 모두 안전 처리
         if isinstance(damage_response, dict):
             damage_result = damage_response
         else:
             try:
                 damage_result = json.loads(damage_response)
-            except:
-                damage_result = {"query": {"damage": "불명", "damage_detail": "불명", "missing_parts": "불명"}}
-            
+            except Exception:
+                damage_result = {
+                    "query": {"damage": "불명", "damage_detail": "불명", "missing_parts": "불명"}
+                }
+
         if isinstance(soil_response, dict):
             soil_result = soil_response
         else:
             try:
                 soil_result = json.loads(soil_response)
-            except:
+            except Exception:
                 soil_result = {"query": {"soil": "깨끗", "soil_detail": "오염 없음"}}
 
-        # 4. 통합 판단 로직 적용
-        toy_type = type_result.get("type", "기타")
+        # 3) 통합 판단 로직 적용
+        # type: 영어 카테고리를 그대로 사용 (최종 출력도 영어)
+        toy_type = type_result.get("type", "others")
         battery = type_result.get("battery", "불명")
-        size = type_result.get("size", "중간")  # AI 분석 결과 사용
-        material = material_result.get("material", "불명")
-        material_detail = material_result.get("material_detail", "불명")
-        material_confidence = material_result.get("confidence", "불명")
+        size = type_result.get("size", "중간")
+
+        # material: 영어 그대로 출력하되, 기부판정 로직 호환 위해 한글 문자열도 생성
+        material_en = (material_result.get("material") or "unknown").strip().lower()
+        components_en = material_result.get("components") or []
+        secondary_hint = material_result.get("secondary_hint")
+        material_detail = material_result.get("material_detail", "")
         material_notes = material_result.get("notes", "")
-        
-        # ★ CHANGED: damage/soil 은 query 기준으로 읽기 (신규 포맷 대응)
+        confidence = material_result.get("confidence", 0.0)
+
+        # 최종 노출용(영어)
+        if material_en == "mixed" and components_en:
+            material_display = "mixed(" + ",".join(components_en) + ")"
+        else:
+            material_display = material_en
+
+        # 기부판정 로직용(한글 조합)
+        if material_en == "mixed" and components_en:
+            material_for_rules_ko = _join_components_ko(components_en)  # 예: "플라스틱,금속"
+        else:
+            material_for_rules_ko = _EN2KO.get(material_en, material_en)
+
+        if material_notes:
+            material_detail = (material_detail + " | " + material_notes).strip(" |")
+
+        # damage는 query 기준 라벨들 읽기
         if "query" in damage_result:
             damage = damage_result["query"].get("damage", "불명")
             damage_detail = damage_result["query"].get("damage_detail", "불명")
@@ -96,6 +159,7 @@ class SupervisorAgent:
             damage_detail = damage_result.get("damage_detail", "불명")
             missing_parts = damage_result.get("missing_parts", "불명")
 
+        # soil은 query 기준 라벨들 읽기
         if "query" in soil_result:
             soil = soil_result["query"].get("soil", "깨끗")
             soil_detail = soil_result["query"].get("soil_detail", "오염 없음")
@@ -103,69 +167,99 @@ class SupervisorAgent:
             soil = soil_result.get("soil", "깨끗")
             soil_detail = soil_result.get("soil_detail", "오염 없음")
 
-        # ✅ 기준 대비 숫자 레벨(-2..+2) 추출
-        damage_level = None
+        # --- Damage: 상대 등급/점수 (신규 포맷) ---
+        rel_damage_grade = None
+        query_damage_score = None
+        reference_damage_score = None
         if isinstance(damage_result, dict):
-            # direct 필드 우선
-            if "damage_level" in damage_result:
-                damage_level = damage_result.get("damage_level")
-            # relative_vs_ref 안에 있을 수도 있음
-            if damage_level is None:
-                damage_level = (damage_result.get("relative_vs_ref") or {}).get("damage_delta_level")
+            # 다양한 키 호환
+            rel_damage_grade = (
+                damage_result.get("relative_damage_grade")
+                or damage_result.get("grade")
+                or (damage_result.get("relative_vs_ref") or {}).get("grade")
+            )
+            query_damage_score = (
+                damage_result.get("query_damage_score")
+                or damage_result.get("query_abs")
+            )
+            reference_damage_score = (
+                damage_result.get("reference_damage_score")
+                or damage_result.get("reference_abs")
+            )
 
+        # --- Soil: 등급/수치 추출 (여러 포맷 호환) ---
+        soil_grade = None
         soil_level = None
         if isinstance(soil_result, dict):
-            if "soil_level" in soil_result:
-                soil_level = soil_result.get("soil_level")
-            if soil_level is None:
-                soil_level = (soil_result.get("relative_vs_ref") or {}).get("soil_delta_level")
+            # 등급 우선: 최신 포맷 우선순위대로 조회
+            soil_grade = (
+                soil_result.get("relative_soil_grade")
+                or soil_result.get("grade")
+                or (soil_result.get("relative_vs_ref") or {}).get("grade")
+            )
+
+            # 수치(-2..+2 혹은 delta): 있으면 함께 전달(디버그/호환용)
+            lvl = soil_result.get("soil_level")
+            if lvl is None:
+                lvl = (soil_result.get("relative_vs_ref") or {}).get("delta")
+            soil_level = lvl
 
         # 의미있는 관찰사항 생성
-        notes = self._generate_meaningful_notes(toy_type, battery, material, material_detail, damage, damage_detail, missing_parts, soil, soil_detail)
-        
-        # Material Agent의 추가 정보를 관찰사항에 포함
-        if material_notes and material_notes not in notes:
-            notes = f"{notes} | 재료 분석: {material_notes}" if notes else f"재료 분석: {material_notes}"
-        
-        # 5. 기부 판단 로직 (통합 에이전트와 동일한 규칙)
-        donate, donate_reason, repair_or_disassemble = self._judge_donation(
-            toy_type, battery, material, material_detail, damage, damage_detail, missing_parts, soil, soil_detail
+        notes = self._generate_meaningful_notes(
+            toy_type, battery, material_display, material_detail,
+            damage, damage_detail, missing_parts, soil, soil_detail
         )
-        
-        # 6. 토큰 사용량 계산 (개별 에이전트들의 합계)
+
+        # 4) 기부 판단 로직 (한글 호환 문자열로 평가)
+        donate, donate_reason, repair_or_disassemble = self._judge_donation(
+            toy_type, battery, material_for_rules_ko, material_detail,
+            damage, damage_detail, missing_parts, soil, soil_detail
+        )
+
+        # 5) 토큰 사용량 합산
         token_usage = {
             "type_agent": type_tokens.get("total_tokens", 0),
             "material_agent": material_tokens.get("total_tokens", 0),
             "damage_agent": damage_tokens.get("total_tokens", 0),
             "soil_agent": soil_tokens.get("total_tokens", 0),
-            "total": type_tokens.get("total_tokens", 0) + material_tokens.get("total_tokens", 0) + damage_tokens.get("total_tokens", 0) + soil_tokens.get("total_tokens", 0)
+            "total": type_tokens.get("total_tokens", 0)
+                     + material_tokens.get("total_tokens", 0)
+                     + damage_tokens.get("total_tokens", 0)
+                     + soil_tokens.get("total_tokens", 0),
         }
 
-        # 7. 결과 반환
+        # 6) 결과 반환 (영어 출력 유지)
         return {
-            "장난감 종류": toy_type,
+            "장난감 종류": toy_type,                    # 영어 카테고리
             "건전지 여부": battery,
-            "재료": material,
+            "재료": material_display,                  # 영어 (mixed는 mixed(plastic,metal) 형태)
             "파손": damage,
             "오염도": soil,
             "관찰사항": notes,
             "크기": size,
+
             "기부 가능 여부": "가능" if donate else "불가능",
             "기부 불가 사유": donate_reason,
             "수리/분해": repair_or_disassemble,
+
             "토큰 사용량": token_usage,
 
-            # ★ NEW: 기준 대비 숫자 레벨(-2..+2)
-            "기준 대비(파손)": int(damage_level) if damage_level is not None else 0,
-            "기준 대비(오염)": int(soil_level) if soil_level is not None else 0,
+            # DamageAgent
+            "파손 상대등급": rel_damage_grade,                 # 'A'..'E'
+            "파손 점수(중고)": query_damage_score,            # 0..4
+            "파손 점수(신품)": reference_damage_score,        # 0..4
+
+            # SoilAgent (신규/구버전 혼용 지원)
+            "오염 상대등급": soil_grade,                      # 'A'..'E' (있다면)
+            "기준 대비(오염)": int(soil_level) if soil_level is not None else None,
         }
 
+    # --- 이하 기존 judge/notes 메서드는 그대로 (한국어 키워드 기반) ---
     def _judge_donation(self, toy_type, battery, material, material_detail, damage, damage_detail, missing_parts, soil, soil_detail):
         """
         가중치 기반 기부 가능 여부 판단 시스템
         소재(40%) + 부품상태(30%) + 파손(20%) + 오염도(10%) 순으로 평가
         """
-        # (이하 원문 그대로)
         if material == "나무":
             return False, "나무 소재는 안전상 기부 불가", "분해/부품 추출(업사이클)"
         if ("천" in material or "섬유" in material or 
@@ -191,7 +285,6 @@ class SupervisorAgent:
             "불분명" in str(toy_type)):
             return False, f"{toy_type}은 기부 불가", "분해/부품 추출(업사이클)"
         score = 0
-        max_score = 100
         if material == "플라스틱" and "단일" in material_detail:
             score += 40
         elif material == "금속" and "단일" in material_detail:
@@ -249,33 +342,35 @@ class SupervisorAgent:
             return False, "심각한 문제로 기부 불가", "분해/부품 추출(업사이클)"
 
     def _generate_meaningful_notes(self, toy_type, battery, material, material_detail, damage, damage_detail, missing_parts, soil, soil_detail):
-        """분석 결과를 바탕으로 의미있는 관찰사항을 생성합니다."""
         notes = []
-        # (원문 로직 그대로 유지)
-        if toy_type == "피규어" or toy_type == "모형":
+        if toy_type == "action_figures" or toy_type == "others":
             notes.append("피규어/모형류는 세밀한 파손 여부 확인 필요")
-        elif toy_type == "자동차 장난감":
+        elif toy_type == "vehicles":
             notes.append("자동차 장난감은 바퀴와 동작부위 상태 중요")
-        elif toy_type == "변신 로봇":
+        elif toy_type == "robot":
             notes.append("변신 로봇은 관절부위 파손 여부 확인 필요")
-        elif toy_type == "블록":
+        elif toy_type == "building_blocks":
             notes.append("블록류는 결합부위 마모 상태 확인")
-        elif toy_type == "공":
-            notes.append("공류는 압축성과 표면 상태 확인")
+        elif toy_type == "sports":
+            notes.append("스포츠 장난감은 마모/변형 확인")
+
         if battery == "건전지":
             notes.append("건전지 장난감은 전자부품 상태 확인 필요")
         elif battery == "비건전지":
             notes.append("비건전지 장난감은 기계적 동작 확인")
-        if material == "플라스틱" and "단일" in material_detail:
+
+        # 소재 관련 안내 (영문 출력값을 그대로 주석처럼 사용)
+        if "plastic" in material:
             notes.append("플라스틱 소재는 균열이나 변형 확인")
-        elif material == "금속" and "단일" in material_detail:
+        elif "metal" in material:
             notes.append("금속 소재는 녹이나 변형 상태 확인")
-        elif material == "나무":
+        elif "wood" in material:
             notes.append("나무 소재는 균열이나 부식 상태 확인")
-        elif "혼합" in material_detail or "," in material:
-            notes.append("혼합 소재는 각 재료별 상태 확인 필요")
-        elif "섬유" in material_detail:
-            notes.append("섬유 소재는 위생상태와 마모 확인")
+        elif "fabric" in material:
+            notes.append("섬유/천 소재는 위생상태와 마모 확인")
+        elif "silicone" in material or "rubber" in material:
+            notes.append("실리콘/고무 소재는 표면 오염 및 경화 확인")
+
         if damage == "없음" and missing_parts == "없음":
             notes.append("파손 없음, 부품 완전 - 기부 적합")
         elif missing_parts == "있음":
@@ -286,6 +381,7 @@ class SupervisorAgent:
             notes.append("경미한 파손 - 수리 후 기부 가능")
         elif "심각" in damage or "심각" in damage_detail:
             notes.append("심각한 파손 - 부품 추출 후 업사이클")
+
         if soil == "깨끗" or "깨끗" in soil or "깨끗" in soil_detail:
             notes.append("오염 없음 - 기부 적합")
         elif soil == "보통" or "보통" in soil_detail:
@@ -294,7 +390,5 @@ class SupervisorAgent:
             notes.append("약간 더러움 - 세척 후 기부 가능")
         elif soil == "더러움" or "더러움" in soil or "더러움" in soil_detail:
             notes.append("심한 오염 - 위생상 기부 불가")
-        if len(notes) > 0:
-            return " | ".join(notes)
-        else:
-            return "기본적인 상태 확인 완료"
+
+        return " | ".join(notes) if notes else "기본적인 상태 확인 완료"

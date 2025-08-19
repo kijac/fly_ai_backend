@@ -33,7 +33,7 @@ def toystock_list(
     }
 
 # 테스트용: 이미지 URL 포함 장난감 리스트
-@router.get("/toystocklist_test", response_model=toy_stock_schema.ToyStockList)
+@router.get("/toystocklist_remote", response_model=toy_stock_schema.ToyStockList)
 def toystock_list_test(
     toy_type: str = Query("", description="장난감 종류 검색 (없으면 전체 조회)"),
     page: int = Query(0, ge=0, description="페이지 번호 (0부터 시작)"),
@@ -43,7 +43,7 @@ def toystock_list_test(
     db: Session = Depends(get_db)
     ):
     """
-    테스트용: 이미지 URL을 포함한 toystocklist
+    원격 프론트엔드 접속용
     """
     total, _toystock_list = toy_stock_crud.get_toystock_list(db, toy_type=toy_type, skip=page*size, limit=size, keyword=keyword, toy_status=toy_status)
     
@@ -259,7 +259,7 @@ async def register_donation_bulk(
             "toy_type": toy_type[idx],
             "description": description[idx],
             "image_url": None,  # 임시로 None, 나중에 업데이트
-            "toy_status": ToyStatus.FOR_SALE,  # 기부도 FOR_SALE 상태로 설정
+            "toy_status": ToyStatus.DONATION,  # 기부는 DONATION 상태로 설정
             "is_donatable": donation_status,
             "created_at": datetime.now(),
             "updated_at": datetime.now(),
