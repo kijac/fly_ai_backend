@@ -94,16 +94,17 @@ def toy_detail(toy_id: int, db: Session = Depends(get_db)):
 async def register_toys_bulk(
     toy_name: List[str] = Form(...),
     toy_type: List[str] = Form(...),
-    description: List[str] = Form(...),
+    soil: List[str] = Form(...),
+    damage: List[str] = Form(...),
     sale_price: List[int] = Form(...),
     images: List[UploadFile] = File(...),  # 모든 이미지를 하나의 리스트로 받음
     db: Session = Depends(get_db),
     current_user: User = Depends(get_current_user)
 ):
-    if not toy_name or not toy_type or not description or not sale_price or not images:
+    if not toy_name or not toy_type or not soil or not damage or not sale_price or not images:
         raise HTTPException(status_code=400, detail="필수 항목이 누락되었습니다.")
 
-    if not (len(toy_name) == len(toy_type) == len(description) == len(sale_price)):
+    if not (len(toy_name) == len(toy_type) == len(soil) == len(damage) == len(sale_price)):
         raise HTTPException(status_code=400, detail="입력 데이터의 개수가 일치하지 않습니다.")
     
     # 이미지 개수로 장난감 개수 자동 계산 (자유로운 개수)
@@ -145,10 +146,11 @@ async def register_toys_bulk(
             "user_id": current_user.user_id,
             "toy_name": toy_name[idx],
             "toy_type": toy_type[idx],
-            "description": description[idx],
             "image_url": None,  # 임시로 None, 나중에 업데이트
             "toy_status": ToyStatus.FOR_SALE,
             "sale_price": sale_price[idx],
+            "soil": soil[idx],
+            "damage": damage[idx],
             "created_at": datetime.now(),
             "updated_at": datetime.now(),
         }
@@ -205,16 +207,17 @@ async def register_toys_bulk(
 @router.post("/submit_donation", response_model=toy_stock_schema.ToyDonationResponse)
 async def register_donation_bulk(
     toy_type: List[str] = Form(...),
-    description: List[str] = Form(...),
+    soil: List[str] = Form(...),
+    damage: List[str] = Form(...),
     is_donatable: List[str] = Form(...),
     images: List[UploadFile] = File(...),  # 모든 이미지를 하나의 리스트로 받음
     db: Session = Depends(get_db),
     current_user: User = Depends(get_current_user)
 ):
-    if not toy_type or not description or not is_donatable or not images:
+    if not toy_type or not soil or not damage or not is_donatable or not images:
         raise HTTPException(status_code=400, detail="필수 항목이 누락되었습니다.")
 
-    if not (len(toy_type) == len(description) == len(is_donatable)):
+    if not (len(toy_type) == len(soil) == len(damage) == len(is_donatable)):
         raise HTTPException(status_code=400, detail="입력 데이터의 개수가 일치하지 않습니다.")
     
     # 이미지 개수로 장난감 개수 자동 계산 (자유로운 개수)
@@ -257,10 +260,11 @@ async def register_donation_bulk(
         toy_data = {
             "user_id": current_user.user_id,
             "toy_type": toy_type[idx],
-            "description": description[idx],
             "image_url": None,  # 임시로 None, 나중에 업데이트
             "toy_status": ToyStatus.DONATION,  # 기부는 DONATION 상태로 설정
             "is_donatable": donation_status,
+            "soil": soil[idx],
+            "damage": damage[idx],
             "created_at": datetime.now(),
             "updated_at": datetime.now(),
         }

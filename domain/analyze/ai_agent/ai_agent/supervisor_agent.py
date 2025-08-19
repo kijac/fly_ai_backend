@@ -38,6 +38,10 @@ class SupervisorAgent:
 
     # 기준 이미지(ref_image_bytes)를 추가 인자로 받음 (신품 이미지)
     def process(self, front_image, left_image, rear_image, right_image, ref_image_bytes):
+        import time
+        start_time = time.time()
+        print("🔄 이미지 최적화 중...")
+        
         # 0) 각 이미지 크기 최적화
         optimized_front = optimize_image_size(front_image)
         optimized_left = optimize_image_size(left_image)
@@ -47,6 +51,7 @@ class SupervisorAgent:
 
         # 1) 각 개별 에이전트를 병렬로 실행 (4개 이미지 사용)
         print("개별 에이전트 분석 중... (4개 이미지 통합 분석)")
+        agent_start_time = time.time()
         with concurrent.futures.ThreadPoolExecutor(max_workers=4) as executor:
             future_type = executor.submit(
                 self.type_agent.analyze, optimized_front, optimized_left, optimized_rear, optimized_right
@@ -61,26 +66,71 @@ class SupervisorAgent:
                 self.soil_agent.analyze, optimized_front, optimized_left, optimized_rear, optimized_right, ref_optimized
             )
 
-            # 결과 수집 (타임아웃 30초)
+            # 결과 수집 (타임아웃 15초로 단축)
             try:
-                type_response, type_tokens = future_type.result(timeout=30)
-                material_response, material_tokens = future_material.result(timeout=30)
-                damage_response, damage_tokens = future_damage.result(timeout=30)
-                soil_response, soil_tokens = future_soil.result(timeout=30)
-            except concurrent.futures.TimeoutError:
+                print("🚀 모든 에이전트 병렬 실행 시작...")
+                
+                # 모든 future를 딕셔너리로 관리
+                futures = {
+                    'type': future_type,
+                    'material': future_material,
+                    'damage': future_damage,
+                    'soil': future_soil
+                }
+                
+                # 결과를 저장할 딕셔너리
+                results = {}
+                
+                # 완료된 순서대로 결과 수집 (진정한 병렬 처리)
+                for completed_future in concurrent.futures.as_completed(futures.values(), timeout=30):
+                    # 어떤 future가 완료되었는지 찾기
+                    for name, future in futures.items():
+                        if future == completed_future:
+                            try:
+                                response, tokens = completed_future.result()
+                                results[name] = (response, tokens)
+                                print(f"✅ {name.capitalize()}Agent 완료 (병렬)")
+                                break
+                            except Exception as e:
+                                print(f"❌ {name.capitalize()}Agent 에러: {e}")
+                                raise
+                
+                # 결과 언패킹
+                type_response, type_tokens = results['type']
+                material_response, material_tokens = results['material']
+                damage_response, damage_tokens = results['damage']
+                soil_response, soil_tokens = results['soil']
+                
+            except concurrent.futures.TimeoutError as e:
+                print(f"⏰ 타임아웃 에러: {e}")
                 print("일부 에이전트가 타임아웃되었습니다. 순차 처리로 전환합니다.")
-                type_response, type_tokens = self.type_agent.analyze(
-                    optimized_front, optimized_left, optimized_rear, optimized_right
-                )
-                material_response, material_tokens = self.material_agent.analyze(
-                    optimized_front, optimized_left, optimized_rear, optimized_right
-                )
-                damage_response, damage_tokens = self.damage_agent.analyze(
-                    optimized_front, optimized_left, optimized_rear, optimized_right, ref_optimized
-                )
-                soil_response, soil_tokens = self.soil_agent.analyze(
-                    optimized_front, optimized_left, optimized_rear, optimized_right, ref_optimized
-                )
+                try:
+                    type_response, type_tokens = self.type_agent.analyze(
+                        optimized_front, optimized_left, optimized_rear, optimized_right
+                    )
+                    material_response, material_tokens = self.material_agent.analyze(
+                        optimized_front, optimized_left, optimized_rear, optimized_right
+                    )
+                    damage_response, damage_tokens = self.damage_agent.analyze(
+                        optimized_front, optimized_left, optimized_rear, optimized_right, ref_optimized
+                    )
+                    soil_response, soil_tokens = self.soil_agent.analyze(
+                        optimized_front, optimized_left, optimized_rear, optimized_right, ref_optimized
+                    )
+                except Exception as seq_error:
+                    print(f"❌ 순차 처리 중 에러: {seq_error}")
+                    import traceback
+                    traceback.print_exc()
+                    raise seq_error
+            except Exception as e:
+                print(f"❌ 병렬 처리 중 에러: {e}")
+                import traceback
+                traceback.print_exc()
+                raise e
+
+        agent_end_time = time.time()
+        agent_time = agent_end_time - agent_start_time
+        print(f"🤖 에이전트 API 호출 완료: {agent_time:.2f}초")
 
         # 2) JSON 파싱/안전 처리
         try:
@@ -229,6 +279,10 @@ class SupervisorAgent:
         }
 
         # 6) 결과 반환 (영어 출력 유지)
+        end_time = time.time()
+        total_time = end_time - start_time
+        print(f"⚡ 에이전트 분석 완료: {total_time:.2f}초")
+        
         return {
             "장난감 종류": toy_type,                    # 영어 카테고리
             "건전지 여부": battery,

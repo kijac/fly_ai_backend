@@ -1,10 +1,10 @@
-# damage_agent.py  (Claude 버전, 기준 1장, 절대점수/상대등급 A~E 반환)
+# damage_agent.py  (Gemini 2.0 Flash 버전, 기준 1장, 절대점수/상대등급 A~E 반환)
 import os, io, json, base64
 from typing import Tuple, Dict, Optional
 
 from PIL import Image
 from dotenv import load_dotenv
-from anthropic import Anthropic
+import google.generativeai as genai
 
 load_dotenv()
 
@@ -20,9 +20,6 @@ def _img_bytes_to_b64jpeg(img_bytes: bytes, max_side: int = 1024) -> str:
     buf = io.BytesIO()
     img.save(buf, format="JPEG", quality=92)
     return base64.b64encode(buf.getvalue()).decode("utf-8")
-
-def _anthropic_img_part(b64: str) -> Dict:
-    return {"type": "image", "source": {"type": "base64", "media_type": "image/jpeg", "data": b64}}
 
 # 손상 절대점수: 4(새것/손상없음) → 0(심각)
 def _damage_to_abs(label: str) -> int:
@@ -48,12 +45,13 @@ class DamageAgent:
     입력: 사용자 4뷰(앞/좌/후/우) + 기준 1장(ref)
     출력: query/ref 라벨, 절대점수(0..4), 상대등급(A~E)
     """
-    def __init__(self, model: str = "claude-sonnet-4-20250514"):
+    def __init__(self, model: str = "gemini-2.5-flash-lite"):
         self.model = model
-        api_key = os.getenv("ANTHROPIC_API_KEY")
+        api_key = os.getenv("GOOGLE_API_KEY")
         if not api_key:
-            raise RuntimeError("환경변수 ANTHROPIC_API_KEY가 없습니다.")
-        self.client = Anthropic(api_key=api_key)
+            raise RuntimeError("환경변수 GOOGLE_API_KEY가 필요합니다.")
+        genai.configure(api_key=api_key)
+        self.model = genai.GenerativeModel(model)
 
         self.prompt = """
 You are a toy DAMAGE and MISSING-PARTS judge.
@@ -74,47 +72,39 @@ Rules:
                 query_front: bytes, query_left: bytes, query_rear: bytes, query_right: bytes,
                 ref_image: bytes) -> Tuple[dict, dict]:
         # 1) 이미지 준비
-        q_b64s = [
-            _img_bytes_to_b64jpeg(query_front),
-            _img_bytes_to_b64jpeg(query_left),
-            _img_bytes_to_b64jpeg(query_rear),
-            _img_bytes_to_b64jpeg(query_right),
-        ]
-        r_b64 = _img_bytes_to_b64jpeg(ref_image)
+        images = []
+        for img_bytes in [query_front, query_left, query_rear, query_right]:
+            img = Image.open(io.BytesIO(img_bytes)).convert("RGB")
+            images.append(img)
+        
+        ref_img = Image.open(io.BytesIO(ref_image)).convert("RGB")
+        images.append(ref_img)
 
-        contents = [{"type": "text", "text": self.prompt},
-                    {"type": "text", "text": "QUERY IMAGES (front/left/rear/right):"}]
-        for b64 in q_b64s:
-            contents.append(_anthropic_img_part(b64))
-        contents.append({"type": "text", "text": "REFERENCE IMAGE:"})
-        contents.append(_anthropic_img_part(r_b64))
-
-        # 2) Claude 호출
-        msg = self.client.messages.create(
-            model=self.model,
-            max_tokens=400,
-            temperature=0.0,
-            system="Return STRICT JSON only.",
-            messages=[{"role": "user", "content": contents}]
-        )
+        # 2) Gemini 호출
+        response = self.model.generate_content([self.prompt] + images)
 
         # 3) usage
         usage = {"input_tokens": 0, "output_tokens": 0, "total_tokens": 0}
         try:
-            u = getattr(msg, "usage", None)
-            itok = int(getattr(u, "input_tokens", 0)) if u else 0
-            otok = int(getattr(u, "output_tokens", 0)) if u else 0
-            usage.update({"input_tokens": itok, "output_tokens": otok, "total_tokens": itok + otok})
+            if hasattr(response, 'usage_metadata'):
+                usage.update({
+                    "input_tokens": getattr(response.usage_metadata, 'prompt_token_count', 0),
+                    "output_tokens": getattr(response.usage_metadata, 'candidates_token_count', 0),
+                    "total_tokens": getattr(response.usage_metadata, 'total_token_count', 0)
+                })
         except Exception:
             pass
 
         # 4) JSON 파싱
-        raw = "".join(b.text for b in msg.content if hasattr(b, "text")).strip()
+        raw = response.text.strip()
         if raw.startswith("```"):
             raw = raw.strip("`").replace("json", "", 1).strip()
         try:
             base = json.loads(raw)
         except Exception as e:
+            print(f"❌ DamageAgent 파싱 에러: {e}")
+            import traceback
+            traceback.print_exc()
             base = {
                 "query":    {"damage":"판단 불가","missing_parts":"불명","damage_detail":f"parse_error: {e}"},
                 "reference":{"damage":"판단 불가","missing_parts":"불명","damage_detail":""}

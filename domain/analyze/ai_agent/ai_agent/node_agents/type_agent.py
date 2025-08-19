@@ -1,8 +1,8 @@
-# type_agent.py  (Claude 버전; 영어 카테고리 반환)
+# type_agent.py  (Gemini 2.0 Flash 버전; 영어 카테고리 반환)
 import os, io, json, base64
 from dotenv import load_dotenv
 from PIL import Image
-from anthropic import Anthropic
+import google.generativeai as genai
 
 load_dotenv()
 
@@ -19,20 +19,22 @@ def _img_bytes_to_b64jpeg(img_bytes: bytes, max_side: int = 1024) -> str:
     img.save(buf, format="JPEG", quality=92)
     return base64.b64encode(buf.getvalue()).decode("utf-8")
 
-def _anthropic_img_part(b64: str) -> dict:
-    return {"type": "image", "source": {"type": "base64", "media_type": "image/jpeg", "data": b64}}
+def _gemini_img_part(img_bytes: bytes) -> dict:
+    """바이트 이미지를 Gemini용 포맷으로 변환"""
+    return {"mime_type": "image/jpeg", "data": img_bytes}
 
 class TypeAgent:
-    def __init__(self, model: str = "claude-sonnet-4-20250514"):
+    def __init__(self, model: str = "gemini-2.5-flash-lite"):
         self.model = model
-        api_key = os.getenv("ANTHROPIC_API_KEY")
+        api_key = os.getenv("GOOGLE_API_KEY")
         if not api_key:
-            raise RuntimeError("환경변수 ANTHROPIC_API_KEY가 필요합니다.")
-        self.client = Anthropic(api_key=api_key)
+            raise RuntimeError("환경변수 GOOGLE_API_KEY가 필요합니다.")
+        genai.configure(api_key=api_key)
+        self.model = genai.GenerativeModel(model)
 
     def analyze(self, front_image: bytes, left_image: bytes, rear_image: bytes, right_image: bytes):
         # 4개 이미지를 분석하여 종류/건전지/크기 판별
-        system_prompt = """
+        prompt = """
 You are a toy category expert. Look at four views (front/left/rear/right) and output STRICT JSON only.
 Category must be one of:
 {"type":"robot|building_blocks|dolls|vehicles|educational|action_figures|board_games|musical|sports|others","battery":"건전지|비건전지|불명","size":"작음|중간|큄|불명"}
@@ -45,37 +47,28 @@ Rules:
 """.strip()
 
         try:
-            b64s = []
+            # 이미지 준비
+            images = []
             for img_bytes in [front_image, left_image, rear_image, right_image]:
-                b64s.append(_img_bytes_to_b64jpeg(img_bytes))
+                img = Image.open(io.BytesIO(img_bytes)).convert("RGB")
+                images.append(img)
 
-            contents = [{"type": "text", "text": system_prompt},
-                        {"type": "text", "text": "4-angle images to analyze:"}]
-            for b in b64s:
-                contents.append(_anthropic_img_part(b))
-
-            msg = self.client.messages.create(
-                model=self.model,
-                max_tokens=200,
-                temperature=0.0,
-                system="Return STRICT JSON only. No extra text.",
-                messages=[{"role": "user", "content": contents}]
-            )
-
+            # Gemini 호출
+            response = self.model.generate_content([prompt] + images)
+            
+            # 토큰 정보 추출
             token_info = {"prompt_tokens": 0, "completion_tokens": 0, "total_tokens": 0}
             try:
-                u = getattr(msg, "usage", None)
-                itok = int(getattr(u, "input_tokens", 0)) if u else 0
-                otok = int(getattr(u, "output_tokens", 0)) if u else 0
-                token_info.update({
-                    "prompt_tokens": itok,
-                    "completion_tokens": otok,
-                    "total_tokens": itok + otok
-                })
+                if hasattr(response, 'usage_metadata'):
+                    token_info.update({
+                        "prompt_tokens": getattr(response.usage_metadata, 'prompt_token_count', 0),
+                        "completion_tokens": getattr(response.usage_metadata, 'candidates_token_count', 0),
+                        "total_tokens": getattr(response.usage_metadata, 'total_token_count', 0)
+                    })
             except Exception:
                 pass
 
-            raw = "".join(b.text for b in msg.content if hasattr(b, "text")).strip()
+            raw = response.text.strip()
             if raw.startswith("```json"):
                 raw = raw[7:]
             if raw.startswith("```"):
@@ -91,5 +84,7 @@ Rules:
             return result, token_info
 
         except Exception as e:
-            print(f"TypeAgent 에러: {e}")
+            print(f"❌ TypeAgent 에러: {e}")
+            import traceback
+            traceback.print_exc()
             return '{"type":"others","battery":"불명","size":"불명"}', {"total_tokens": 0}

@@ -132,11 +132,46 @@ def _build_catalog(csv_path: str):
 
 
 # ----------------------- CLIP 임베딩 -----------------------
+# 전역 변수로 CLIP 모델 관리 (한 번만 로딩하고 재사용)
+_global_model = None
+_global_processor = None
+_global_device = None
+
+def get_or_load_model(model_name: str = MODEL_NAME):
+    """CLIP 모델을 한 번만 로딩하고 재사용"""
+    global _global_model, _global_processor, _global_device
+    
+    if _global_model is None:
+        # GPU 사용 강제 설정
+        if torch.cuda.is_available():
+            _global_device = torch.device("cuda:0")
+            print(f"GPU 사용 가능: {torch.cuda.get_device_name(0)}")
+        else:
+            _global_device = torch.device("cpu")
+            print("GPU 사용 불가능, CPU 사용")
+        
+        _global_model = CLIPModel.from_pretrained(model_name).to(_global_device)
+        _global_processor = CLIPProcessor.from_pretrained(model_name)
+        _global_model.eval()
+        
+        # GPU 메모리 최적화
+        if torch.cuda.is_available():
+            torch.cuda.empty_cache()
+            print(f"GPU 메모리 사용량: {torch.cuda.memory_allocated(0) / 1024**2:.1f}MB")
+        
+        print(f"CLIP 모델 로딩 완료 (device: {_global_device})")
+    
+    return _global_model, _global_processor, _global_device
+
 def load_model(model_name: str, device: torch.device):
-    model = CLIPModel.from_pretrained(model_name).to(device)
-    processor = CLIPProcessor.from_pretrained(model_name)
-    model.eval()
-    return model, processor
+    """기존 호환성을 위한 래퍼 함수"""
+    return get_or_load_model(model_name)
+
+def clear_gpu_memory():
+    """GPU 메모리 정리"""
+    if torch.cuda.is_available():
+        torch.cuda.empty_cache()
+        print("GPU 메모리 정리 완료")
 
 def embed_image(model, processor, img_path, device) -> np.ndarray:
     image = Image.open(img_path).convert("RGB")
@@ -180,6 +215,9 @@ def _read_bytes_or_none(path: Optional[str]) -> Optional[bytes]:
 # ----------------------- 유사도 검색 (Top-1) -----------------------
 def similar_search_top1(query_img: str, feats_npy: str, paths_npy: str,
                         model_name: str) -> dict:
+    import time
+    clip_start_time = time.time()
+    
     if not os.path.isfile(query_img):
         raise FileNotFoundError(f"IMAGE_PATH not found: {query_img}")
     if not os.path.isfile(feats_npy) or not os.path.isfile(paths_npy):
@@ -190,8 +228,11 @@ def similar_search_top1(query_img: str, feats_npy: str, paths_npy: str,
     if feats.ndim != 2 or feats.shape[0] != len(paths):
         raise ValueError("features/paths 크기 불일치")
 
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    model, processor = load_model(model_name, device)
+    model, processor, device = get_or_load_model(model_name)
+    
+    clip_end_time = time.time()
+    clip_time = clip_end_time - clip_start_time
+    print(f"🔍 CLIP 유사도 검색 완료: {clip_time:.2f}초")
 
     q = embed_image(model, processor, query_img, device)
     q = q / (np.linalg.norm(q) + 1e-9)
@@ -229,8 +270,7 @@ def _best_match_key_by_clip(query_img_path: str, name_by_key: Dict[str, str]) ->
     """파일명/폴더명 매칭 실패 시: CLIP 이미지↔텍스트 매칭으로 product_name 찾기"""
     if not name_by_key:
         return None
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    model, processor = load_model(MODEL_NAME, device)
+    model, processor, device = get_or_load_model(MODEL_NAME)
     qvec = embed_image(model, processor, query_img_path, device)
     qvec = qvec / (np.linalg.norm(qvec) + 1e-9)
 

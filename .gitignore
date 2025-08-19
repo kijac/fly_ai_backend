@@ -1,55 +1,17 @@
-# Python
-__pycache__/
-*.py[cod]
-*.pyo
-*.pyd
-*.pyc
-
-# 환경설정 및 환경파일
+# 환경변수 파일
 .env
-env/
-venv/
-.venv/
-.idea/
-.vscode/
-.toypics/
 
-
-# 데이터베이스/마이그레이션
-migrations/
-
-# Jupyter Notebook
-.ipynb_checkpoints/
-
-# OS별 파일
-.DS_Store
-Thumbs.db
-
-# 기타
-*.log
-*.sqlite3
-test.ipynb
-reset_toy_stock.py
+# 테스트용 이미지 폴더
 toypics/
 
-# AI 모델 파일들 (용량이 크므로 제외)
-domain/analyze/ai_agent/toys_index/
-domain/analyze/ai_agent/used/
-domain/analyze/ai_agent/products_info.csv
-domain/analyze/ai_agent/old_toy/
-domain/analyze/ai_agent/venv/
-domain/analyze/ai_agent/train/
-domain/analyze/ai_agent/test/
-domain/analyze/ai_agent/carbot_data_final.csv
-domain/analyze/ai_agent/carbot_data_final.xlsx
+# 테스트 노트북
+test.ipynb
 
-# AI 모델 캐시 및 빌드 파일
-domain/analyze/ai_agent/__pycache__/
-domain/analyze/ai_agent/*.egg-info/
-domain/analyze/ai_agent/build/
-domain/analyze/ai_agent/dist/
-domain/analyze/ai_agent/ai_agent/__pycache__/
-domain/analyze/ai_agent/ai_agent/evaluation/
+# 재질 변환 스크립트
+convert_materials.py
 
-# ...existing code...
-alembic.ini
+# Python 캐시 파일들
+__pycache__/
+*.pyc
+*.pyo
+*.pyd

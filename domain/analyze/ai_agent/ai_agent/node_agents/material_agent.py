@@ -1,10 +1,10 @@
-# material_agent.py  (Claude 버전, 영어 카테고리 출력, mixed는 확실할 때만)
+# material_agent.py  (Gemini 2.0 Flash 버전, 영어 카테고리 출력, mixed는 확실할 때만)
 import os, io, json, base64
 from typing import Tuple, Dict, Optional, List
 
 from PIL import Image
 from dotenv import load_dotenv
-from anthropic import Anthropic
+import google.generativeai as genai
 
 load_dotenv()
 
@@ -22,9 +22,6 @@ def _img_bytes_to_b64jpeg(img_bytes: bytes, max_side: int = 1024) -> str:
     img.save(buf, format="JPEG", quality=92)
     return base64.b64encode(buf.getvalue()).decode("utf-8")
 
-def _anthropic_img_part(b64: str) -> Dict:
-    return {"type": "image", "source": {"type": "base64", "media_type": "image/jpeg", "data": b64}}
-
 class MaterialAgent:
     """
     결과는 영어로:
@@ -35,12 +32,13 @@ class MaterialAgent:
       notes: 선택
       secondary_hint: 혼합으로 확정하기 애매할 때 약한 2순위 후보(없으면 null)
     """
-    def __init__(self, model: str = "claude-sonnet-4-20250514"):
+    def __init__(self, model: str = "gemini-2.5-flash-lite"):
         self.model = model
-        api_key = os.getenv("ANTHROPIC_API_KEY")
+        api_key = os.getenv("GOOGLE_API_KEY")
         if not api_key:
-            raise RuntimeError("환경변수 ANTHROPIC_API_KEY가 필요합니다.")
-        self.client = Anthropic(api_key=api_key)
+            raise RuntimeError("환경변수 GOOGLE_API_KEY가 필요합니다.")
+        genai.configure(api_key=api_key)
+        self.model = genai.GenerativeModel(model)
 
         self.prompt = """
 You are a MATERIAL classifier for toys.
@@ -70,34 +68,26 @@ Guidelines:
     def analyze(self,
                 front_image: bytes, left_image: bytes, rear_image: bytes, right_image: bytes):
         # 이미지 4장 준비
-        b64s = []
+        images = []
         for img_bytes in [front_image, left_image, rear_image, right_image]:
-            b64s.append(_img_bytes_to_b64jpeg(img_bytes))
-
-        contents = [{"type": "text", "text": self.prompt},
-                    {"type": "text", "text": "4-view images (front/left/rear/right):"}]
-        for b in b64s:
-            contents.append(_anthropic_img_part(b))
+            img = Image.open(io.BytesIO(img_bytes)).convert("RGB")
+            images.append(img)
 
         try:
-            msg = self.client.messages.create(
-                model=self.model,
-                max_tokens=300,
-                temperature=0.0,
-                system="Return STRICT JSON only.",
-                messages=[{"role": "user", "content": contents}]
-            )
+            response = self.model.generate_content([self.prompt] + images)
 
             usage = {"input_tokens": 0, "output_tokens": 0, "total_tokens": 0}
             try:
-                u = getattr(msg, "usage", None)
-                itok = int(getattr(u, "input_tokens", 0)) if u else 0
-                otok = int(getattr(u, "output_tokens", 0)) if u else 0
-                usage.update({"input_tokens": itok, "output_tokens": otok, "total_tokens": itok + otok})
+                if hasattr(response, 'usage_metadata'):
+                    usage.update({
+                        "input_tokens": getattr(response.usage_metadata, 'prompt_token_count', 0),
+                        "output_tokens": getattr(response.usage_metadata, 'candidates_token_count', 0),
+                        "total_tokens": getattr(response.usage_metadata, 'total_token_count', 0)
+                    })
             except Exception:
                 pass
 
-            raw = "".join(b.text for b in msg.content if hasattr(b, "text")).strip()
+            raw = response.text.strip()
             if raw.startswith("```json"):
                 raw = raw[7:]
             if raw.startswith("```"):
@@ -130,7 +120,9 @@ Guidelines:
             return out_json, usage
 
         except Exception as e:
-            print(f"MaterialAgent 에러: {e}")
+            print(f"❌ MaterialAgent 에러: {e}")
+            import traceback
+            traceback.print_exc()
             fallback = {
                 "material": "unknown",
                 "components": [],

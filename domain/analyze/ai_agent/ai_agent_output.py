@@ -183,6 +183,9 @@ def run_full_pipeline(
     rear: Optional[str] = None,
     right: Optional[str] = None,
 ) -> dict:
+    import time
+    start_time = time.time()
+    print(f"🚀 AI 분석 시작: {query_image_path}")
     baseline = run_sameitem_price(
         image_path=query_image_path,
         feats_npy=feats_npy,
@@ -265,6 +268,11 @@ def run_full_pipeline(
         "ref_selection_reason": baseline.get("ref_selection_reason"),
         "csv_path": csv_path,
     }
+    
+    end_time = time.time()
+    total_time = end_time - start_time
+    print(f"✅ AI 분석 완료: {total_time:.2f}초")
+    
     return out
 
 
