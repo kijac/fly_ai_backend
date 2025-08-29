@@ -1,0 +1,37 @@
+# FastAPI 및 웹 프레임워크
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+starlette
+
+# 데이터베이스 및 ORM
+sqlalchemy==2.0.23
+pymysql==1.1.0
+alembic==1.12.1
+
+# 인증 및 보안
+passlib[bcrypt]
+python-jose[cryptography]
+cryptography==41.0.7
+python-multipart==0.0.6
+
+# 데이터 검증 및 설정
+pydantic>=2.7.4
+pydantic-settings==2.1.0
+email-validator
+python-dotenv==1.0.0
+
+# AI 모델 관련 패키지들
+google-generativeai
+Pillow
+streamlit
+pandas
+numpy
+
+transformers
+
+# 이미지 처리
+opencv-python
+
+# 유틸리티
+pathlib
+# ntpath

@@ -1,0 +1,17 @@
+# 환경변수 파일
+.env
+
+# 테스트용 이미지 폴더
+toypics/
+
+# 테스트 노트북
+test.ipynb
+
+# 재질 변환 스크립트
+convert_materials.py
+
+# Python 캐시 파일들
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
