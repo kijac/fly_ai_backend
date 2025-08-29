@@ -15,3 +15,6 @@ __pycache__/
 *.pyc
 *.pyo
 *.pyd
+
+# 이미지
+domain/analyze/ai_agent/train/
